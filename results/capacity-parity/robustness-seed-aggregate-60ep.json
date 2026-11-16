@@ -1,0 +1,138 @@
+{
+ "exp": "R2-E16：E12 temporal_1 60ep seed 层聚合（R3B-m4）",
+ "date": "2026-10-24",
+ "machine": "import 复用 e6_inference 统计机器；在案 60ep npz，不重训练；rng=zlib.crc32(temporal_1|60ep|metric)",
+ "family_declaration_r2am5": "稳健性抽查（temporal_1 单点 60ep 口径）：全部 p 值不入 Holm 申报族、不进摘要（逐 seed p 抽查定位可接受——mixed 三 p Bonferroni×3 后 0.024/0.006/0.018 仍全过）；红线：未检出≠等效",
+ "per_metric": {
+  "auc_mixed": {
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": 0.25983,
+     "p_indep": 0.00399
+    },
+    {
+     "seed": 1,
+     "obs_diff": 0.27623,
+     "p_indep": 0.00399
+    },
+    {
+     "seed": 2,
+     "obs_diff": 0.26953,
+     "p_indep": 0.00998
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": 0.26853,
+    "p_b2000": 0.0005
+   },
+   "direction_count_full_worse": 0
+  },
+  "auc_logon": {
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": -0.01255,
+     "p_indep": 0.41517
+    },
+    {
+     "seed": 1,
+     "obs_diff": 0.00785,
+     "p_indep": 0.87625
+    },
+    {
+     "seed": 2,
+     "obs_diff": -0.01752,
+     "p_indep": 0.49301
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": -0.00741,
+    "p_b2000": 0.61619
+   },
+   "direction_count_full_worse": 2
+  },
+  "ap_logon": {
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": -0.00409,
+     "p_indep": 0.01597
+    },
+    {
+     "seed": 1,
+     "obs_diff": -0.0005,
+     "p_indep": 0.54491
+    },
+    {
+     "seed": 2,
+     "obs_diff": 0.00072,
+     "p_indep": 0.56487
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": -0.00129,
+    "p_b2000": 0.16492
+   },
+   "direction_count_full_worse": 2
+  }
+ },
+ "e12_replay_check": {
+  "status": "逐位一致（同 npz 同机器，管线零漂移）",
+  "mixed_diff": [
+   0.25983,
+   0.27623,
+   0.26953
+  ],
+  "logon_auc_diff": [
+   -0.01255,
+   0.00785,
+   -0.01752
+  ],
+  "logon_ap_diff": [
+   -0.00409,
+   -0.0005,
+   0.00072
+  ]
+ },
+ "ep30_vs_ep60_aggregate": {
+  "auc_mixed": {
+   "ep30_incase": {
+    "obs_mean_diff": 0.32993,
+    "p_b2000": 0.0005
+   },
+   "ep60_this": {
+    "obs_mean_diff": 0.26853,
+    "p_b2000": 0.0005
+   }
+  },
+  "auc_logon": {
+   "ep30_incase": {
+    "obs_mean_diff": -0.02081,
+    "p_b2000": 0.02749
+   },
+   "ep60_this": {
+    "obs_mean_diff": -0.00741,
+    "p_b2000": 0.61619
+   }
+  },
+  "ap_logon": {
+   "ep30_incase": {
+    "obs_mean_diff": -0.00154,
+    "p_b2000": 0.50825
+   },
+   "ep60_this": {
+    "obs_mean_diff": -0.00129,
+    "p_b2000": 0.16492
+   }
+  },
+  "reading": "temporal_1 单点：mixed 可分 30ep/60ep 方向一致；LOGON AUC 聚合 obs 幅度 30ep→60ep 变化如实并报（R3B-m4「方向保持」句以本表为准）；AP 口径未检出≠等效。"
+ },
+ "fix_note_r2a2m6": {
+  "status": "APPENDED（R3/P1-8）：首跑 log 未留档（logs/e16_seed_agg.log 仅 392 字节=最终成功运行，首跑留痕被覆盖），以本注为准",
+  "first_run_bug": "首跑 ap_logon 口径误传 metric='auc'（聚合 obs 与 AUC 同值暴露），修复后重跑",
+  "evidence_note": "首跑数值未交付未引用；修复重跑的逐 seed obs 与 E12 交付逐位一致（管线零漂移断言在案）；本注为 R2A2-m6 弱留证申报的登记层闭环",
+  "review_refs": "R2A2-m6 / 本轮 P1-8",
+  "producer": "src/r3_key_producers.py（R3/P1-8）"
+ }
+}

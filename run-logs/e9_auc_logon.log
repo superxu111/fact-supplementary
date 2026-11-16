@@ -1,0 +1,7 @@
+  uniform_1 agg_p=0.002 per_seed_p=[0.002, 0.00798, 0.67465]
+  uniform_4 agg_p=0.02699 per_seed_p=[0.002, 0.06986, 0.70259]
+  uniform_16 agg_p=0.0095 per_seed_p=[0.002, 0.002, 0.57086]
+  temporal_1 agg_p=0.02749 per_seed_p=[0.53493, 0.499, 0.01996]
+  temporal_4 agg_p=0.0005 per_seed_p=[0.06188, 0.0519, 0.02395]
+  temporal_16 agg_p=0.0005 per_seed_p=[0.06587, 0.06786, 0.00798]
+E9_DONE {"uniform": {"points": ["uniform_1", "uniform_16", "uniform_4"], "agg_p_b2000": [0.002, 0.0095, 0.02699], "obs_mean": [-0.09005, -0.07381, -0.07696], "stouffer_one_sided": 2.5770221080894e-06, "fisher": 6.172551671084282e-05, "acat": 0.004671199342628163}, "temporal": {"points": ["temporal_1", "temporal_16", "temporal_4"], "agg_p_b2000": [0.02749, 0.0005, 0.0005], "obs_mean": [-0.02081, -0.02378, -0.02386], "stouffer_one_sided": 6.049513412830291e-08, "fisher": 1.3500037944733718e-06, "acat": 0.0007432567240981403}}

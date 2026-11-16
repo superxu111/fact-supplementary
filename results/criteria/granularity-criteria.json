@@ -1,0 +1,8 @@
+{
+  "exp": "R1-E4 边→事件→窗三粒度证据链收口+每类型样本量申报",
+  "frozen_at": "2026-10-24T12:20:00+08:00",
+  "hypothesis": "H4: 边级结论聚合到事件级(749事件)与窗级(E1输出)后仍一致，或如实报不一致",
+  "design": {"自变量": "聚合粒度×臂(full/homo_rerun/homoflows_rerun)", "因变量": "事件级Recall@K+AP_rows+AP_event_weighted+top25 host footprint；样本量表；丢样表", "边身份还原": "npz LOGON行块序=当日logon_days边序，强断言=还原攻击行标签≡npz y"},
+  "success": "三粒度×臂一致性矩阵完整(一致/不一致均如实报)；W12 丢样表入正文；W14 truetype 反常统一解释申报",
+  "red_lines": ["粒度不一致≠某粒度错误，如实并报", "未检出显著差异≠等效"]
+}

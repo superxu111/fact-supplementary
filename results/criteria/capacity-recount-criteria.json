@@ -1,0 +1,9 @@
+{
+  "exp": "R1-E3 容量对齐宽度补偿臂 d'=33",
+  "frozen_at": "2026-10-24T11:50:00+08:00",
+  "hypothesis": "H3: homo 臂参数缺口 6,913 (0.819%) 不驱动主结论",
+  "design": {"自变量": "homo宽度 d'=33 (+2.1%过冲) vs 未补偿 homo(d=32)", "因变量": "LOGON同池AP/AUC+混合池AUC", "对照": ["homo_rerun(在案60ep+本次projB重产)", "full(在案)"], "规模": "1臂×3seeds×60ep"},
+  "success": "full vs homo_w33 与 full vs homo 的差异方向/幅度在 seed 波动带内 → 容量伪影排除条款写入协议表；超出 → 如实申报并改写为容量 vs 归纳偏置讨论",
+  "param_recheck": "W9: d'=33 参数过冲须独立复算（+17,351, +2.1% 申报口径）",
+  "red_lines": ["消融下降≠超基线", "未检出显著差异≠等效"]
+}

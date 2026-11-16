@@ -1,0 +1,264 @@
+{
+ "exp": "R2-REG：e4 窗级公平格补录生产者（P0-6/R2B-M4②；R2 第四轮 E13 方向修正版）",
+ "date": "2026-10-24",
+ "producer": "src/r2_reg_layer.py::build_e4_fair_row_replay（修正版由 src/e13_delay_rule_fix.py 驱动重生成；R2B-M4②：原键 granularity_matrix_window_row_fair 无在案生成代码，本脚本为补录生产者并注明 post_hoc；在案 e4 对象不改写）",
+ "replay": {
+  "arl100": {
+   "tau_t": 3.053,
+   "per_arm_seed": {
+    "full_s0": {
+     "det_rate": 0.182,
+     "delay": 2
+    },
+    "full_s1": {
+     "det_rate": 0.455,
+     "delay": 2
+    },
+    "full_s2": {
+     "det_rate": 0.364,
+     "delay": 0
+    },
+    "homoflows_s0": {
+     "det_rate": 0.455,
+     "delay": 2
+    },
+    "homoflows_s1": {
+     "det_rate": 0.455,
+     "delay": 0
+    },
+    "homoflows_s2": {
+     "det_rate": 0.182,
+     "delay": 2
+    },
+    "homo_s0": {
+     "det_rate": 0.182,
+     "delay": 2
+    },
+    "homo_s1": {
+     "det_rate": 0.182,
+     "delay": 8
+    },
+    "homo_s2": {
+     "det_rate": 0.182,
+     "delay": 2
+    }
+   },
+   "pair_directions_det_rate_rule_PRIMARY": {
+    "full_vs_homoflows": [
+     "second_better",
+     "tie",
+     "first_better"
+    ],
+    "full_vs_homo": [
+     "tie",
+     "first_better",
+     "first_better"
+    ],
+    "homoflows_vs_homo": [
+     "first_better",
+     "first_better",
+     "tie"
+    ]
+   },
+   "pair_directions_delay_rule_sensitivity": {
+    "full_vs_homoflows": [
+     "tie",
+     "second_better",
+     "first_better"
+    ],
+    "full_vs_homo": [
+     "tie",
+     "first_better",
+     "first_better"
+    ],
+    "homoflows_vs_homo": [
+     "tie",
+     "first_better",
+     "tie"
+    ]
+   }
+  },
+  "arl500": {
+   "tau_t": 4.207,
+   "per_arm_seed": {
+    "full_s0": {
+     "det_rate": 0.182,
+     "delay": 2
+    },
+    "full_s1": {
+     "det_rate": 0.182,
+     "delay": 2
+    },
+    "full_s2": {
+     "det_rate": 0.182,
+     "delay": 2
+    },
+    "homoflows_s0": {
+     "det_rate": 0.091,
+     "delay": 2
+    },
+    "homoflows_s1": {
+     "det_rate": 0.091,
+     "delay": 2
+    },
+    "homoflows_s2": {
+     "det_rate": 0.091,
+     "delay": 2
+    },
+    "homo_s0": {
+     "det_rate": 0.091,
+     "delay": 2
+    },
+    "homo_s1": {
+     "det_rate": 0.0,
+     "delay": null
+    },
+    "homo_s2": {
+     "det_rate": 0.091,
+     "delay": 2
+    }
+   },
+   "pair_directions_det_rate_rule_PRIMARY": {
+    "full_vs_homoflows": [
+     "first_better",
+     "first_better",
+     "first_better"
+    ],
+    "full_vs_homo": [
+     "first_better",
+     "first_better",
+     "first_better"
+    ],
+    "homoflows_vs_homo": [
+     "tie",
+     "first_better",
+     "tie"
+    ]
+   },
+   "pair_directions_delay_rule_sensitivity": {
+    "full_vs_homoflows": [
+     "tie",
+     "tie",
+     "tie"
+    ],
+    "full_vs_homo": [
+     "tie",
+     "first_better",
+     "tie"
+    ],
+    "homoflows_vs_homo": [
+     "tie",
+     "first_better",
+     "tie"
+    ]
+   }
+  }
+ },
+ "bitwise_match_per_arm_seed": true,
+ "pair_directions_match_under_det_rate_rule": true,
+ "direction_rule_declaration_r2bm5": "主判定规则=检出率比较（det 高者 better）——原键未声明规则，此处补声明；延迟规则（先告警者 better=延迟小者 better，None=永不告警为最差）为敏感性对照；delay 分支方向修正见 superseded 键与 R2A-M2/R3B-M1",
+ "delay_rule_divergence": {
+  "arl100": {
+   "full_vs_homoflows": [
+    "tie",
+    "second_better",
+    "first_better"
+   ],
+   "homoflows_vs_homo": [
+    "tie",
+    "first_better",
+    "tie"
+   ]
+  },
+  "arl500": {
+   "full_vs_homoflows": [
+    "tie",
+    "tie",
+    "tie"
+   ],
+   "full_vs_homo": [
+    "tie",
+    "first_better",
+    "tie"
+   ]
+  }
+ },
+ "delay_rule_divergence_count": {
+  "pairs": 4,
+  "cells": 8,
+  "note": "声明规则（先告警者 better）下 delay 行与 det 主规则行的真实分歧：完整双档口径。R2A-M2「4 对 8 格」即此口径；R3B-M1「2 对 3 格」为其 arl100 子集（full_vs_homoflows s0/s1 + homoflows_vs_homo s0）"
+ },
+ "delay_rule_note": "两规则真实分歧=4 对 8 格（arl100：full_vs_homoflows s0/s1、homoflows_vs_homo s0；arl500：full_vs_homoflows s0/s1/s2、full_vs_homo s0/s2）——原文「仅 arl100 full_vs_homoflows 两格分歧」与原复审转述「仅 arl100 full_vs_homoflows 前两 seed 不同」均失实（supersedes，原文保留于 superseded 键）；论文引用公平格时须带规则声明。",
+ "superseded_r2am2_r3bm1": {
+  "status": "SUPERSEDES：原 pair_directions_delay_rule_sensitivity 由方向写反的实现生成（r2_reg_layer.py 旧版对 delay 复用 det 的 va>vb 比较符且 None→−1e9，把更晚告警判为更好）——arl100 三对 5 格 first/second 互换（full_vs_homoflows s1/s2、full_vs_homo s1/s2、homoflows_vs_homo s1），arl500 全 tie/None 格侥幸不变；本键原文保留。",
+  "old_pair_directions_delay_rule_sensitivity": {
+   "arl100": {
+    "full_vs_homoflows": [
+     "tie",
+     "first_better",
+     "second_better"
+    ],
+    "full_vs_homo": [
+     "tie",
+     "second_better",
+     "second_better"
+    ],
+    "homoflows_vs_homo": [
+     "tie",
+     "second_better",
+     "tie"
+    ]
+   },
+   "arl500": {
+    "full_vs_homoflows": [
+     "tie",
+     "tie",
+     "tie"
+    ],
+    "full_vs_homo": [
+     "tie",
+     "first_better",
+     "tie"
+    ],
+    "homoflows_vs_homo": [
+     "tie",
+     "first_better",
+     "tie"
+    ]
+   }
+  },
+  "old_delay_rule_divergence": {
+   "arl100": {
+    "full_vs_homoflows": [
+     "tie",
+     "first_better",
+     "second_better"
+    ],
+    "full_vs_homo": [
+     "tie",
+     "second_better",
+     "second_better"
+    ],
+    "homoflows_vs_homo": [
+     "tie",
+     "second_better",
+     "tie"
+    ]
+   },
+   "arl500": {
+    "full_vs_homoflows": [
+     "tie",
+     "tie",
+     "tie"
+    ],
+    "full_vs_homo": [
+     "tie",
+     "first_better",
+     "tie"
+    ]
+   }
+  },
+  "old_delay_rule_note": "两规则仅在 {\"arl100\": [\"full_vs_homoflows\", \"full_vs_homo\", \"homoflows_vs_homo\"], \"arl500\": [\"full_vs_homoflows\", \"full_vs_homo\"]} 处分歧（R2B 复审人同结论：仅 arl100 full_vs_homoflows 前两 seed 不同）——论文引用公平格时须带规则声明。",
+  "review_refs": "R2A-M2 / R3B-M1 / R2 第四轮 E13"
+ }
+}

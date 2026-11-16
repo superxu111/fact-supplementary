@@ -1,0 +1,114 @@
+{
+ "exp": "R3b-gate3-mutation-score（创新方案一③：拦截力变异自证）",
+ "date": "2026-10-25T00:40:55+08:00",
+ "producer": "src/r3_gate3_mutation_score.py（测生产校验器 src/verify_provenance.py 本体，/tmp 一次性副本）",
+ "mutation_score": "8/8",
+ "target": "升级后闸3=chain_verify（链接+行内容哈希双断言）+freeze_drift_check（最新冻结 sha256 vs 现文件）",
+ "mutations": [
+  {
+   "id": "M1",
+   "name": "非末行 freeze 行内容编辑保留 hash 字段",
+   "expected": {
+    "detect_by": "chain",
+    "why": "content_hash_mismatch",
+    "at": 1
+   },
+   "killed": true,
+   "detected_by": "chain_verify",
+   "located_at": "row 1 content_hash_mismatch (results/cross-checks/criteria.json)",
+   "verdict": "KILLED"
+  },
+  {
+   "id": "M2",
+   "name": "冻结文件被静默改动不补冻结行",
+   "expected": {
+    "detect_by": "drift",
+    "why": "STALE_FROZEN_HASH"
+   },
+   "killed": true,
+   "detected_by": "freeze_drift_check",
+   "located_at": "RESEARCH_LOG.md STALE_FROZEN_HASH",
+   "verdict": "KILLED"
+  },
+  {
+   "id": "M3",
+   "name": "删除中间行",
+   "expected": {
+    "detect_by": "chain",
+    "why": "prev_hash_link_broken",
+    "at": 11
+   },
+   "killed": true,
+   "detected_by": "chain_verify",
+   "located_at": "row 11 prev_hash_link_broken (results/threshold-calibration/e4_window_row_fair_replay.json)",
+   "verdict": "KILLED"
+  },
+  {
+   "id": "M4",
+   "name": "相邻两行换序",
+   "expected": {
+    "detect_by": "chain",
+    "why": "prev_hash_link_broken"
+   },
+   "killed": true,
+   "detected_by": "chain_verify",
+   "located_at": "row 3 prev_hash_link_broken (results/capacity-parity/criteria_e16.json)",
+   "verdict": "KILLED"
+  },
+  {
+   "id": "M5",
+   "name": "行 hash 字段本身篡改",
+   "expected": {
+    "detect_by": "chain",
+    "why": "content_hash_mismatch",
+    "at": 8
+   },
+   "killed": true,
+   "detected_by": "chain_verify",
+   "located_at": "row 8 content_hash_mismatch (src/e11_g3_sensitivity.py)",
+   "verdict": "KILLED"
+  },
+  {
+   "id": "M6",
+   "name": "meta 行 note 被改保留 hash",
+   "expected": {
+    "detect_by": "chain",
+    "why": "content_hash_mismatch",
+    "at": 20
+   },
+   "killed": true,
+   "detected_by": "chain_verify",
+   "located_at": "row 20 content_hash_mismatch (R3/P1-4 晚产物补登记（late_registration）：R2 时点 src/e13_delay_rule_f)",
+   "verdict": "KILLED"
+  },
+  {
+   "id": "M7",
+   "name": "伪造追加行（prev_hash 跳变、行自洽）",
+   "expected": {
+    "detect_by": "chain",
+    "why": "prev_hash_link_broken",
+    "at": 54
+   },
+   "killed": true,
+   "detected_by": "chain_verify",
+   "located_at": "row 54 prev_hash_link_broken (results/forged_r3.json)",
+   "verdict": "KILLED",
+   "located_at_note_r4": "row 54=交付时点（2026-10-25T00:40 变异运行）链长；现链 68 行（R3 收口+R4 冻结后持续增长，append-only）——located_at 为运行时点快照非当前行号，防跨时点误读（R6B-m5）"
+  },
+  {
+   "id": "M8",
+   "name": "冻结 sha256 记录造假+整链重算自洽（现文件不动）",
+   "expected": {
+    "detect_by": "drift",
+    "why": "STALE_FROZEN_HASH"
+   },
+   "killed": true,
+   "detected_by": "freeze_drift_check",
+   "located_at": "RESEARCH_LOG.md STALE_FROZEN_HASH",
+   "verdict": "KILLED"
+  }
+ ],
+ "boundary_declaration": "单机无信任根：M8 证明「记录造假+链重算」唯一拦在登记值 vs 现场工件比对；记录与文件合谋篡改（等价合法重冻结）不可防——无签名体系的能力边界，与 gate3.verify_model_declaration 申报一致",
+ "production_ledger_untouched": true,
+ "review_refs": "R3A-M1 / R5B-M2 / 创新方案一③"
+}

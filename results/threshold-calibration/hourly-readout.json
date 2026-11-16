@@ -1,0 +1,75 @@
+{
+ "design": "\u89c1\u6a21\u5757 docstring\uff08\u9884\u767b\u8bb0\uff09",
+ "warmup_h": 168,
+ "n_windows": 1224,
+ "n_attack_windows": 68,
+ "stat": "hourly new (user,dst) pair count",
+ "readouts": {
+  "fixed@arl100": {
+   "p1": null,
+   "p2": 3.316,
+   "arl_measured_holdout": 97.0,
+   "n_alarm_windows": 15,
+   "attack_coverage": 0.044,
+   "per_alert_precision": 0.2,
+   "first_alarm_hour_idx": 57,
+   "first_attack_hour_idx": 8,
+   "delay_h": 49
+  },
+  "cusum0.5@arl100": {
+   "p1": 0.5,
+   "p2": 2.8242,
+   "arl_measured_holdout": 100.3,
+   "n_alarm_windows": 31,
+   "attack_coverage": 0.176,
+   "per_alert_precision": 0.387,
+   "first_alarm_hour_idx": 8,
+   "first_attack_hour_idx": 8,
+   "delay_h": 0
+  },
+  "ewma0.2@arl100": {
+   "p1": 0.2,
+   "p2": 1.8945,
+   "arl_measured_holdout": 98.9,
+   "n_alarm_windows": 121,
+   "attack_coverage": 0.544,
+   "per_alert_precision": 0.306,
+   "first_alarm_hour_idx": 8,
+   "first_attack_hour_idx": 8,
+   "delay_h": 0
+  },
+  "fixed@arl500": {
+   "p1": null,
+   "p2": 11.3274,
+   "arl_measured_holdout": 584.4,
+   "n_alarm_windows": 2,
+   "attack_coverage": 0.0,
+   "per_alert_precision": 0.0,
+   "first_alarm_hour_idx": 58,
+   "first_attack_hour_idx": 8,
+   "delay_h": 50
+  },
+  "cusum0.5@arl500": {
+   "p1": 0.5,
+   "p2": 11.6871,
+   "arl_measured_holdout": 477.9,
+   "n_alarm_windows": 8,
+   "attack_coverage": 0.029,
+   "per_alert_precision": 0.25,
+   "first_alarm_hour_idx": 15,
+   "first_attack_hour_idx": 8,
+   "delay_h": 7
+  },
+  "ewma0.2@arl500": {
+   "p1": 0.2,
+   "p2": 6.7754,
+   "arl_measured_holdout": 491.8,
+   "n_alarm_windows": 16,
+   "attack_coverage": 0.044,
+   "per_alert_precision": 0.188,
+   "first_alarm_hour_idx": 58,
+   "first_attack_hour_idx": 8,
+   "delay_h": 50
+  }
+ }
+}

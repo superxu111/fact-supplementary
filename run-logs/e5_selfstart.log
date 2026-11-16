@@ -1,0 +1,22 @@
+{
+ "selfstarting@arl100": {
+  "c_calibrated": 3.826,
+  "c_normal_theory": 2.326,
+  "attack_coverage": 0.0,
+  "per_alert_precision": 0.0,
+  "n_alarm_windows": 10,
+  "delay_h": 49,
+  "note": "\u4e0e hourly-readout.json \u540c\u6d41\u5bf9\u7167\uff1afixed@arl100 \u8986\u76d6 4%/\u5ef6\u8fdf 49h\uff0cewma0.2@arl100 \u8986\u76d6 54%/\u5ef6\u8fdf 0"
+ },
+ "selfstarting@arl500": {
+  "c_calibrated": 5.831,
+  "c_normal_theory": 2.878,
+  "attack_coverage": 0.0,
+  "per_alert_precision": 0.0,
+  "n_alarm_windows": 4,
+  "delay_h": 50,
+  "note": "\u4e0e hourly-readout.json \u540c\u6d41\u5bf9\u7167\uff1afixed@arl100 \u8986\u76d6 4%/\u5ef6\u8fdf 49h\uff0cewma0.2@arl100 \u8986\u76d6 54%/\u5ef6\u8fdf 0"
+ }
+}
+E5_SELFSTARTING_DONE
+rc=0

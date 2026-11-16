@@ -1,0 +1,8 @@
+{
+ "exp": "R2-E12 判据 post_hoc 补登记（R3B-M3 响应，R2 第四轮）",
+ "status": "post_hoc（如实降格）",
+ "honest_statement": "原判据以 src/e12_closure.py docstring 承载并自报「开工前冻结」；mtime 审计（criteria_mtime_ledger.json rows_r4_append）证明该脚本 19:48:32 落盘晚于两臂训练产物（19:46:20/19:47:08），且训练所用 r1_train_arm.py 于 19:42:07（开跑前约 4 分钟）被编辑——「开工前冻结/判据双去向预先登记」不被文件系统时间链支持。如实降格为「收口分析前冻结」：判据内容（60ep 双臂抽查、双去向预登记）先于收口产物 e12_closure.json（19:55:16）落盘，但晚于训练。",
+ "criteria_content": "①对照 30ep 在案值申报 30/60ep 口径差；②成功判据=方向计数如实申报（mixed 3/3 保持或翻转、LOGON AUC/AP 方向计数并报）；③红线：口径差如实并报不择优引用",
+ "rule_instituted": "GPU 门禁新规（自本轮起）：训练启动前断言 criteria 行已落盘 evidence-ledger.jsonl（先 criteria 后训练），杜绝 docstring 单独作为事前性证据",
+ "review_refs": "R3B-M3 / R2A-m1 / R2 第四轮"
+}

@@ -1,0 +1,43 @@
+{
+ "exp": "R4 收官修复轮（主会话直接修，用户裁定 2026-10-25）判据预登记",
+ "date": "2026-10-25T01:23:06+08:00",
+ "round_scope": "登记勘误（P0-1/P1-2/P1-3/P1-4）+ 用户批准新增 UA/频率基线臂（E18）；不新增任何数据层实验",
+ "items": [
+  {
+   "id": "P0-1",
+   "item": "E15 证书 family_multiplicity_stance_r3 补 corrected_r4 子键：全 16 格 Bonferroni×16 枚举（scipy binom 现算与在案 p_one_sided 逐位断言一致后方落盘）；预期=raw 拒绝 5 格→族级校正后 3 格、翻转 2 格（arl500/S3 nullA→0.2857、arl100/S4 nullB→0.0790）；S4 null_A 侧任何校正下强拒绝",
+   "success": "16/16 格 p_raw 与在案逐位一致；adjusted=x16 精确算术；manifest 行27 以追加 errata 行处置（原行不改）"
+  },
+  {
+   "id": "P1-2",
+   "item": "FILE_EXEMPT 三件豁免理由入 not_done 面（二选一取登记分支）；e13 晚编辑补 diff 摘要键；闭环面=申报面∪not_done 面不变量登记为 V22 claim-lint 前提",
+   "success": "三处全部落盘且 gate1 无新增键级孤儿"
+  },
+  {
+   "id": "P1-3",
+   "item": "r3_review2_minor_fixes.py 守卫键名补 b；criteria_mtime_ledger 补 criteria_r3 行（真实 stat 双时刻）；M7 located_at 补交付时点链长注记；errata 前缀 P0-1 起用 R3fix-E*",
+   "success": "修复后幂等（重跑零插入）；台账行为 append-only"
+  },
+  {
+   "id": "P1-4",
+   "item": "判据先冻规则制度化：本文件即写作轮判据，落盘并 --freeze 后才跑 E18（与 GPU 门禁对称）",
+   "success": "ledger 中 criteria_r4 冻结行 mtime 早于 E18 产物 mtime"
+  },
+  {
+   "id": "E18",
+   "item": "UA 记忆规则+频率基线臂（用户 2026-10-25 批准）：LOGON 同池（EVAL_DAYS 全部边，事件级 (user,dst) 真值），训练对=TRAIN_DAYS(0-9) 名称空间对",
+   "definitions_frozen": "UA 分数=对∈训练日集合?0:1；FREQ 分数=1/(1+训练日计数)；指标=池化 plain AP/AUC+随机参照 AP=n_pos/n_pool",
+   "success": "池计数与在案逐位一致（n_pool=445,229/n_pos=277）；结果为描述性附表行，不做与模型臂的优劣判语（红线：模型主张本就是 not-detectably-improve，基线对比仅作上下文）；训练窗含 redteam 事件与管线同协议（可比利害一致）如实申报"
+  }
+ ],
+ "errata_prefix_rule": "勘误 ID 自本轮起用 R3fix-E*（R3B-E* 与审稿人 B 席历史前缀撞名，R6B-m4②）",
+ "cpu_freeze_rule": "CPU 实验判据先追加并 --freeze 后再跑（P1-4，与 GPU 门禁对称）——本规则自本轮起对全部后续 CPU 实验生效",
+ "producer": "主会话（R4；判定与数字来自 R3-整合人清单+本席独立复算）",
+ "e18_pool_count_errata_r4": {
+  "status": "ERRATA R3fix-E2（R4/E18 运行时断言拦截——判据先冻自证第二次有效）",
+  "erratum": "E18 item success 写「n_pool=445,229」系池口径误置：445,229 为混合池（LOGON 131,235+FLOW 313,994，manifest 行28/R5B-M1 双池计数在案）；E18 为 LOGON 同池",
+  "corrected": "LOGON 同池计数 n_pool=131,235 / n_pos=277（正例 277 与混合池逐位同=真值映射正确的独立证据）；随机参照 AP=277/131235",
+  "evidence": "E18 首跑 AssertionError 131235/277；manifest 行28 checks 含 131235/277 在案锚",
+  "producer": "src/r4_p0_registry_fixes.py 附带登记（R4）"
+ }
+}

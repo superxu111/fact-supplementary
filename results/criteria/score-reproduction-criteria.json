@@ -1,0 +1,10 @@
+{
+  "exp": "R1-VERIFY 在案产物核验",
+  "post_hoc_note": "⚠️ 本判据文件为运行后补登记（2026-10-24 R1 第二轮修复时补录，见 R1B-M6）。判据文本取自协议与 verify_incase.py docstring 原文，非事后改写。",
+  "frozen_at_incase": "2026-10-24（运行前冻结于脚本 docstring）",
+  "registered_at": "2026-10-24T17:00:00+08:00",
+  "hypothesis": "E47B 在案逐边分数 npz 复算指标与在案 JSON 一致（容差 5e-4，full/homo 逐位）→ 合格不重跑，E1/E4 直接复用",
+  "success": "3 臂×3 seed 混合池 AUC/LOGON AUC/AP 全部 |Δ|<5e-4 且池计数 (445229,277,131235,277) 逐位一致",
+  "red_lines": ["复算失败则不得复用，须 projB 内重训"],
+  "postmortem": "结果 PASS；措辞修正（R1B-m1）：full 3 seeds 逐位一致，homo s1 混合池 AUC Δ=1e-4（尾差，RESEARCH_LOG 原文『full/homo 逐位一致』过强，已按 score-reproduction-check.json 实测修正申报）"
+}

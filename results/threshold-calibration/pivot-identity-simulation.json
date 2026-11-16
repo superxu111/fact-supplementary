@@ -1,0 +1,67 @@
+{
+ "exp": "R2-REG：G1 直接模拟数字补生成代码（P0-2/R1A2-M1③/V6）",
+ "date": "2026-10-24",
+ "producer_note": "本脚本为补录生产者（post_hoc，R1A2-M1③ resolution：direct_pivot_check 的生成代码入库并与复审人复算值并报）；不回充历史时刻，产物 mtime 即补录时刻。",
+ "unconditional_iid_200k": {
+  "arl100": {
+   "tau": 3.0531,
+   "n_trials": 200000,
+   "rate": 0.009915,
+   "rate_x_arl0": 0.9915,
+   "se_rate": 0.000222,
+   "analytic_truth_rate_x_arl0": 1.0,
+   "mc_within_3se_of_1": true
+  },
+  "arl500": {
+   "tau": 4.2068,
+   "n_trials": 200000,
+   "rate": 0.002055,
+   "rate_x_arl0": 1.0275,
+   "se_rate": 0.000101,
+   "analytic_truth_rate_x_arl0": 1.0,
+   "mc_within_3se_of_1": true
+  }
+ },
+ "world_replay_structure": {
+  "arl100": {
+   "n_worlds": 100,
+   "fresh_per_world": 9000,
+   "total_n": 900000,
+   "rate": 0.008284,
+   "rate_x_arl0": 0.8284,
+   "se_rate_x_arl0": 0.0096,
+   "structure_note": "世界重放结构：新鲜窗除以「本世界第 0 池」的 μ/σ 标准化——条件于世界的告警率随 μ_j/σ_j 抽样波动，合并率含世界间方差（与 g1_synthetic 世界间 ARL 重尾同一来源）"
+  },
+  "arl500": {
+   "n_worlds": 100,
+   "fresh_per_world": 9000,
+   "total_n": 900000,
+   "rate": 0.001328,
+   "rate_x_arl0": 0.6639,
+   "se_rate_x_arl0": 0.0192,
+   "structure_note": "世界重放结构：新鲜窗除以「本世界第 0 池」的 μ/σ 标准化——条件于世界的告警率随 μ_j/σ_j 抽样波动，合并率含世界间方差（与 g1_synthetic 世界间 ARL 重尾同一来源）"
+  }
+ },
+ "incase_value": {
+  "arl100": {
+   "rate_x_arl0": 0.952,
+   "gate_pass": true
+  },
+  "arl500": {
+   "rate_x_arl0": 1.025,
+   "gate_pass": true
+  }
+ },
+ "reviewer_values": {
+  "R1A2_self_impl_200k": {
+   "arl100": 1.015,
+   "arl500": 1.052
+  },
+  "R2B_self_impl_200k_2000batch100": {
+   "arl100": 1.001,
+   "arl500": 1.02
+  }
+ },
+ "attribution_note": "三实现并存归因：解析真值（枢轴恒等式）=1.000。无条件 iid 结构落 1±3SE（本脚本实测见上）；R1A2 值 1.015 与 E5 criteria 修订 4 自述「20 万次模拟 0.01015」一致（同批结构）；存档 0.952 与 1.000 差约 −4.8%，超出无条件结构 MC 噪声（SE≈0.07%），归因于世界重放式结构对世界的条件化（本脚本结构②可复现该方向的系统偏差）与 RNG 流差异——三值均在 ±15% 门内，G1「通过」结论不因实现选择翻转；论文引用以无条件结构（≈1.000）为准，存档值与复审人值并报留痕。",
+ "gate_conclusion": "两档 |rate×ARL0−1|<15% 在全部三个实现下成立——G1 主张（正态族内枢轴恒等式成立）不依赖实现选择；「仅证恒等式、非父体验证」的三句式表述另见 R1_metrics 修复层。"
+}

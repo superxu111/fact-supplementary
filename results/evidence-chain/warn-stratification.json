@@ -1,0 +1,41 @@
+{
+ "exp": "R3/P1-8：finalize*.py 浮点字面量三层分层注册表",
+ "producer": "src/r3_key_producers.py[4]（R3/P1-8；闸2 verify_provenance.gate2 同规则现算比对）",
+ "layer_rule": "L_EXEMPT=结构常量（解析真值 1.000）；L_QUOTE=引述性（数值按字面量自身精度舍入后精确出现于 results/** 交付 JSON，机器判定）；L_REGISTER=待登记（前两者皆非）",
+ "ratchet": "L_REGISTER 棘轮：只许降不许升——闸2 现算待登记项须全部见于 l_register_resolved，新增未登记项即 FAIL；本表由 R3 起为棘轮基线",
+ "counts": {
+  "warn_total": 91,
+  "l_exempt": 1,
+  "l_quote": 87,
+  "l_register": 3
+ },
+ "l_exempt": [
+  {
+   "file": "finalize_r3.py",
+   "literal": "1.000"
+  }
+ ],
+ "l_quote_count_by_file": {
+  "finalize_e3_e4.py": 20,
+  "finalize_r2.py": 18,
+  "finalize_r3.py": 49
+ },
+ "l_register_resolved": [
+  {
+   "file": "finalize_r3.py",
+   "literal": "1.3122",
+   "reason": "勘误引用值（更正注内被更正的错误值原文：原字符串硬编码 arl100 κ 误植，真值 1.3124 已入 manifest 行 E11 κ；禁进正文，仅存于更正引文）"
+  },
+  {
+   "file": "finalize_r3.py",
+   "literal": "1.2785",
+   "reason": "勘误引用值（更正注内被更正的错误值原文：原 arl500 κ 误植值，真值 1.4616 已入 manifest；闸2 κ 断言的上下文豁免对象）"
+  },
+  {
+   "file": "finalize_r3.py",
+   "literal": "3.2905",
+   "reason": "勘误引用值（更正注内 z_{1-1/2000}=3.2905 系误植分母出处说明，非任何档位执行值）"
+  }
+ ],
+ "l_register_count_by_file": {}
+}

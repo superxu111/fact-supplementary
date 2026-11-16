@@ -1,0 +1,9 @@
+{
+  "exp": "R1-E2 负采样/候选池协议敏感性",
+  "frozen_at": "2026-10-24T11:50:00+08:00",
+  "hypothesis": "H2: full vs homo 的 LOGON同池更差+混合池不可分 结论不随 训练负采样策略{uniform,temporal}×比例{1:1,1:4,1:16}×评估池构造{同视图,混合} 翻转，或给出翻转边界",
+  "design": {"自变量": "训练负采样策略×比例(6点,uniform路径与在案逐行一致)", "因变量": "LOGON同池AP/AUC+混合池AUC+评估侧采样池AP/AUC+配对置换p(B=500,日块)", "臂": ["full", "homo"], "seeds": [0, 1, 2], "epochs": {"校验链60ep": ["uniform_1"], "网格30ep": ["uniform_1", "uniform_4", "uniform_16", "temporal_1", "temporal_4", "temporal_16"]}},
+  "regression_check": {"n_pool": 445229, "n_pos": 277, "n_pool_logon": 131235, "n_pos_logon": 277, "full_auc_mixed_60ep_incase": [0.8958, 0.8994, 0.921], "homo_auc_mixed_60ep_incase": [0.9314, 0.8873, 0.8867], "homo_ap_logon_60ep_incase": [0.0084, 0.0168, 0.0056], "tolerance": "AUC |Δ|<0.02(60ep重跑带,非逐位因GPU非确定性→以在案seed波动带为带)；计数须逐位"},
+  "success": "复现校验带内 + 完整协议×臂×seed表 + (稳定区间结论 或 翻转边界表)；无显著差异处按红线措辞'未检出显著差异(检验方式+p+n)'",
+  "red_lines": ["未检出显著差异≠等效", "消融下降≠超基线"]
+}

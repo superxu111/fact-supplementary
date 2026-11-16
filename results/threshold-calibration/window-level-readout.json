@@ -1,0 +1,6573 @@
+{
+ "design": "见模块 docstring（预登记冻结）",
+ "TOPK": 50,
+ "ARL0S": [
+  100,
+  500
+ ],
+ "arms": {
+  "full": {
+   "0": {
+    "top50mean": {
+     "benign_mu": 0.3232955237146881,
+     "benign_sd": 1.302352814739977,
+     "z_eval_windows": [
+      2.945,
+      2.652,
+      6.042,
+      2.326,
+      2.598,
+      2.253,
+      2.789,
+      2.901,
+      2.824,
+      2.84,
+      5.016
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.9222,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 9.3
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.2891,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 88.3,
+       "arl_calibration": 101.2
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.127,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 92.4,
+       "arl_calibration": 99.9
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3594,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 105.4,
+       "arl_calibration": 104.4
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.9222,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 8.9
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.916,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 465.7,
+       "arl_calibration": 502.1
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.9114,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 490.8,
+       "arl_calibration": 521.7
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.9404,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 469.8,
+       "arl_calibration": 474.8
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        13,
+        14,
+        20,
+        22,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 23.8,
+       "mean_events_in_nonalarm_windows": 53.6,
+       "pointbiserial_alarm_vs_events": -0.253,
+       "random_perm_ref_mean_rate": 0.53,
+       "empirical_p_vs_random": 0.827
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.926,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.926,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        14,
+        21,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 16.0,
+       "mean_events_in_nonalarm_windows": 49.6,
+       "pointbiserial_alarm_vs_events": -0.275,
+       "random_perm_ref_mean_rate": 0.36,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.9,
+       "empirical_p_vs_random": 0.709
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.923,
+       "empirical_p_vs_random": 0.967
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -6.253454222122438,
+     "benign_sd": 0.389171305317859,
+     "z_eval_windows": [
+      -1.075,
+      -1.21,
+      6.33,
+      -0.429,
+      -0.463,
+      -0.57,
+      -0.416,
+      -0.451,
+      -0.355,
+      -0.349,
+      -0.146
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.1117,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 9.2
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.156,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 110.5,
+       "arl_calibration": 103.5
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 102.3,
+       "arl_calibration": 100.8
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 107.0,
+       "arl_calibration": 98.2
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.1117,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 9.1
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.1729,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 535.7,
+       "arl_calibration": 497.0
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.1996,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 512.1,
+       "arl_calibration": 528.0
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.0688,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 519.0,
+       "arl_calibration": 496.2
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        14,
+        15
+       ],
+       "mean_events_in_alarm_windows": 30.5,
+       "mean_events_in_nonalarm_windows": 38.9,
+       "pointbiserial_alarm_vs_events": -0.055,
+       "random_perm_ref_mean_rate": 0.171,
+       "empirical_p_vs_random": 0.115
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        14,
+        15
+       ],
+       "mean_events_in_alarm_windows": 30.5,
+       "mean_events_in_nonalarm_windows": 38.9,
+       "pointbiserial_alarm_vs_events": -0.055,
+       "random_perm_ref_mean_rate": 0.173,
+       "empirical_p_vs_random": 0.023
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.123,
+       "empirical_p_vs_random": 0.357
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        14,
+        15
+       ],
+       "mean_events_in_alarm_windows": 30.5,
+       "mean_events_in_nonalarm_windows": 38.9,
+       "pointbiserial_alarm_vs_events": -0.055,
+       "random_perm_ref_mean_rate": 0.158,
+       "empirical_p_vs_random": 0.0
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 5.671779976950751,
+     "benign_sd": 1.9496909560736353,
+     "z_eval_windows": [
+      3.233,
+      0.741,
+      1.837,
+      0.448,
+      1.947,
+      1.543,
+      1.54,
+      0.736,
+      1.704,
+      1.837,
+      2.853
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.7226,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 8.8
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.2891,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.3,
+       "arl_calibration": 105.3
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.127,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 102.7,
+       "arl_calibration": 102.4
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.2432,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 95.6,
+       "arl_calibration": 95.0
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.7226,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 8.5
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.6836,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 493.1,
+       "arl_calibration": 483.3
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.7661,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 471.5,
+       "arl_calibration": 483.4
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.7952,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 484.6,
+       "arl_calibration": 523.9
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        12,
+        14,
+        20,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 52.8,
+       "mean_events_in_nonalarm_windows": 24.5,
+       "pointbiserial_alarm_vs_events": 0.24,
+       "random_perm_ref_mean_rate": 0.455,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        14,
+        22,
+        29
+       ],
+       "mean_events_in_alarm_windows": 17.3,
+       "mean_events_in_nonalarm_windows": 44.9,
+       "pointbiserial_alarm_vs_events": -0.209,
+       "random_perm_ref_mean_rate": 0.268,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.798,
+       "empirical_p_vs_random": 0.626
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        12,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 33.0,
+       "mean_events_in_nonalarm_windows": 81.0,
+       "pointbiserial_alarm_vs_events": -0.235,
+       "random_perm_ref_mean_rate": 0.806,
+       "empirical_p_vs_random": 0.313
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        12,
+        14,
+        20,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 52.8,
+       "mean_events_in_nonalarm_windows": 24.5,
+       "pointbiserial_alarm_vs_events": 0.24,
+       "random_perm_ref_mean_rate": 0.455,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 4,
+       "first_alarm_day": 20,
+       "delay_windows_from_day12": 4,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        20,
+        28
+       ],
+       "mean_events_in_alarm_windows": 2.0,
+       "mean_events_in_nonalarm_windows": 45.2,
+       "pointbiserial_alarm_vs_events": -0.284,
+       "random_perm_ref_mean_rate": 0.182,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 4,
+       "first_alarm_day": 20,
+       "delay_windows_from_day12": 4,
+       "detection_rate": 0.636,
+       "n_alarm_windows": 7,
+       "alarm_windows_days": [
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 8.6,
+       "mean_events_in_nonalarm_windows": 87.8,
+       "pointbiserial_alarm_vs_events": -0.65,
+       "random_perm_ref_mean_rate": 0.694,
+       "empirical_p_vs_random": 0.827
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.727,
+       "n_alarm_windows": 8,
+       "alarm_windows_days": [
+        14,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 11.9,
+       "mean_events_in_nonalarm_windows": 105.3,
+       "pointbiserial_alarm_vs_events": -0.71,
+       "random_perm_ref_mean_rate": 0.681,
+       "empirical_p_vs_random": 0.526
+      }
+     }
+    }
+   },
+   "1": {
+    "top50mean": {
+     "benign_mu": 0.061397077101800174,
+     "benign_sd": 1.225382526961651,
+     "z_eval_windows": [
+      2.806,
+      2.342,
+      6.596,
+      2.346,
+      2.814,
+      2.242,
+      2.379,
+      3.173,
+      3.058,
+      3.114,
+      5.115
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.9775,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 8.9
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.3181,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 89.5,
+       "arl_calibration": 100.3
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.2432,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 111.4,
+       "arl_calibration": 99.4
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3594,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 101.4,
+       "arl_calibration": 96.9
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.9775,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 8.8
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 5.1484,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 512.4,
+       "arl_calibration": 494.0
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.9404,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 521.1,
+       "arl_calibration": 501.4
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.9985,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 535.1,
+       "arl_calibration": 506.8
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        13,
+        14,
+        20,
+        22,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 23.8,
+       "mean_events_in_nonalarm_windows": 53.6,
+       "pointbiserial_alarm_vs_events": -0.253,
+       "random_perm_ref_mean_rate": 0.53,
+       "empirical_p_vs_random": 0.835
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.926,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.926,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        14,
+        21,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 16.0,
+       "mean_events_in_nonalarm_windows": 49.6,
+       "pointbiserial_alarm_vs_events": -0.275,
+       "random_perm_ref_mean_rate": 0.369,
+       "empirical_p_vs_random": 0.093
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.893,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.916,
+       "empirical_p_vs_random": 0.883
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -6.3003944179590095,
+     "benign_sd": 0.4347546177120523,
+     "z_eval_windows": [
+      -0.566,
+      -0.72,
+      5.079,
+      -0.655,
+      -0.806,
+      -0.799,
+      -0.585,
+      -0.789,
+      -0.582,
+      -0.668,
+      -0.48
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.0822,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.7,
+       "arl_calibration": 9.0
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 1.8945,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 105.0,
+       "arl_calibration": 95.9
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.7057,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.7,
+       "arl_calibration": 100.5
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.6912,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.7,
+       "arl_calibration": 101.2
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.0822,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 9.2
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 2.8242,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 544.8,
+       "arl_calibration": 480.6
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.127,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 533.3,
+       "arl_calibration": 508.8
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 1.9817,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 525.3,
+       "arl_calibration": 494.5
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.086,
+       "empirical_p_vs_random": 0.161
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.11,
+       "empirical_p_vs_random": 0.213
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.034,
+       "empirical_p_vs_random": 0.003
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.095,
+       "empirical_p_vs_random": 0.049
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 5.468815273708767,
+     "benign_sd": 1.7709318213709202,
+     "z_eval_windows": [
+      1.84,
+      0.492,
+      1.938,
+      1.071,
+      1.242,
+      1.536,
+      1.616,
+      0.784,
+      1.361,
+      1.547,
+      3.178
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.3383,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 8.9
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.708,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 89.6,
+       "arl_calibration": 94.5
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.9817,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 96.9,
+       "arl_calibration": 100.1
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.0688,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 105.2,
+       "arl_calibration": 100.5
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.3383,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 8.9
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.1025,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 489.8,
+       "arl_calibration": 482.7
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.5337,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 492.4,
+       "arl_calibration": 473.5
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.4465,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 452.1,
+       "arl_calibration": 486.9
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.636,
+       "n_alarm_windows": 7,
+       "alarm_windows_days": [
+        12,
+        14,
+        21,
+        22,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 39.6,
+       "mean_events_in_nonalarm_windows": 33.5,
+       "pointbiserial_alarm_vs_events": 0.05,
+       "random_perm_ref_mean_rate": 0.636,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        14,
+        22,
+        29
+       ],
+       "mean_events_in_alarm_windows": 17.3,
+       "mean_events_in_nonalarm_windows": 44.9,
+       "pointbiserial_alarm_vs_events": -0.209,
+       "random_perm_ref_mean_rate": 0.268,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.797,
+       "empirical_p_vs_random": 0.632
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.808,
+       "empirical_p_vs_random": 0.647
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.636,
+       "n_alarm_windows": 7,
+       "alarm_windows_days": [
+        12,
+        14,
+        21,
+        22,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 39.6,
+       "mean_events_in_nonalarm_windows": 33.5,
+       "pointbiserial_alarm_vs_events": 0.05,
+       "random_perm_ref_mean_rate": 0.636,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 5,
+       "first_alarm_day": 21,
+       "delay_windows_from_day12": 5,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        21,
+        29
+       ],
+       "mean_events_in_alarm_windows": 10.0,
+       "mean_events_in_nonalarm_windows": 43.4,
+       "pointbiserial_alarm_vs_events": -0.22,
+       "random_perm_ref_mean_rate": 0.182,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 4,
+       "first_alarm_day": 20,
+       "delay_windows_from_day12": 4,
+       "detection_rate": 0.636,
+       "n_alarm_windows": 7,
+       "alarm_windows_days": [
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 8.6,
+       "mean_events_in_nonalarm_windows": 87.8,
+       "pointbiserial_alarm_vs_events": -0.65,
+       "random_perm_ref_mean_rate": 0.699,
+       "empirical_p_vs_random": 0.841
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 4,
+       "first_alarm_day": 20,
+       "delay_windows_from_day12": 4,
+       "detection_rate": 0.636,
+       "n_alarm_windows": 7,
+       "alarm_windows_days": [
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 8.6,
+       "mean_events_in_nonalarm_windows": 87.8,
+       "pointbiserial_alarm_vs_events": -0.65,
+       "random_perm_ref_mean_rate": 0.718,
+       "empirical_p_vs_random": 0.872
+      }
+     }
+    }
+   },
+   "2": {
+    "top50mean": {
+     "benign_mu": 0.42679728410517176,
+     "benign_sd": 1.1542584041785553,
+     "z_eval_windows": [
+      3.142,
+      2.749,
+      6.313,
+      2.685,
+      2.882,
+      2.64,
+      2.978,
+      3.163,
+      2.895,
+      2.836,
+      5.089
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 2.0366,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.8,
+       "arl_calibration": 9.5
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.2891,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 107.5,
+       "arl_calibration": 101.0
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.127,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 94.1,
+       "arl_calibration": 94.6
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3594,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 100.5,
+       "arl_calibration": 100.5
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 2.0366,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.3,
+       "arl_calibration": 8.8
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 5.0322,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 526.6,
+       "arl_calibration": 524.7
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.9404,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 545.0,
+       "arl_calibration": 491.1
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.9404,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 461.9,
+       "arl_calibration": 473.0
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        13,
+        14,
+        20,
+        22,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 23.8,
+       "mean_events_in_nonalarm_windows": 53.6,
+       "pointbiserial_alarm_vs_events": -0.253,
+       "random_perm_ref_mean_rate": 0.528,
+       "empirical_p_vs_random": 0.807
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.924,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.924,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        14,
+        21,
+        26,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 47.1,
+       "pointbiserial_alarm_vs_events": -0.221,
+       "random_perm_ref_mean_rate": 0.379,
+       "empirical_p_vs_random": 0.187
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.919,
+       "empirical_p_vs_random": 0.947
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.924,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -5.78452496600076,
+     "benign_sd": 0.43644617713376727,
+     "z_eval_windows": [
+      -1.66,
+      -1.334,
+      4.053,
+      -1.506,
+      -1.866,
+      -1.74,
+      -1.152,
+      -1.159,
+      -1.058,
+      -1.199,
+      -0.918
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.229,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.7,
+       "arl_calibration": 8.7
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.127,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 101.7,
+       "arl_calibration": 95.8
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 102.4,
+       "arl_calibration": 98.4
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 102.0,
+       "arl_calibration": 96.7
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.229,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 9.8
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.1874,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 534.8,
+       "arl_calibration": 483.7
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.2141,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 478.8,
+       "arl_calibration": 526.6
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.1124,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 520.4,
+       "arl_calibration": 505.7
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.014,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.021,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.008,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.014,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 6.014361275566949,
+     "benign_sd": 2.5400755217842703,
+     "z_eval_windows": [
+      0.958,
+      0.937,
+      1.029,
+      0.11,
+      0.83,
+      0.58,
+      1.107,
+      1.418,
+      0.706,
+      0.407,
+      1.898
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 2.0712,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 8.8
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.1426,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 81.5,
+       "arl_calibration": 151.0
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.0688,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 92.7,
+       "arl_calibration": 100.1
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3594,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 111.0,
+       "arl_calibration": 103.4
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 2.0712,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 9.4
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.7136,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 457.4,
+       "arl_calibration": 476.2
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.8533,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 487.4,
+       "arl_calibration": 470.8
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.9985,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 580.4,
+       "arl_calibration": 529.5
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 8,
+       "first_alarm_day": 27,
+       "delay_windows_from_day12": 8,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        27
+       ],
+       "mean_events_in_alarm_windows": 9.0,
+       "mean_events_in_nonalarm_windows": 40.2,
+       "pointbiserial_alarm_vs_events": -0.153,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 7,
+       "first_alarm_day": 26,
+       "delay_windows_from_day12": 7,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.5,
+       "mean_events_in_nonalarm_windows": 51.0,
+       "pointbiserial_alarm_vs_events": -0.308,
+       "random_perm_ref_mean_rate": 0.441,
+       "empirical_p_vs_random": 0.613
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 10,
+       "first_alarm_day": 29,
+       "delay_windows_from_day12": 10,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        29
+       ],
+       "mean_events_in_alarm_windows": 16.0,
+       "mean_events_in_nonalarm_windows": 39.5,
+       "pointbiserial_alarm_vs_events": -0.115,
+       "random_perm_ref_mean_rate": 0.119,
+       "empirical_p_vs_random": 0.38
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.02,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.023,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    }
+   }
+  },
+  "homoflows": {
+   "0": {
+    "top50mean": {
+     "benign_mu": 1.2669719606637952,
+     "benign_sd": 0.7146445097558212,
+     "z_eval_windows": [
+      2.793,
+      2.777,
+      11.705,
+      3.334,
+      3.282,
+      2.844,
+      2.958,
+      2.653,
+      2.654,
+      3.074,
+      3.464
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.9339,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.1,
+       "arl_calibration": 9.4
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.1946,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 91.4,
+       "arl_calibration": 96.7
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.1851,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 105.1,
+       "arl_calibration": 102.8
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3013,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 92.2,
+       "arl_calibration": 104.2
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.9339,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 8.4
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.916,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 490.0,
+       "arl_calibration": 482.5
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.8823,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 502.6,
+       "arl_calibration": 503.9
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.9114,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 496.8,
+       "arl_calibration": 473.8
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        13,
+        14,
+        20,
+        22,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 23.8,
+       "mean_events_in_nonalarm_windows": 53.6,
+       "pointbiserial_alarm_vs_events": -0.253,
+       "random_perm_ref_mean_rate": 0.503,
+       "empirical_p_vs_random": 0.533
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.916,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.941,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        14,
+        20,
+        26,
+        29
+       ],
+       "mean_events_in_alarm_windows": 19.5,
+       "mean_events_in_nonalarm_windows": 47.6,
+       "pointbiserial_alarm_vs_events": -0.23,
+       "random_perm_ref_mean_rate": 0.418,
+       "empirical_p_vs_random": 0.601
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.914,
+       "empirical_p_vs_random": 0.98
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.916,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -2.653801265437581,
+     "benign_sd": 0.26991021616119726,
+     "z_eval_windows": [
+      -1.623,
+      -1.503,
+      5.07,
+      -0.452,
+      -1.261,
+      -0.691,
+      -0.39,
+      0.191,
+      -0.471,
+      0.018,
+      -0.215
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.1095,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 9.2
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.0688,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 97.9,
+       "arl_calibration": 97.2
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 104.6,
+       "arl_calibration": 96.2
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.7711,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.3,
+       "arl_calibration": 104.2
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.1095,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 10.0
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.0566,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 488.3,
+       "arl_calibration": 479.9
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.1851,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 477.5,
+       "arl_calibration": 510.6
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.0834,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 538.2,
+       "arl_calibration": 502.6
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.083,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.12,
+       "empirical_p_vs_random": 0.318
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.044,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.1,
+       "empirical_p_vs_random": 0.133
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 4.964858690897624,
+     "benign_sd": 2.1692470897493665,
+     "z_eval_windows": [
+      2.223,
+      2.121,
+      4.177,
+      1.381,
+      4.091,
+      1.58,
+      3.576,
+      0.684,
+      0.696,
+      1.724,
+      1.609
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 2.2285,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 9.8
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.4572,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 74.8,
+       "arl_calibration": 76.3
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.2141,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 103.7,
+       "arl_calibration": 102.0
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.4538,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 103.5,
+       "arl_calibration": 103.7
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 2.2285,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 9.0
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 5.3809,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 613.9,
+       "arl_calibration": 527.3
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 3.0131,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 485.1,
+       "arl_calibration": 481.3
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 3.1147,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 463.3,
+       "arl_calibration": 471.0
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        14,
+        20,
+        22
+       ],
+       "mean_events_in_alarm_windows": 12.3,
+       "mean_events_in_nonalarm_windows": 46.8,
+       "pointbiserial_alarm_vs_events": -0.261,
+       "random_perm_ref_mean_rate": 0.273,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        14,
+        20,
+        22
+       ],
+       "mean_events_in_alarm_windows": 12.3,
+       "mean_events_in_nonalarm_windows": 46.8,
+       "pointbiserial_alarm_vs_events": -0.261,
+       "random_perm_ref_mean_rate": 0.339,
+       "empirical_p_vs_random": 0.733
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.865,
+       "empirical_p_vs_random": 0.513
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.868,
+       "empirical_p_vs_random": 0.528
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        14,
+        20,
+        22
+       ],
+       "mean_events_in_alarm_windows": 12.3,
+       "mean_events_in_nonalarm_windows": 46.8,
+       "pointbiserial_alarm_vs_events": -0.261,
+       "random_perm_ref_mean_rate": 0.273,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        14,
+        21,
+        29
+       ],
+       "mean_events_in_alarm_windows": 18.3,
+       "mean_events_in_nonalarm_windows": 44.5,
+       "pointbiserial_alarm_vs_events": -0.199,
+       "random_perm_ref_mean_rate": 0.221,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.779,
+       "empirical_p_vs_random": 0.578
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.777,
+       "empirical_p_vs_random": 0.57
+      }
+     }
+    }
+   },
+   "1": {
+    "top50mean": {
+     "benign_mu": 0.9686226409673692,
+     "benign_sd": 0.6697009286049126,
+     "z_eval_windows": [
+      3.167,
+      2.934,
+      9.21,
+      3.162,
+      2.663,
+      2.721,
+      2.625,
+      2.976,
+      2.605,
+      3.151,
+      3.446
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.8721,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 8.6
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.2891,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 94.8,
+       "arl_calibration": 98.5
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.156,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 97.0,
+       "arl_calibration": 95.1
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3013,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 95.3,
+       "arl_calibration": 101.1
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.8721,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 10.0
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.916,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 457.2,
+       "arl_calibration": 513.2
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.8896,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 541.2,
+       "arl_calibration": 527.4
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.9114,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 523.6,
+       "arl_calibration": 483.4
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        13,
+        14,
+        20,
+        22,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 23.8,
+       "mean_events_in_nonalarm_windows": 53.6,
+       "pointbiserial_alarm_vs_events": -0.253,
+       "random_perm_ref_mean_rate": 0.503,
+       "empirical_p_vs_random": 0.538
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.917,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.926,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        13,
+        14,
+        21,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 29.0,
+       "mean_events_in_nonalarm_windows": 44.3,
+       "pointbiserial_alarm_vs_events": -0.13,
+       "random_perm_ref_mean_rate": 0.39,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.91,
+       "empirical_p_vs_random": 0.922
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.917,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -3.189612337263826,
+     "benign_sd": 0.21303010339330064,
+     "z_eval_windows": [
+      -0.971,
+      -1.252,
+      3.5,
+      0.002,
+      0.619,
+      0.57,
+      0.295,
+      0.924,
+      0.322,
+      0.1,
+      0.7
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.3077,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 9.9
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 1.8655,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.8,
+       "arl_calibration": 99.8
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.6912,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.4,
+       "arl_calibration": 105.0
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.7202,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 100.7,
+       "arl_calibration": 101.3
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.3077,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.4,
+       "arl_calibration": 9.0
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 2.8097,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 501.1,
+       "arl_calibration": 510.3
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.156,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 529.3,
+       "arl_calibration": 506.9
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.0979,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 549.2,
+       "arl_calibration": 485.5
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.2,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.183,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.086,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.125,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 4.7669019434187145,
+     "benign_sd": 1.4556052595625175,
+     "z_eval_windows": [
+      4.36,
+      3.377,
+      5.045,
+      2.654,
+      3.472,
+      2.915,
+      2.969,
+      2.753,
+      0.407,
+      2.136,
+      1.758
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.1789,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 10.1
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.4756,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 102.2,
+       "arl_calibration": 101.4
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.8945,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 110.8,
+       "arl_calibration": 104.9
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.8945,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.2,
+       "arl_calibration": 94.9
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.1789,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 9.6
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.5215,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 457.1,
+       "arl_calibration": 502.4
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.3594,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 495.5,
+       "arl_calibration": 487.7
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.2432,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 493.2,
+       "arl_calibration": 482.5
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 40.2,
+       "mean_events_in_nonalarm_windows": 9.0,
+       "pointbiserial_alarm_vs_events": 0.153,
+       "random_perm_ref_mean_rate": 0.909,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        20,
+        22,
+        28
+       ],
+       "mean_events_in_alarm_windows": 55.0,
+       "mean_events_in_nonalarm_windows": 16.2,
+       "pointbiserial_alarm_vs_events": 0.329,
+       "random_perm_ref_mean_rate": 0.55,
+       "empirical_p_vs_random": 0.88
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.932,
+       "empirical_p_vs_random": 0.354
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.966,
+       "empirical_p_vs_random": 0.667
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 40.2,
+       "mean_events_in_nonalarm_windows": 9.0,
+       "pointbiserial_alarm_vs_events": 0.153,
+       "random_perm_ref_mean_rate": 0.909,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        12,
+        14,
+        20,
+        22,
+        28
+       ],
+       "mean_events_in_alarm_windows": 49.8,
+       "mean_events_in_nonalarm_windows": 27.0,
+       "pointbiserial_alarm_vs_events": 0.194,
+       "random_perm_ref_mean_rate": 0.466,
+       "empirical_p_vs_random": 0.193
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.907,
+       "empirical_p_vs_random": 0.19
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.93,
+       "empirical_p_vs_random": 0.343
+      }
+     }
+    }
+   },
+   "2": {
+    "top50mean": {
+     "benign_mu": 1.1550390170680152,
+     "benign_sd": 0.7336318140289997,
+     "z_eval_windows": [
+      2.605,
+      2.558,
+      11.009,
+      2.816,
+      2.565,
+      2.092,
+      2.449,
+      2.169,
+      2.066,
+      2.024,
+      3.09
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.7484,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.8,
+       "arl_calibration": 9.4
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.4053,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 105.5,
+       "arl_calibration": 97.7
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.127,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 96.3,
+       "arl_calibration": 97.5
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3013,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 98.8,
+       "arl_calibration": 103.2
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.7484,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 9.6
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.8579,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 472.0,
+       "arl_calibration": 520.3
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.8823,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 541.9,
+       "arl_calibration": 496.2
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.8678,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 481.7,
+       "arl_calibration": 484.8
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        13,
+        14,
+        20,
+        22,
+        28
+       ],
+       "mean_events_in_alarm_windows": 24.2,
+       "mean_events_in_nonalarm_windows": 48.3,
+       "pointbiserial_alarm_vs_events": -0.205,
+       "random_perm_ref_mean_rate": 0.473,
+       "empirical_p_vs_random": 0.219
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.918,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.918,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        14,
+        21,
+        27
+       ],
+       "mean_events_in_alarm_windows": 16.0,
+       "mean_events_in_nonalarm_windows": 45.4,
+       "pointbiserial_alarm_vs_events": -0.223,
+       "random_perm_ref_mean_rate": 0.337,
+       "empirical_p_vs_random": 0.712
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.856,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.887,
+       "empirical_p_vs_random": 0.668
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -2.9858619728184705,
+     "benign_sd": 0.2853541871288904,
+     "z_eval_windows": [
+      -2.457,
+      -2.843,
+      -1.41,
+      -1.521,
+      -1.22,
+      -0.884,
+      -0.68,
+      -1.175,
+      -0.986,
+      -1.493,
+      -1.131
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.3225,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.4,
+       "arl_calibration": 8.9
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.127,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 111.6,
+       "arl_calibration": 105.0
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.7493,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 97.0,
+       "arl_calibration": 102.7
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.7638,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.4,
+       "arl_calibration": 102.7
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.3225,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 9.5
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.1729,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 543.1,
+       "arl_calibration": 476.5
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.2432,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 571.2,
+       "arl_calibration": 518.2
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.1487,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 534.2,
+       "arl_calibration": 501.7
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 3.9398509661356607,
+     "benign_sd": 1.110039493617034,
+     "z_eval_windows": [
+      4.628,
+      2.818,
+      11.331,
+      6.705,
+      9.46,
+      6.393,
+      8.278,
+      2.817,
+      1.887,
+      2.598,
+      4.15
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.3895,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 9.1
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.2432,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 102.8,
+       "arl_calibration": 104.7
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.8074,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.1,
+       "arl_calibration": 101.5
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.8437,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 97.1,
+       "arl_calibration": 95.6
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.3895,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 8.7,
+       "arl_calibration": 9.2
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.2891,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 425.3,
+       "arl_calibration": 489.4
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.3158,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 524.9,
+       "arl_calibration": 507.3
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.2432,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 505.1,
+       "arl_calibration": 521.9
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 40.2,
+       "mean_events_in_nonalarm_windows": 9.0,
+       "pointbiserial_alarm_vs_events": 0.153,
+       "random_perm_ref_mean_rate": 0.835,
+       "empirical_p_vs_random": 0.183
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.965,
+       "empirical_p_vs_random": 0.617
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.991,
+       "empirical_p_vs_random": 0.903
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.727,
+       "n_alarm_windows": 8,
+       "alarm_windows_days": [
+        12,
+        14,
+        15,
+        20,
+        21,
+        22,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.6,
+       "mean_events_in_nonalarm_windows": 36.7,
+       "pointbiserial_alarm_vs_events": 0.007,
+       "random_perm_ref_mean_rate": 0.719,
+       "empirical_p_vs_random": 0.789
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.965,
+       "empirical_p_vs_random": 0.617
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.965,
+       "empirical_p_vs_random": 0.617
+      }
+     }
+    }
+   }
+  },
+  "homo": {
+   "0": {
+    "top50mean": {
+     "benign_mu": 1.4560461648305256,
+     "benign_sd": 1.8236738939163992,
+     "z_eval_windows": [
+      2.45,
+      2.256,
+      4.46,
+      2.414,
+      2.351,
+      2.121,
+      2.07,
+      2.718,
+      2.829,
+      2.775,
+      3.788
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.8116,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 9.7
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.2891,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 92.2,
+       "arl_calibration": 101.7
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.127,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 95.1,
+       "arl_calibration": 97.3
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3013,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 102.4,
+       "arl_calibration": 104.7
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.8116,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 9.0
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.916,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 479.8,
+       "arl_calibration": 516.8
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.8823,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 525.6,
+       "arl_calibration": 492.1
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.9114,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 535.6,
+       "arl_calibration": 516.4
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        13,
+        14,
+        20,
+        26,
+        28
+       ],
+       "mean_events_in_alarm_windows": 29.2,
+       "mean_events_in_nonalarm_windows": 44.2,
+       "pointbiserial_alarm_vs_events": -0.127,
+       "random_perm_ref_mean_rate": 0.496,
+       "empirical_p_vs_random": 0.459
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.925,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.925,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        14,
+        21,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 16.0,
+       "mean_events_in_nonalarm_windows": 49.6,
+       "pointbiserial_alarm_vs_events": -0.275,
+       "random_perm_ref_mean_rate": 0.354,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.855,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.892,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -5.866159144358624,
+     "benign_sd": 0.5320893730421736,
+     "z_eval_windows": [
+      -1.611,
+      -1.887,
+      4.802,
+      -1.581,
+      -1.587,
+      -1.704,
+      -1.711,
+      -1.402,
+      -1.487,
+      -1.704,
+      -1.484
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.3844,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.7,
+       "arl_calibration": 8.0
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.1851,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.6,
+       "arl_calibration": 100.8
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.9,
+       "arl_calibration": 94.1
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 91.9,
+       "arl_calibration": 94.5
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.3844,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.4,
+       "arl_calibration": 8.9
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.3181,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 522.8,
+       "arl_calibration": 470.2
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.2432,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 446.6,
+       "arl_calibration": 475.9
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.2141,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 479.7,
+       "arl_calibration": 503.3
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.015,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.024,
+       "empirical_p_vs_random": 0.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.007,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.015,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 7.323462963104248,
+     "benign_sd": 2.429101823311011,
+     "z_eval_windows": [
+      1.209,
+      1.038,
+      2.023,
+      1.206,
+      1.154,
+      1.321,
+      1.085,
+      1.323,
+      1.402,
+      1.157,
+      1.986
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.0648,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.0,
+       "arl_calibration": 8.3
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 1.8945,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.9,
+       "arl_calibration": 101.3
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.6912,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 94.8,
+       "arl_calibration": 99.9
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.6984,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 104.3,
+       "arl_calibration": 95.4
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.0648,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.3,
+       "arl_calibration": 8.8
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 2.7952,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 500.8,
+       "arl_calibration": 486.8
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.1197,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 496.1,
+       "arl_calibration": 515.6
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 1.989,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 488.7,
+       "arl_calibration": 493.4
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        12,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 33.0,
+       "mean_events_in_nonalarm_windows": 81.0,
+       "pointbiserial_alarm_vs_events": -0.235,
+       "random_perm_ref_mean_rate": 0.909,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        14,
+        21,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 16.0,
+       "mean_events_in_nonalarm_windows": 49.6,
+       "pointbiserial_alarm_vs_events": -0.275,
+       "random_perm_ref_mean_rate": 0.352,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.831,
+       "empirical_p_vs_random": 0.894
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.849,
+       "empirical_p_vs_random": 0.998
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        12,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 33.0,
+       "mean_events_in_nonalarm_windows": 81.0,
+       "pointbiserial_alarm_vs_events": -0.235,
+       "random_perm_ref_mean_rate": 0.909,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 3,
+       "first_alarm_day": 15,
+       "delay_windows_from_day12": 3,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        15,
+        26,
+        29
+       ],
+       "mean_events_in_alarm_windows": 22.7,
+       "mean_events_in_nonalarm_windows": 42.9,
+       "pointbiserial_alarm_vs_events": -0.153,
+       "random_perm_ref_mean_rate": 0.243,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.747,
+       "empirical_p_vs_random": 0.348
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.794,
+       "empirical_p_vs_random": 0.577
+      }
+     }
+    }
+   },
+   "1": {
+    "top50mean": {
+     "benign_mu": 1.2202894379695257,
+     "benign_sd": 1.750333064586054,
+     "z_eval_windows": [
+      2.732,
+      2.639,
+      1.26,
+      2.11,
+      2.597,
+      2.422,
+      2.455,
+      2.702,
+      3.09,
+      2.918,
+      3.461
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.6498,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 8.9
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.2909,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 96.9,
+       "arl_calibration": 96.3
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.0107,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 82.4,
+       "arl_calibration": 95.5
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.2141,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 95.0,
+       "arl_calibration": 100.5
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.6498,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 9.0
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.5383,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 527.5,
+       "arl_calibration": 487.7
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.7661,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 480.4,
+       "arl_calibration": 497.4
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.7661,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 486.2,
+       "arl_calibration": 471.1
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        12,
+        13,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.6,
+       "mean_events_in_nonalarm_windows": 35.0,
+       "pointbiserial_alarm_vs_events": 0.013,
+       "random_perm_ref_mean_rate": 0.909,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        13,
+        20,
+        22,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 21.6,
+       "mean_events_in_nonalarm_windows": 50.5,
+       "pointbiserial_alarm_vs_events": -0.245,
+       "random_perm_ref_mean_rate": 0.455,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.914,
+       "empirical_p_vs_random": 0.956
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.914,
+       "empirical_p_vs_random": 0.956
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        12,
+        13,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.6,
+       "mean_events_in_nonalarm_windows": 35.0,
+       "pointbiserial_alarm_vs_events": 0.013,
+       "random_perm_ref_mean_rate": 0.909,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        14,
+        21,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 16.0,
+       "mean_events_in_nonalarm_windows": 49.6,
+       "pointbiserial_alarm_vs_events": -0.275,
+       "random_perm_ref_mean_rate": 0.351,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.872,
+       "empirical_p_vs_random": 0.591
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.892,
+       "empirical_p_vs_random": 0.816
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -6.415423853108908,
+     "benign_sd": 0.48387858829983815,
+     "z_eval_windows": [
+      -1.724,
+      -1.737,
+      -0.918,
+      -1.239,
+      -1.409,
+      -1.61,
+      -1.709,
+      -1.279,
+      -0.976,
+      -1.182,
+      -1.231
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.3633,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.1,
+       "arl_calibration": 9.6
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.3884,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 95.7,
+       "arl_calibration": 100.3
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.8437,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 95.8,
+       "arl_calibration": 98.8
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.8945,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 108.7,
+       "arl_calibration": 101.8
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.3633,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 9.5
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.5215,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 478.2,
+       "arl_calibration": 483.7
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.3303,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 479.1,
+       "arl_calibration": 470.1
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.2722,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 513.6,
+       "arl_calibration": 496.4
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": null,
+       "first_alarm_day": null,
+       "delay_windows_from_day12": null,
+       "detection_rate": 0.0,
+       "n_alarm_windows": 0,
+       "alarm_windows_days": [],
+       "mean_events_in_alarm_windows": null,
+       "mean_events_in_nonalarm_windows": 37.4,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 0.0,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 7.028533458709717,
+     "benign_sd": 1.5037526160787946,
+     "z_eval_windows": [
+      1.258,
+      1.218,
+      -0.398,
+      0.638,
+      1.537,
+      1.403,
+      1.605,
+      0.77,
+      2.269,
+      1.482,
+      1.868
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.6753,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 8.8
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.8242,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 98.4,
+       "arl_calibration": 103.3
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.0107,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 95.3,
+       "arl_calibration": 100.1
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.127,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 96.4,
+       "arl_calibration": 103.0
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.6753,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 8.8
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.335,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 508.2,
+       "arl_calibration": 525.5
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.6499,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 492.3,
+       "arl_calibration": 483.5
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.6208,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 430.7,
+       "arl_calibration": 483.7
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 8,
+       "first_alarm_day": 27,
+       "delay_windows_from_day12": 8,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 12.5,
+       "mean_events_in_nonalarm_windows": 42.9,
+       "pointbiserial_alarm_vs_events": -0.2,
+       "random_perm_ref_mean_rate": 0.182,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 6,
+       "first_alarm_day": 22,
+       "delay_windows_from_day12": 6,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        22,
+        28
+       ],
+       "mean_events_in_alarm_windows": 2.0,
+       "mean_events_in_nonalarm_windows": 45.2,
+       "pointbiserial_alarm_vs_events": -0.284,
+       "random_perm_ref_mean_rate": 0.19,
+       "empirical_p_vs_random": 0.088
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 5,
+       "first_alarm_day": 21,
+       "delay_windows_from_day12": 5,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 9.8,
+       "mean_events_in_nonalarm_windows": 70.4,
+       "pointbiserial_alarm_vs_events": -0.514,
+       "random_perm_ref_mean_rate": 0.713,
+       "empirical_p_vs_random": 0.98
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 5,
+       "first_alarm_day": 21,
+       "delay_windows_from_day12": 5,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 9.8,
+       "mean_events_in_nonalarm_windows": 70.4,
+       "pointbiserial_alarm_vs_events": -0.514,
+       "random_perm_ref_mean_rate": 0.645,
+       "empirical_p_vs_random": 0.938
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 8,
+       "first_alarm_day": 27,
+       "delay_windows_from_day12": 8,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 12.5,
+       "mean_events_in_nonalarm_windows": 42.9,
+       "pointbiserial_alarm_vs_events": -0.2,
+       "random_perm_ref_mean_rate": 0.182,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 8,
+       "first_alarm_day": 27,
+       "delay_windows_from_day12": 8,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        27
+       ],
+       "mean_events_in_alarm_windows": 9.0,
+       "mean_events_in_nonalarm_windows": 40.2,
+       "pointbiserial_alarm_vs_events": -0.153,
+       "random_perm_ref_mean_rate": 0.1,
+       "empirical_p_vs_random": 0.096
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 6,
+       "first_alarm_day": 22,
+       "delay_windows_from_day12": 6,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 11.0,
+       "mean_events_in_nonalarm_windows": 59.3,
+       "pointbiserial_alarm_vs_events": -0.41,
+       "random_perm_ref_mean_rate": 0.508,
+       "empirical_p_vs_random": 0.545
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 6,
+       "first_alarm_day": 22,
+       "delay_windows_from_day12": 6,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        22,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 7.2,
+       "mean_events_in_nonalarm_windows": 54.6,
+       "pointbiserial_alarm_vs_events": -0.388,
+       "random_perm_ref_mean_rate": 0.43,
+       "empirical_p_vs_random": 0.583
+      }
+     }
+    }
+   },
+   "2": {
+    "top50mean": {
+     "benign_mu": 1.3215297675795026,
+     "benign_sd": 1.891659512755397,
+     "z_eval_windows": [
+      2.468,
+      2.727,
+      6.066,
+      2.52,
+      2.775,
+      2.925,
+      2.467,
+      2.761,
+      2.807,
+      3.025,
+      3.805
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.7518,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.8,
+       "arl_calibration": 8.5
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 3.2891,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 88.7,
+       "arl_calibration": 94.5
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 2.1851,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 112.3,
+       "arl_calibration": 100.6
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 2.3303,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.8,
+       "arl_calibration": 95.8
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.7518,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.2,
+       "arl_calibration": 9.2
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 4.7998,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 437.2,
+       "arl_calibration": 501.0
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.8823,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 520.2,
+       "arl_calibration": 505.1
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.8823,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 489.1,
+       "arl_calibration": 474.9
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.545,
+       "n_alarm_windows": 6,
+       "alarm_windows_days": [
+        13,
+        14,
+        20,
+        22,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 23.8,
+       "mean_events_in_nonalarm_windows": 53.6,
+       "pointbiserial_alarm_vs_events": -0.253,
+       "random_perm_ref_mean_rate": 0.53,
+       "empirical_p_vs_random": 0.833
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.925,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.925,
+       "empirical_p_vs_random": 1.0
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 0,
+       "first_alarm_day": 12,
+       "delay_windows_from_day12": 0,
+       "detection_rate": 1.0,
+       "n_alarm_windows": 11,
+       "alarm_windows_days": [
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 37.4,
+       "mean_events_in_nonalarm_windows": null,
+       "pointbiserial_alarm_vs_events": null,
+       "random_perm_ref_mean_rate": 1.0,
+       "empirical_p_vs_random": 1.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.364,
+       "n_alarm_windows": 4,
+       "alarm_windows_days": [
+        14,
+        21,
+        27,
+        29
+       ],
+       "mean_events_in_alarm_windows": 16.0,
+       "mean_events_in_nonalarm_windows": 49.6,
+       "pointbiserial_alarm_vs_events": -0.275,
+       "random_perm_ref_mean_rate": 0.365,
+       "empirical_p_vs_random": 0.062
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.892,
+       "empirical_p_vs_random": 1.0
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 1,
+       "first_alarm_day": 13,
+       "delay_windows_from_day12": 1,
+       "detection_rate": 0.909,
+       "n_alarm_windows": 10,
+       "alarm_windows_days": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 20.2,
+       "mean_events_in_nonalarm_windows": 209.0,
+       "pointbiserial_alarm_vs_events": -0.926,
+       "random_perm_ref_mean_rate": 0.917,
+       "empirical_p_vs_random": 1.0
+      }
+     }
+    },
+    "mean": {
+     "benign_mu": -6.163964715804298,
+     "benign_sd": 0.4632910701554453,
+     "z_eval_windows": [
+      -2.008,
+      -2.085,
+      11.528,
+      -1.697,
+      -1.435,
+      -1.46,
+      -1.346,
+      -1.402,
+      -1.502,
+      -1.662,
+      -1.188
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.0816,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.8,
+       "arl_calibration": 10.0
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 92.6,
+       "arl_calibration": 94.5
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.7057,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 107.5,
+       "arl_calibration": 97.7
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.6766,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.3,
+       "arl_calibration": 102.7
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.0816,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.3,
+       "arl_calibration": 9.6
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 2.708,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 475.0,
+       "arl_calibration": 502.8
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.0688,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 467.8,
+       "arl_calibration": 477.9
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 1.9381,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 478.7,
+       "arl_calibration": 504.7
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        14,
+        15
+       ],
+       "mean_events_in_alarm_windows": 30.5,
+       "mean_events_in_nonalarm_windows": 38.9,
+       "pointbiserial_alarm_vs_events": -0.055,
+       "random_perm_ref_mean_rate": 0.199,
+       "empirical_p_vs_random": 0.273
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        14,
+        15
+       ],
+       "mean_events_in_alarm_windows": 30.5,
+       "mean_events_in_nonalarm_windows": 38.9,
+       "pointbiserial_alarm_vs_events": -0.055,
+       "random_perm_ref_mean_rate": 0.19,
+       "empirical_p_vs_random": 0.175
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.091,
+       "n_alarm_windows": 1,
+       "alarm_windows_days": [
+        14
+       ],
+       "mean_events_in_alarm_windows": 35.0,
+       "mean_events_in_nonalarm_windows": 37.6,
+       "pointbiserial_alarm_vs_events": -0.013,
+       "random_perm_ref_mean_rate": 0.091,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        14,
+        15
+       ],
+       "mean_events_in_alarm_windows": 30.5,
+       "mean_events_in_nonalarm_windows": 38.9,
+       "pointbiserial_alarm_vs_events": -0.055,
+       "random_perm_ref_mean_rate": 0.178,
+       "empirical_p_vs_random": 0.187
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        14,
+        15
+       ],
+       "mean_events_in_alarm_windows": 30.5,
+       "mean_events_in_nonalarm_windows": 38.9,
+       "pointbiserial_alarm_vs_events": -0.055,
+       "random_perm_ref_mean_rate": 0.183,
+       "empirical_p_vs_random": 0.094
+      }
+     }
+    },
+    "max": {
+     "benign_mu": 8.623092121548122,
+     "benign_sd": 2.185731636441691,
+     "z_eval_windows": [
+      1.211,
+      1.013,
+      2.049,
+      1.32,
+      1.688,
+      1.287,
+      0.869,
+      1.098,
+      1.459,
+      1.622,
+      1.628
+     ],
+     "calibrations": {
+      "fixed@arl100": {
+       "p1": null,
+       "p2": 1.4589,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 8.9,
+       "arl_calibration": 9.4
+      },
+      "cusum_k0.5@arl100": {
+       "p1": 0.5,
+       "p2": 2.1851,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 106.2,
+       "arl_calibration": 101.1
+      },
+      "ewma_l0.2@arl100": {
+       "p1": 0.2,
+       "p2": 1.7783,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 96.9,
+       "arl_calibration": 95.4
+      },
+      "ewma_l0.3@arl100": {
+       "p1": 0.3,
+       "p2": 1.8364,
+       "arl_nominal": 100,
+       "arl_measured_bootstrap_holdout": 99.8,
+       "arl_calibration": 103.9
+      },
+      "fixed@arl500": {
+       "p1": null,
+       "p2": 1.4589,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 9.1,
+       "arl_calibration": 9.5
+      },
+      "cusum_k0.5@arl500": {
+       "p1": 0.5,
+       "p2": 3.2891,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 491.0,
+       "arl_calibration": 505.6
+      },
+      "ewma_l0.2@arl500": {
+       "p1": 0.2,
+       "p2": 2.3158,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 523.1,
+       "arl_calibration": 508.5
+      },
+      "ewma_l0.3@arl500": {
+       "p1": 0.3,
+       "p2": 2.2722,
+       "arl_nominal": 500,
+       "arl_measured_bootstrap_holdout": 479.1,
+       "arl_calibration": 507.6
+      }
+     },
+     "detection": {
+      "fixed@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        14,
+        20,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 12.8,
+       "mean_events_in_nonalarm_windows": 57.8,
+       "pointbiserial_alarm_vs_events": -0.382,
+       "random_perm_ref_mean_rate": 0.455,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.273,
+       "n_alarm_windows": 3,
+       "alarm_windows_days": [
+        14,
+        21,
+        28
+       ],
+       "mean_events_in_alarm_windows": 14.0,
+       "mean_events_in_nonalarm_windows": 46.1,
+       "pointbiserial_alarm_vs_events": -0.244,
+       "random_perm_ref_mean_rate": 0.291,
+       "empirical_p_vs_random": 0.196
+      },
+      "ewma_l0.2@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.813,
+       "empirical_p_vs_random": 0.826
+      },
+      "ewma_l0.3@arl100": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.83,
+       "empirical_p_vs_random": 0.871
+      },
+      "fixed@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.455,
+       "n_alarm_windows": 5,
+       "alarm_windows_days": [
+        14,
+        20,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 12.8,
+       "mean_events_in_nonalarm_windows": 57.8,
+       "pointbiserial_alarm_vs_events": -0.382,
+       "random_perm_ref_mean_rate": 0.455,
+       "empirical_p_vs_random": 0.0
+      },
+      "cusum_k0.5@arl500": {
+       "first_alarm_win_idx": 3,
+       "first_alarm_day": 15,
+       "delay_windows_from_day12": 3,
+       "detection_rate": 0.182,
+       "n_alarm_windows": 2,
+       "alarm_windows_days": [
+        15,
+        27
+       ],
+       "mean_events_in_alarm_windows": 17.5,
+       "mean_events_in_nonalarm_windows": 41.8,
+       "pointbiserial_alarm_vs_events": -0.16,
+       "random_perm_ref_mean_rate": 0.182,
+       "empirical_p_vs_random": 0.0
+      },
+      "ewma_l0.2@arl500": {
+       "first_alarm_win_idx": 3,
+       "first_alarm_day": 15,
+       "delay_windows_from_day12": 3,
+       "detection_rate": 0.727,
+       "n_alarm_windows": 8,
+       "alarm_windows_days": [
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 10.8,
+       "mean_events_in_nonalarm_windows": 108.3,
+       "pointbiserial_alarm_vs_events": -0.741,
+       "random_perm_ref_mean_rate": 0.713,
+       "empirical_p_vs_random": 0.716
+      },
+      "ewma_l0.3@arl500": {
+       "first_alarm_win_idx": 2,
+       "first_alarm_day": 14,
+       "delay_windows_from_day12": 2,
+       "detection_rate": 0.818,
+       "n_alarm_windows": 9,
+       "alarm_windows_days": [
+        14,
+        15,
+        20,
+        21,
+        22,
+        26,
+        27,
+        28,
+        29
+       ],
+       "mean_events_in_alarm_windows": 13.4,
+       "mean_events_in_nonalarm_windows": 145.0,
+       "pointbiserial_alarm_vs_events": -0.865,
+       "random_perm_ref_mean_rate": 0.739,
+       "empirical_p_vs_random": 0.335
+      }
+     }
+    }
+   }
+  }
+ },
+ "h1_delay_comparison_top50mean": {
+  "full/s0/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.545
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "full/s0/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 2,
+    "det_rate": 0.364
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "full/s1/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.545
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "full/s1/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 2,
+    "det_rate": 0.364
+   },
+   "ewma_l0.2": {
+    "delay": 2,
+    "det_rate": 0.818
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "full/s2/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.545
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "full/s2/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 2,
+    "det_rate": 0.364
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homoflows/s0/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.545
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homoflows/s0/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 2,
+    "det_rate": 0.364
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homoflows/s1/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.545
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homoflows/s1/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.455
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homoflows/s2/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.455
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homoflows/s2/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 2,
+    "det_rate": 0.273
+   },
+   "ewma_l0.2": {
+    "delay": 2,
+    "det_rate": 0.818
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homo/s0/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.455
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homo/s0/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 2,
+    "det_rate": 0.364
+   },
+   "ewma_l0.2": {
+    "delay": 2,
+    "det_rate": 0.818
+   },
+   "ewma_l0.3": {
+    "delay": 2,
+    "det_rate": 0.818
+   }
+  },
+  "homo/s1/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 0.909
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.455
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homo/s1/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 0.909
+   },
+   "cusum_k0.5": {
+    "delay": 2,
+    "det_rate": 0.364
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homo/s2/arl100": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 1,
+    "det_rate": 0.545
+   },
+   "ewma_l0.2": {
+    "delay": 1,
+    "det_rate": 0.909
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  },
+  "homo/s2/arl500": {
+   "fixed": {
+    "delay": 0,
+    "det_rate": 1.0
+   },
+   "cusum_k0.5": {
+    "delay": 2,
+    "det_rate": 0.364
+   },
+   "ewma_l0.2": {
+    "delay": 2,
+    "det_rate": 0.818
+   },
+   "ewma_l0.3": {
+    "delay": 1,
+    "det_rate": 0.909
+   }
+  }
+ }
+}

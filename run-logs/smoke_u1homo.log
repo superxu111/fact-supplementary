@@ -1,0 +1,4 @@
+N=25815 users=11635 hosts=14180 tr_days=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] obs_pairs=78528 arm=homo w=32 neg=uniformx1 ep=1
+seed0 ep0 loss=1.2208 (L=0.6768 F=0.0000 T=1.0879)
+seed0 ap_logon=0.0020 auc_logon=0.4942 auc_mixed=0.4174 params=834653 (1792814140)
+R1TRAIN_homo_w32_uniform1_DONE

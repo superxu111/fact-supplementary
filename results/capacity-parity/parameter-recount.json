@@ -1,0 +1,66 @@
+{
+ "full_w32": {
+  "total": 843631,
+  "breakdown": {
+   "node_emb": 826080,
+   "type_emb": 16,
+   "gcn_logon": 1312,
+   "gcn_flow": 1312,
+   "gru_l": 6336,
+   "gru_f": 6336,
+   "mgate": 65,
+   "gate": 65,
+   "Wl": 1024,
+   "Wf": 1024,
+   "bl": 1,
+   "bf": 1,
+   "type_head": 59
+  }
+ },
+ "homo_w32": {
+  "total": 834653,
+  "breakdown": {
+   "node_emb": 826080,
+   "type_emb": 16,
+   "gcn_logon": 1056,
+   "gcn_flow": 1056,
+   "gru": 6336,
+   "gate": 65,
+   "b": 1,
+   "type_head": 43
+  }
+ },
+ "homo_w33": {
+  "total": 860998,
+  "breakdown": {
+   "node_emb": 851895,
+   "type_emb": 16,
+   "gcn_logon": 1122,
+   "gcn_flow": 1122,
+   "gru": 6732,
+   "gate": 67,
+   "b": 1,
+   "type_head": 43
+  }
+ },
+ "derived": {
+  "gap_full_minus_homo_w32": 8978,
+  "gap_pct": 1.0642,
+  "overshoot_w33_vs_full": 17367,
+  "overshoot_pct": 2.0586,
+  "incase_declared": {
+   "full": 843631,
+   "homo": 836718,
+   "gap": 6913,
+   "gap_pct": 0.819,
+   "w33_overshoot_declared": 17351,
+   "overshoot_pct_declared": 2.1
+  },
+  "recount_vs_incase": {
+   "full_exact_match": true,
+   "homo_delta": -2065,
+   "homo_delta_note": "\u5728\u6848 836,718 \u7cfb\u65e7 E41B \u811a\u672c\u7248\u672c\u53e3\u5f84\uff08\u7ed3\u6784\u5dee ~2,065\uff0c0.25%\uff09\uff1b\u672c\u7ba1\u7ebf\u5185\u4e09\u81c2\u540c\u6e90\u81ea\u6d3d\uff0cE3 \u5bf9\u7167\u4e0d\u53d7\u5f71\u54cd\uff0c\u4e24\u53e3\u5f84\u5e76\u62a5",
+   "overshoot_delta": 16
+  }
+ }
+}

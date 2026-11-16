@@ -1,0 +1,552 @@
+{
+ "exp": "R2-E9 auc_logon 六协议点独立种子重跑+聚合（P0-4/R1A2-M3）",
+ "date": "2026-10-24",
+ "design": "见模块 docstring（开工前冻结）",
+ "machine": "与 src/e6_inference.py 完全同统计机器（import 复用）；独立置换种子 rng=zlib.crc32(point|auc_logon)",
+ "per_point": [
+  {
+   "point": "uniform_1",
+   "metric": "auc_logon",
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": -0.18391,
+     "p_indep": 0.002,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 1,
+     "obs_diff": -0.07393,
+     "p_indep": 0.00798,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 2,
+     "obs_diff": -0.0123,
+     "p_indep": 0.67465,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": -0.09005,
+    "p_b2000": 0.002
+   }
+  },
+  {
+   "point": "uniform_4",
+   "metric": "auc_logon",
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": -0.19051,
+     "p_indep": 0.002,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 1,
+     "obs_diff": -0.06091,
+     "p_indep": 0.06986,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 2,
+     "obs_diff": 0.02054,
+     "p_indep": 0.70259,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": -0.07696,
+    "p_b2000": 0.02699
+   }
+  },
+  {
+   "point": "uniform_16",
+   "metric": "auc_logon",
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": -0.17406,
+     "p_indep": 0.002,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 1,
+     "obs_diff": -0.07017,
+     "p_indep": 0.002,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 2,
+     "obs_diff": 0.02281,
+     "p_indep": 0.57086,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": -0.07381,
+    "p_b2000": 0.0095
+   }
+  },
+  {
+   "point": "temporal_1",
+   "metric": "auc_logon",
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": -0.00689,
+     "p_indep": 0.53493,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 1,
+     "obs_diff": -0.01213,
+     "p_indep": 0.499,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 2,
+     "obs_diff": -0.04341,
+     "p_indep": 0.01996,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": -0.02081,
+    "p_b2000": 0.02749
+   }
+  },
+  {
+   "point": "temporal_4",
+   "metric": "auc_logon",
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": -0.01356,
+     "p_indep": 0.06188,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 1,
+     "obs_diff": -0.01641,
+     "p_indep": 0.0519,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 2,
+     "obs_diff": -0.04162,
+     "p_indep": 0.02395,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": -0.02386,
+    "p_b2000": 0.0005
+   }
+  },
+  {
+   "point": "temporal_16",
+   "metric": "auc_logon",
+   "per_seed": [
+    {
+     "seed": 0,
+     "obs_diff": -0.01738,
+     "p_indep": 0.06587,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 1,
+     "obs_diff": -0.01121,
+     "p_indep": 0.06786,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    },
+    {
+     "seed": 2,
+     "obs_diff": -0.04274,
+     "p_indep": 0.00798,
+     "auc_mixed_pool_n": 131235,
+     "n_pos": 277
+    }
+   ],
+   "seed_aggregate": {
+    "obs_mean_diff": -0.02378,
+    "p_b2000": 0.0005
+   }
+  }
+ ],
+ "families": {
+  "family_half1_logonAP": {
+   "family_def": "family_half1_logonAP: 18 逐 seed + 6 聚合 = m=24 一次性 Holm（R1A2-m2 修复：原交付按 m=18/m=6 分层两套，本表统一为全族一次校正）",
+   "holm_per_seed_m24": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "holm_aggregate_m24": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "agg_p_raw": [
+    0.50825,
+    0.44728,
+    0.5952,
+    0.07446,
+    0.32334,
+    0.27436
+   ],
+   "point_order": [
+    "temporal_1",
+    "temporal_16",
+    "temporal_4",
+    "uniform_1",
+    "uniform_16",
+    "uniform_4"
+   ],
+   "supersedes": "ranking-inference.json E2.families.family_half1_logonAP（原 holm_per_seed 按 m=18、holm_aggregate 按 m=6 分层执行）"
+  },
+  "family_half2_mixed": {
+   "family_def": "family_half2_mixed: 18 逐 seed + 6 聚合 = m=24 一次性 Holm（R1A2-m2 修复：原交付按 m=18/m=6 分层两套，本表统一为全族一次校正）",
+   "holm_per_seed_m24": [
+    0.1198,
+    0.1198,
+    0.13566,
+    0.18161,
+    0.13566,
+    0.18161,
+    0.18161,
+    0.1198,
+    0.13566,
+    0.79044,
+    0.35928,
+    0.18161,
+    0.79044,
+    0.79044,
+    0.042,
+    0.79044,
+    0.47904,
+    0.13566
+   ],
+   "holm_aggregate_m24": [
+    0.012,
+    0.012,
+    0.012,
+    0.79044,
+    0.68565,
+    0.79044
+   ],
+   "agg_p_raw": [
+    0.0005,
+    0.0005,
+    0.0005,
+    0.17291,
+    0.09795,
+    0.13343
+   ],
+   "point_order": [
+    "temporal_1",
+    "temporal_16",
+    "temporal_4",
+    "uniform_1",
+    "uniform_16",
+    "uniform_4"
+   ],
+   "supersedes": "ranking-inference.json E2.families.family_half2_mixed（原 holm_per_seed 按 m=18、holm_aggregate 按 m=6 分层执行）"
+  },
+  "family_half1_logonAUC": {
+   "family_def": "family_half1_logonAUC: 6 协议点×3 seeds 逐 seed（18）+ 6 聚合 = m=24 一次性 Holm",
+   "holm_per_seed_m24": [
+    1.0,
+    1.0,
+    0.27944,
+    0.55692,
+    0.55692,
+    0.13566,
+    0.55692,
+    0.519,
+    0.31135,
+    0.044,
+    0.13566,
+    1.0,
+    0.044,
+    0.044,
+    1.0,
+    0.044,
+    0.55692,
+    1.0
+   ],
+   "holm_aggregate_m24": [
+    0.32388,
+    0.012,
+    0.012,
+    0.044,
+    0.1425,
+    0.32388
+   ],
+   "agg_p_raw": [
+    0.02749,
+    0.0005,
+    0.0005,
+    0.002,
+    0.0095,
+    0.02699
+   ],
+   "point_order": [
+    "temporal_1",
+    "temporal_16",
+    "temporal_4",
+    "uniform_1",
+    "uniform_16",
+    "uniform_4"
+   ],
+   "note": "P0-4 新增：auc_logon 口径（R1 头条 p=0.002 出处指标）首次进入 Holm 族"
+  },
+  "family_half1_combined_m48_sensitivity": {
+   "family_def": "敏感性：half1 家族合并（ap_logon 24 + auc_logon 24 = m=48 一次性 Holm）",
+   "holm_aggregate_m48": {
+    "ap_logon": {
+     "temporal_1": 1.0,
+     "temporal_16": 1.0,
+     "temporal_4": 1.0,
+     "uniform_1": 1.0,
+     "uniform_16": 1.0,
+     "uniform_4": 1.0
+    },
+    "auc_logon": {
+     "temporal_1": 0.97164,
+     "temporal_16": 0.024,
+     "temporal_4": 0.024,
+     "uniform_1": 0.092,
+     "uniform_16": 0.3705,
+     "uniform_4": 0.97164
+    }
+   },
+   "note": "证明 half1 结论对族定义（分层 m=24 ×2 vs 合并 m=48）不敏感"
+  }
+ },
+ "cross_aggregate_calibers": {
+  "uniform": {
+   "points": [
+    "uniform_1",
+    "uniform_16",
+    "uniform_4"
+   ],
+   "agg_p_b2000": [
+    0.002,
+    0.0095,
+    0.02699
+   ],
+   "obs_mean": [
+    -0.09005,
+    -0.07381,
+    -0.07696
+   ],
+   "stouffer_one_sided": 2.5770221080894e-06,
+   "fisher": 6.172551671084282e-05,
+   "acat": 0.004671199342628163
+  },
+  "temporal": {
+   "points": [
+    "temporal_1",
+    "temporal_16",
+    "temporal_4"
+   ],
+   "agg_p_b2000": [
+    0.02749,
+    0.0005,
+    0.0005
+   ],
+   "obs_mean": [
+    -0.02081,
+    -0.02378,
+    -0.02386
+   ],
+   "stouffer_one_sided": 6.049513412830291e-08,
+   "fisher": 1.3500037944733718e-06,
+   "acat": 0.0007432567240981403
+  }
+ },
+ "incase_crossref": {
+  "temporal_1": {
+   "incase_p_logon_sharedseed2026": [
+    0.5389,
+    0.5329,
+    0.0259
+   ],
+   "incase_obs_auc_logon": [
+    -0.0069,
+    -0.0121,
+    -0.0434
+   ],
+   "indep_p": [
+    0.53493,
+    0.499,
+    0.01996
+   ],
+   "indep_obs": [
+    -0.00689,
+    -0.01213,
+    -0.04341
+   ],
+   "agg_p_b2000": 0.02749,
+   "direction_count_full_worse": 3
+  },
+  "temporal_16": {
+   "incase_p_logon_sharedseed2026": [
+    0.0758,
+    0.0818,
+    0.006
+   ],
+   "incase_obs_auc_logon": [
+    -0.0174,
+    -0.0112,
+    -0.0427
+   ],
+   "indep_p": [
+    0.06587,
+    0.06786,
+    0.00798
+   ],
+   "indep_obs": [
+    -0.01738,
+    -0.01121,
+    -0.04274
+   ],
+   "agg_p_b2000": 0.0005,
+   "direction_count_full_worse": 3
+  },
+  "temporal_4": {
+   "incase_p_logon_sharedseed2026": [
+    0.0719,
+    0.0619,
+    0.02
+   ],
+   "incase_obs_auc_logon": [
+    -0.0136,
+    -0.0164,
+    -0.0416
+   ],
+   "indep_p": [
+    0.06188,
+    0.0519,
+    0.02395
+   ],
+   "indep_obs": [
+    -0.01356,
+    -0.01641,
+    -0.04162
+   ],
+   "agg_p_b2000": 0.0005,
+   "direction_count_full_worse": 3
+  },
+  "uniform_1": {
+   "incase_p_logon_sharedseed2026": [
+    0.002,
+    0.002,
+    0.6467
+   ],
+   "incase_obs_auc_logon": [
+    -0.1839,
+    -0.0739,
+    -0.0123
+   ],
+   "indep_p": [
+    0.002,
+    0.00798,
+    0.67465
+   ],
+   "indep_obs": [
+    -0.18391,
+    -0.07393,
+    -0.0123
+   ],
+   "agg_p_b2000": 0.002,
+   "direction_count_full_worse": 3
+  },
+  "uniform_16": {
+   "incase_p_logon_sharedseed2026": [
+    0.002,
+    0.002,
+    0.515
+   ],
+   "incase_obs_auc_logon": [
+    -0.1741,
+    -0.0702,
+    0.0228
+   ],
+   "indep_p": [
+    0.002,
+    0.002,
+    0.57086
+   ],
+   "indep_obs": [
+    -0.17406,
+    -0.07017,
+    0.02281
+   ],
+   "agg_p_b2000": 0.0095,
+   "direction_count_full_worse": 2
+  },
+  "uniform_4": {
+   "incase_p_logon_sharedseed2026": [
+    0.002,
+    0.0958,
+    0.6766
+   ],
+   "incase_obs_auc_logon": [
+    -0.1905,
+    -0.0609,
+    0.0205
+   ],
+   "indep_p": [
+    0.002,
+    0.06986,
+    0.70259
+   ],
+   "indep_obs": [
+    -0.19051,
+    -0.06091,
+    0.02054
+   ],
+   "agg_p_b2000": 0.02699,
+   "direction_count_full_worse": 2
+  }
+ },
+ "field_name_note_r3bm1": "per_seed.auc_mixed_pool_n（=131,235）字段名沿自 mixed 任务复制（e9_auc_logon_agg.py:76），在 metric=auc_logon 下实为 LOGON 行掩码池的行数——数值正确、名字误导；论文映射时更名 logon_masked_pool_n 或加注。",
+ "independence_declaration_r2am2": "cross_aggregate_calibers 的 Stouffer 单侧/Fisher 把 3 个协议点的聚合 p 合并，但三点共享同一评估池（mixed 445,229 / LOGON 行掩码 131,235 逐位相同）与同 3 个训练种子——跨点独立性不成立，Fisher/Stouffer 口径偏激进（如实申报）；ACAT 对任意相关稳健、且 seed 层聚合置换为主口径，主结论不受影响；引用三口径交叉时须带本申报。"
+}

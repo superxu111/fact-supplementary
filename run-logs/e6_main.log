@@ -1,0 +1,15 @@
+  E2 uniform_1/auc_mixed agg_p=0.17291
+  E2 uniform_1/ap_logon agg_p=0.07446
+  E2 uniform_4/auc_mixed agg_p=0.13343
+  E2 uniform_4/ap_logon agg_p=0.27436
+  E2 uniform_16/auc_mixed agg_p=0.09795
+  E2 uniform_16/ap_logon agg_p=0.32334
+  E2 temporal_1/auc_mixed agg_p=0.0005
+  E2 temporal_1/ap_logon agg_p=0.50825
+  E2 temporal_4/auc_mixed agg_p=0.0005
+  E2 temporal_4/ap_logon agg_p=0.5952
+  E2 temporal_16/auc_mixed agg_p=0.0005
+  E2 temporal_16/ap_logon agg_p=0.44728
+E2 headline: {"claim": "temporal \u8bad\u7ec3 3/3 seeds \u6df7\u5408\u6c60\u53ef\u5206\uff08full \u66f4\u4f18\uff09", "agg_p_raw": [0.0005, 0.0005, 0.0005], "agg_p_holm_within_family24": [0.29385, 0.29385, 0.29385], "survives_holm": [false, false, false]}
+E6_DONE
+rc=0

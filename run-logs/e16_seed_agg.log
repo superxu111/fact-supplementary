@@ -1,0 +1,4 @@
+  auc_mixed: per_seed_obs=[0.25983, 0.27623, 0.26953] agg_obs=0.26853 agg_p=0.00050
+  auc_logon: per_seed_obs=[-0.01255, 0.00785, -0.01752] agg_obs=-0.00741 agg_p=0.61619
+  ap_logon: per_seed_obs=[-0.00409, -0.0005, 0.00072] agg_obs=-0.00129 agg_p=0.16492
+E16_DONE {"ep30_incase": {"obs_mean_diff": -0.02081, "p_b2000": 0.02749}, "ep60_this": {"obs_mean_diff": -0.00741, "p_b2000": 0.61619}}

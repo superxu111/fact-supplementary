@@ -1,0 +1,55 @@
+{
+ "exp": "R4/E18 UA 记忆规则+频率基线臂（LOGON 同池，判据先冻 results/capacity-parity/criteria_r4.json）",
+ "date": "2026-10-25T01:27:43+08:00",
+ "producer": "src/r4_ua_baseline.py（R4；loader/真值/日切与管线 r4b_common 逐项同构）",
+ "design": {
+  "train_days": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "eval_days": [
+   12,
+   13,
+   14,
+   15,
+   20,
+   21,
+   22,
+   26,
+   27,
+   28,
+   29
+  ],
+  "ua_rule": "score=0.0 if (user,host) in train_pairs else 1.0（Euler §VI-C UA 规则同型）",
+  "freq_rule": "score=1/(1+train_count)，未见对=1.0",
+  "metrics": "池化 plain AP/AUC（与管线 in_ap_logon 同池同真值）"
+ },
+ "pool": {
+  "n_pool": 131235,
+  "n_pos": 277,
+  "random_ref_ap": 0.00211072,
+  "train_pair_count": 36306,
+  "eval_seen_in_train_frac": 0.728403
+ },
+ "ua_rule": {
+  "ap": 0.004288561373758031,
+  "auc": 0.7057912248218254
+ },
+ "freq_baseline": {
+  "ap": 0.004797640801412116,
+  "auc": 0.7557641458393557
+ },
+ "sanity": {
+  "pool_bitwise_match": true,
+  "note": "训练窗(0-9)可能含 redteam 事件——与管线训练协议一致（可比利害一致），如实申报；UA/频率为弱启发式基线，本行仅作 §5 附表上下文，不做与模型臂优劣判语"
+ },
+ "reading": "描述性基线行：LANL auth 流上记忆型规则的表现背景（对照 Euler §VI-C「28% 异常为曾见连接」的 UA 局限观察）；模型臂主张维持 not-detectably-improve 口径不变。"
+}

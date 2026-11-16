@@ -1,0 +1,1778 @@
+{
+ "exp": "R1-E4 三粒度证据链收口",
+ "date": "2026-10-24",
+ "design_frozen": "results/granularity/criteria.json + 本文件 docstring",
+ "sample_table_per_type": {
+  "full": {
+   "n_pool_mixed": 445229,
+   "n_pos_mixed": 277,
+   "n_pool_LOGON": 131235,
+   "n_pos_LOGON": 277,
+   "base_rate_LOGON": 0.00211072,
+   "n_pool_FLOW": 313994,
+   "n_pos_FLOW": 0,
+   "base_rate_mixed": 0.00062215
+  },
+  "homo_rerun": {
+   "n_pool_mixed": 445229,
+   "n_pos_mixed": 277,
+   "n_pool_LOGON": 131235,
+   "n_pos_LOGON": 277,
+   "base_rate_LOGON": 0.00211072,
+   "n_pool_FLOW": 313994,
+   "n_pos_FLOW": 0,
+   "base_rate_mixed": 0.00062215
+  },
+  "homoflows_rerun": {
+   "n_pool_mixed": 445229,
+   "n_pos_mixed": 277,
+   "n_pool_LOGON": 131235,
+   "n_pos_LOGON": 277,
+   "base_rate_LOGON": 0.00211072,
+   "n_pool_FLOW": 313994,
+   "n_pos_FLOW": 0,
+   "base_rate_mixed": 0.00062215
+  }
+ },
+ "w12_dropped_events_table": {
+  "n_raw_rows_redteam_file": 749,
+  "n_after_machine_anon_filter": 749,
+  "dropped_events_user_not_in_U_pool": 8,
+  "dropped_users": {
+   "U9763@DOM1": 2,
+   "U5087@DOM1": 1,
+   "U737@DOM1": 2,
+   "U4353@DOM1": 3
+  },
+  "unique_attack_rows_LOGON_pool": 510,
+  "n_events_mapped_to_rows": 741,
+  "n_redteam_dst_hosts_total": 301,
+  "dropped_events_no_row": 8,
+  "row_coverage_ratio": 0.9893
+ },
+ "align_check_edge_restore": {
+  "full": [
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   },
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   },
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   }
+  ],
+  "homo_rerun": [
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   },
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   },
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   }
+  ],
+  "homoflows_rerun": [
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   },
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   },
+   {
+    "n_restored_attack_rows": 277,
+    "y_mismatch": 0,
+    "n_pos_npz": 277
+   }
+  ]
+ },
+ "event_level": {
+  "full": {
+   "0": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "100": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "ap_attack_rows": 0.004272,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   },
+   "1": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "100": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "ap_attack_rows": 0.004844,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   },
+   "2": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "100": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "ap_attack_rows": 0.005645,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   }
+  },
+  "homo_rerun": {
+   "0": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "100": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "ap_attack_rows": 0.008358,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   },
+   "1": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0013,
+     "recall_rows@K": 0.0036,
+     "n_attack_rows_in_topK": 1,
+     "host_footprint_cover@K": 0.0033
+    },
+    "100": {
+     "recall_events@K": 0.0013,
+     "recall_rows@K": 0.0036,
+     "n_attack_rows_in_topK": 1,
+     "host_footprint_cover@K": 0.0033
+    },
+    "ap_attack_rows": 0.016758,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   },
+   "2": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "100": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "ap_attack_rows": 0.005583,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   }
+  },
+  "homoflows_rerun": {
+   "0": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "100": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "ap_attack_rows": 0.005797,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   },
+   "1": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "100": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "ap_attack_rows": 0.011427,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   },
+   "2": {
+    "10": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "25": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "50": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "100": {
+     "recall_events@K": 0.0,
+     "recall_rows@K": 0.0,
+     "n_attack_rows_in_topK": 0,
+     "host_footprint_cover@K": 0.0
+    },
+    "ap_attack_rows": 0.006327,
+    "ap_event_weighted": 1.0,
+    "n_attack_rows": 277
+   }
+  }
+ },
+ "granularity_matrix_edge_event": {
+  "full_vs_homo_rerun": {
+   "edge_AP_logon": {
+    "full": [
+     0.0043,
+     0.0048,
+     0.0056
+    ],
+    "homo_rerun": [
+     0.0084,
+     0.0168,
+     0.0056
+    ],
+    "direction_per_seed": [
+     "homo_better",
+     "homo_better",
+     "full_better"
+    ]
+   },
+   "event_AP_rows": {
+    "full": [
+     0.004272,
+     0.004844,
+     0.005645
+    ],
+    "homo_rerun": [
+     0.008358,
+     0.016758,
+     0.005583
+    ],
+    "direction_per_seed": [
+     "homo_better",
+     "homo_better",
+     "full_better"
+    ]
+   },
+   "event_recall@25": {
+    "full": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "homo_rerun": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "direction_per_seed": [
+     "tie",
+     "tie",
+     "tie"
+    ]
+   }
+  },
+  "full_vs_homoflows_rerun": {
+   "edge_AP_logon": {
+    "full": [
+     0.0043,
+     0.0048,
+     0.0056
+    ],
+    "homoflows_rerun": [
+     0.0058,
+     0.0114,
+     0.0063
+    ],
+    "direction_per_seed": [
+     "homo_better",
+     "homo_better",
+     "homo_better"
+    ]
+   },
+   "event_AP_rows": {
+    "full": [
+     0.004272,
+     0.004844,
+     0.005645
+    ],
+    "homoflows_rerun": [
+     0.005797,
+     0.011427,
+     0.006327
+    ],
+    "direction_per_seed": [
+     "homo_better",
+     "homo_better",
+     "homo_better"
+    ]
+   },
+   "event_recall@25": {
+    "full": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "homoflows_rerun": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "direction_per_seed": [
+     "tie",
+     "tie",
+     "tie"
+    ]
+   }
+  },
+  "homo_rerun_vs_homoflows_rerun": {
+   "edge_AP_logon": {
+    "homo_rerun": [
+     0.0084,
+     0.0168,
+     0.0056
+    ],
+    "homoflows_rerun": [
+     0.0058,
+     0.0114,
+     0.0063
+    ],
+    "direction_per_seed": [
+     "full_better",
+     "full_better",
+     "homo_better"
+    ]
+   },
+   "event_AP_rows": {
+    "homo_rerun": [
+     0.008358,
+     0.016758,
+     0.005583
+    ],
+    "homoflows_rerun": [
+     0.005797,
+     0.011427,
+     0.006327
+    ],
+    "direction_per_seed": [
+     "full_better",
+     "full_better",
+     "homo_better"
+    ]
+   },
+   "event_recall@25": {
+    "homo_rerun": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "homoflows_rerun": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "direction_per_seed": [
+     "tie",
+     "tie",
+     "tie"
+    ]
+   }
+  }
+ },
+ "granularity_matrix_window_row": {
+  "source": "EXP-R1-E1/window-level-readout.json（60ep 自产分数流，主口径 top50mean）",
+  "per_arm_seed": {
+   "full": {
+    "0": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 1.0,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "random_p": 0.827
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     }
+    },
+    "1": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 1.0,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "random_p": 0.835
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     }
+    },
+    "2": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 1.0,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "random_p": 0.807
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     }
+    }
+   },
+   "homoflows": {
+    "0": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 1.0,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "random_p": 0.533
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     }
+    },
+    "1": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 1.0,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "random_p": 0.538
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     }
+    },
+    "2": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 1.0,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.455,
+      "random_p": 0.219
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     }
+    }
+   },
+   "homo": {
+    "0": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 1.0,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.455,
+      "random_p": 0.459
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     }
+    },
+    "1": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.455,
+      "random_p": 0.0
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 0.956
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 0.956
+     }
+    },
+    "2": {
+     "fixed": {
+      "delay": 0,
+      "det_rate": 1.0,
+      "random_p": 1.0
+     },
+     "cusum_k0.5": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "random_p": 0.833
+     },
+     "ewma_l0.2": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     },
+     "ewma_l0.3": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "random_p": 1.0
+     }
+    }
+   }
+  },
+  "arm_pair_directions": {
+   "full_vs_homoflows": {
+    "delay_direction_per_seed_fixed@arl100": [
+     "tie",
+     "tie",
+     "tie"
+    ]
+   },
+   "full_vs_homo": {
+    "delay_direction_per_seed_fixed@arl100": [
+     "tie",
+     "tie",
+     "tie"
+    ]
+   },
+   "homoflows_vs_homo": {
+    "delay_direction_per_seed_fixed@arl100": [
+     "tie",
+     "tie",
+     "tie"
+    ]
+   }
+  },
+  "note": "窗级语义=告警窗覆盖率/首告警延迟（11 评估窗全为攻击窗，day12 即最强攻击日）；与边级/事件级方向对照见 granularity_matrix_edge_event"
+ },
+ "w14_truetype_recheck": {
+  "truetype_incase": {
+   "protocol": {
+    "task": "next-event-type (LOGON=0/FLOW=1), host-stream, strictly causal features",
+    "train_days": "0-9",
+    "eval_days": "day10-36（实际执行窗，M24 修正声明）",
+    "n_train": 7305926,
+    "n_eval": 6818453,
+    "hostset": {
+     "rt_src": 4,
+     "dst_sample": 80,
+     "dst_universe": 301
+    },
+    "day_event_counts_hostset": {
+     "0": [
+      109842,
+      497787
+     ],
+     "1": [
+      144177,
+      609611
+     ],
+     "2": [
+      127099,
+      712714
+     ],
+     "3": [
+      104707,
+      480067
+     ],
+     "4": [
+      102612,
+      466137
+     ],
+     "5": [
+      153336,
+      789873
+     ],
+     "6": [
+      156399,
+      649598
+     ],
+     "7": [
+      174790,
+      526299
+     ],
+     "8": [
+      182096,
+      607097
+     ],
+     "9": [
+      164211,
+      547476
+     ],
+     "10": [
+      141977,
+      430104
+     ],
+     "11": [
+      141789,
+      450034
+     ],
+     "12": [
+      201871,
+      583087
+     ],
+     "13": [
+      208085,
+      569251
+     ],
+     "14": [
+      166251,
+      400644
+     ],
+     "15": [
+      139083,
+      108383
+     ],
+     "16": [
+      114040,
+      97643
+     ],
+     "17": [
+      78767,
+      70455
+     ],
+     "18": [
+      78621,
+      73216
+     ],
+     "19": [
+      79857,
+      82179
+     ],
+     "20": [
+      132496,
+      101984
+     ],
+     "21": [
+      148546,
+      109999
+     ],
+     "22": [
+      139484,
+      126575
+     ],
+     "23": [
+      117816,
+      16564
+     ],
+     "24": [
+      75019,
+      0
+     ],
+     "25": [
+      71492,
+      0
+     ],
+     "26": [
+      112785,
+      5365
+     ],
+     "27": [
+      119059,
+      7263
+     ],
+     "28": [
+      137266,
+      4
+     ],
+     "29": [
+      153168,
+      0
+     ],
+     "30": [
+      147677,
+      0
+     ],
+     "31": [
+      124058,
+      0
+     ],
+     "32": [
+      120376,
+      0
+     ],
+     "33": [
+      169459,
+      0
+     ],
+     "34": [
+      155231,
+      0
+     ],
+     "35": [
+      162686,
+      0
+     ],
+     "36": [
+      148750,
+      1
+     ],
+     "37": [
+      123798,
+      0
+     ],
+     "38": [
+      86945,
+      0
+     ],
+     "39": [
+      88889,
+      0
+     ],
+     "40": [
+      139166,
+      0
+     ],
+     "41": [
+      150231,
+      0
+     ],
+     "42": [
+      161446,
+      0
+     ],
+     "43": [
+      165925,
+      0
+     ],
+     "44": [
+      164945,
+      0
+     ],
+     "45": [
+      145997,
+      0
+     ],
+     "46": [
+      147263,
+      0
+     ],
+     "47": [
+      153149,
+      0
+     ],
+     "48": [
+      181125,
+      0
+     ],
+     "49": [
+      188742,
+      0
+     ],
+     "50": [
+      174172,
+      0
+     ],
+     "51": [
+      113141,
+      0
+     ],
+     "52": [
+      82165,
+      0
+     ],
+     "53": [
+      83679,
+      0
+     ],
+     "54": [
+      169713,
+      0
+     ],
+     "55": [
+      188644,
+      0
+     ],
+     "56": [
+      182483,
+      0
+     ],
+     "57": [
+      183445,
+      0
+     ]
+    },
+    "note": "auth+flows 全量流式扫描；host 抽样披露；特征严格因果（仅该 host 过去事件）",
+    "m24_note": "2026-10-17 M24 勘误：原字段「eval_days=12-29 (redteam)」与代码 EVAL_DAYS=set(range(10,37)) 不符（约 32% 评估事件在声明窗外，day24 起多日 FLOW=0 影响聚合口径）；按主会话无卡版裁定改协议声明为真实窗口 day10-36，与 E42B「仅红队日」的一致性声明撤回；统计数值与数据字节零改动"
+   },
+   "baselines": {
+    "majority": {
+     "macro_f1": 0.3216,
+     "acc": 0.4741
+    },
+    "lag1_markov": {
+     "macro_f1": 0.8024,
+     "acc": 0.8029
+    },
+    "logistic_full": {
+     "macro_f1": 0.8346,
+     "acc": 0.8351,
+     "coef_names": [
+      "log_gap",
+      "log_gap_logon",
+      "log_gap_flow",
+      "cnt_l1h",
+      "cnt_f1h",
+      "cnt_l24h",
+      "cnt_f24h",
+      "sin_tod",
+      "cos_tod",
+      "last_type_l",
+      "last_type_f",
+      "day_frac"
+     ],
+     "coef": [
+      0.821,
+      0.297,
+      -0.802,
+      -0.0,
+      0.0,
+      -0.0,
+      0.0,
+      0.054,
+      0.0,
+      0.342,
+      0.316,
+      0.283
+     ]
+    },
+    "logistic_authonly": {
+     "macro_f1": 0.3268,
+     "acc": 0.475
+    }
+   },
+   "per_day": {
+    "logistic_full": {
+     "per_day_macro_f1": [
+      0.6577,
+      0.6429,
+      0.6672,
+      0.7123,
+      0.7203,
+      0.7523,
+      0.721,
+      0.722,
+      0.7145,
+      0.6531,
+      0.706,
+      0.7316,
+      0.8263,
+      0.8831,
+      0.5,
+      0.5,
+      0.6992,
+      0.6976,
+      0.5768,
+      0.4999,
+      0.5,
+      0.5,
+      0.5,
+      0.4999,
+      0.5,
+      0.4999,
+      0.4999
+     ],
+     "mean": 0.6327
+    },
+    "logistic_authonly": {
+     "per_day_macro_f1": [
+      0.4292,
+      0.432,
+      0.4262,
+      0.4692,
+      0.4141,
+      0.3046,
+      0.3157,
+      0.3207,
+      0.3253,
+      0.3365,
+      0.3031,
+      0.2985,
+      0.3224,
+      0.1097,
+      0.0,
+      0.0,
+      0.0434,
+      0.0544,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0465,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean": 0.1834
+    },
+    "majority": {
+     "per_day_macro_f1": [
+      0.4292,
+      0.432,
+      0.4262,
+      0.4227,
+      0.4141,
+      0.3046,
+      0.3157,
+      0.3207,
+      0.3253,
+      0.3365,
+      0.3031,
+      0.2985,
+      0.3224,
+      0.1097,
+      0.0,
+      0.0,
+      0.0434,
+      0.0544,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mean": 0.1799
+    }
+   },
+   "not_done": [
+    "GRU 序列臂：host 键未随事件落盘，序列重建需二次全量扫描（本轮超时预算），学习型对比由 logistic_full/logistic_authonly 承担；HeteroEuler 类型头按本目标重训须主会话 §6.1 授权"
+   ]
+  }
+ },
+ "r2_repairs": {
+  "ap_event_weighted_v1_deprecated": "恒 1.0（np.repeat 剔除权重 0 负例行，y_rep 全正例）；修复定义与数值见 EXP-R1-E7/type-head-diagnosis.json F1",
+  "ap_event_weighted_v2": {
+   "full": {
+    "0": {
+     "ap_attack_rows": 0.004272,
+     "ap_event_weighted_v2": 0.006062,
+     "n_attack_rows": 277
+    },
+    "1": {
+     "ap_attack_rows": 0.004844,
+     "ap_event_weighted_v2": 0.00649,
+     "n_attack_rows": 277
+    },
+    "2": {
+     "ap_attack_rows": 0.005645,
+     "ap_event_weighted_v2": 0.008057,
+     "n_attack_rows": 277
+    }
+   },
+   "homo_rerun": {
+    "0": {
+     "ap_attack_rows": 0.008358,
+     "ap_event_weighted_v2": 0.011922,
+     "n_attack_rows": 277
+    },
+    "1": {
+     "ap_attack_rows": 0.016758,
+     "ap_event_weighted_v2": 0.020781,
+     "n_attack_rows": 277
+    },
+    "2": {
+     "ap_attack_rows": 0.005583,
+     "ap_event_weighted_v2": 0.008073,
+     "n_attack_rows": 277
+    }
+   },
+   "homoflows_rerun": {
+    "0": {
+     "ap_attack_rows": 0.005797,
+     "ap_event_weighted_v2": 0.008321,
+     "n_attack_rows": 277
+    },
+    "1": {
+     "ap_attack_rows": 0.011427,
+     "ap_event_weighted_v2": 0.015527,
+     "n_attack_rows": 277
+    },
+    "2": {
+     "ap_attack_rows": 0.006327,
+     "ap_event_weighted_v2": 0.009305,
+     "n_attack_rows": 277
+    }
+   }
+  },
+  "recall_grid_corrected_attribution": "两臂事件级排名信号弱（AP≈基率 2-8 倍），recall@K 在 K≤100 接近随机基线——原\"top-25 预算过粗\"归因不成立（R1B-M2b），改写为信号弱；事件级方向一致性由 AP 行口径承载，非独立检出证据",
+  "w14_diagnosis": {
+   "source": "E47B_fairpool_ci/<arm>/results.json type_cm/type_macro_f1（在案）",
+   "macro_f1_by_arm": {
+    "full": [
+     0.8372,
+     0.8412,
+     0.7967
+    ],
+    "nemb": [
+     0.9508,
+     0.9564,
+     0.9493
+    ],
+    "homo": [
+     0.5723,
+     0.5737,
+     0.5593
+    ],
+    "homoflows": [
+     0.5719,
+     0.5733,
+     0.5597
+    ],
+    "noflows": [
+     0.9652,
+     0.9634,
+     0.9611
+    ]
+   },
+   "per_class_prf": {
+    "full": [
+     {
+      "class0": {
+       "P": 0.5572,
+       "R": 0.9548,
+       "F1": 0.7037,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.9999,
+       "R": 0.93,
+       "F1": 0.9637,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.9253,
+       "R": 0.7764,
+       "F1": 0.8443,
+       "support": 445229
+      }
+     },
+     {
+      "class0": {
+       "P": 0.5773,
+       "R": 0.9999,
+       "F1": 0.732,
+       "support": 131235
+      },
+      "class1": {
+       "P": 1.0,
+       "R": 0.8972,
+       "F1": 0.9458,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.9164,
+       "R": 0.7852,
+       "F1": 0.8457,
+       "support": 445229
+      }
+     },
+     {
+      "class0": {
+       "P": 0.5049,
+       "R": 0.9998,
+       "F1": 0.6709,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.9997,
+       "R": 0.8697,
+       "F1": 0.9302,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.8861,
+       "R": 0.7113,
+       "F1": 0.7892,
+       "support": 445229
+      }
+     }
+    ],
+    "nemb": [
+     {
+      "class0": {
+       "P": 0.9761,
+       "R": 0.8911,
+       "F1": 0.9317,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.9667,
+       "R": 0.9476,
+       "F1": 0.9571,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.9453,
+       "R": 0.9827,
+       "F1": 0.9636,
+       "support": 445229
+      }
+     },
+     {
+      "class0": {
+       "P": 0.9839,
+       "R": 0.9033,
+       "F1": 0.9419,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.9844,
+       "R": 0.9447,
+       "F1": 0.9642,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.9391,
+       "R": 0.9885,
+       "F1": 0.9632,
+       "support": 445229
+      }
+     },
+     {
+      "class0": {
+       "P": 0.9748,
+       "R": 0.9013,
+       "F1": 0.9366,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.9791,
+       "R": 0.927,
+       "F1": 0.9524,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.9319,
+       "R": 0.9876,
+       "F1": 0.9589,
+       "support": 445229
+      }
+     }
+    ],
+    "homo": [
+     {
+      "class0": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.6997,
+       "R": 0.8751,
+       "F1": 0.7777,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.8898,
+       "R": 0.9948,
+       "F1": 0.9394,
+       "support": 445229
+      }
+     },
+     {
+      "class0": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.6909,
+       "R": 0.8904,
+       "F1": 0.7781,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.9037,
+       "R": 0.9861,
+       "F1": 0.9431,
+       "support": 445229
+      }
+     },
+     {
+      "class0": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.6748,
+       "R": 0.8534,
+       "F1": 0.7537,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.8791,
+       "R": 0.9741,
+       "F1": 0.9241,
+       "support": 445229
+      }
+     }
+    ],
+    "homoflows": [
+     {
+      "class0": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.6992,
+       "R": 0.8737,
+       "F1": 0.7768,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.8891,
+       "R": 0.9948,
+       "F1": 0.939,
+       "support": 445229
+      }
+     },
+     {
+      "class0": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.6904,
+       "R": 0.889,
+       "F1": 0.7772,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.9029,
+       "R": 0.9859,
+       "F1": 0.9426,
+       "support": 445229
+      }
+     },
+     {
+      "class0": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.6753,
+       "R": 0.8545,
+       "F1": 0.7544,
+       "support": 313994
+      },
+      "class2": {
+       "P": 0.8797,
+       "R": 0.9743,
+       "F1": 0.9246,
+       "support": 445229
+      }
+     }
+    ],
+    "noflows": [
+     {
+      "class0": {
+       "P": 0.9849,
+       "R": 0.9448,
+       "F1": 0.9645,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 0
+      },
+      "class2": {
+       "P": 0.947,
+       "R": 0.9855,
+       "F1": 0.9659,
+       "support": 131235
+      }
+     },
+     {
+      "class0": {
+       "P": 0.9847,
+       "R": 0.9415,
+       "F1": 0.9626,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 0
+      },
+      "class2": {
+       "P": 0.944,
+       "R": 0.9854,
+       "F1": 0.9642,
+       "support": 131235
+      }
+     },
+     {
+      "class0": {
+       "P": 0.9778,
+       "R": 0.9437,
+       "F1": 0.9604,
+       "support": 131235
+      },
+      "class1": {
+       "P": 0.0,
+       "R": 0.0,
+       "F1": 0.0,
+       "support": 0
+      },
+      "class2": {
+       "P": 0.9456,
+       "R": 0.9786,
+       "F1": 0.9618,
+       "support": 131235
+      }
+     }
+    ]
+   },
+   "comparability_audit": {
+    "full": {
+     "classes_in_eval_true": [
+      0,
+      1,
+      2
+     ],
+     "classes_predicted": [
+      0,
+      1,
+      2
+     ],
+     "macro_over_effective_classes": [
+      0,
+      1,
+      2
+     ]
+    },
+    "nemb": {
+     "classes_in_eval_true": [
+      0,
+      1,
+      2
+     ],
+     "classes_predicted": [
+      0,
+      1,
+      2
+     ],
+     "macro_over_effective_classes": [
+      0,
+      1,
+      2
+     ]
+    },
+    "homo": {
+     "classes_in_eval_true": [
+      0,
+      1,
+      2
+     ],
+     "classes_predicted": [
+      1,
+      2
+     ],
+     "macro_over_effective_classes": [
+      0,
+      1,
+      2
+     ]
+    },
+    "homoflows": {
+     "classes_in_eval_true": [
+      0,
+      1,
+      2
+     ],
+     "classes_predicted": [
+      1,
+      2
+     ],
+     "macro_over_effective_classes": [
+      0,
+      1,
+      2
+     ]
+    },
+    "noflows": {
+     "classes_in_eval_true": [
+      0,
+      2
+     ],
+     "classes_predicted": [
+      0,
+      2
+     ],
+     "macro_over_effective_classes": [
+      0,
+      2
+     ]
+    }
+   },
+   "unified_explanation": "full 与 nemb 同为三类别可比口径，macro-F1 差 0.1136（nemb 更高，反常）。逐类 F1 分解（seed0）{'class0': 0.228, 'class1': -0.0066, 'class2': 0.1193}：差距主导项为 class2（随机未观测负对）——full 的类型头把 445229 个未观测随机对中大量误判为 LOGON（class0），nemb 几乎不误判；即 full 的 LOGON 判别边界在类型嵌入参与下对『观测支撑外』的随机对过度自信。该机理与主线证据同向：E2 评估侧候选池扩到非观测对时 AUC 全塌（0.31→0.04）、E2 污染免疫发现（homo 跨类型分数崩坏）——类型条件化的关系记忆在分布外无法校准其置信度。可比性审计：homo/homoflows/noflows 臂评估池无 FLOW 正例（class1 缺席），在案 f1_score 未固定 labels 参数 → 其 macro-F1 实际只在有效类别集上平均，跨臂不可比，论文不得并列引用。注：本条为诊断证据申报，论文最终措辞归写作路。"
+  },
+  "granularity_matrix_window_row_fair": {
+   "source": "EXP-R1-E5 公平校准（t 预测枢轴 τ）+ window-level-readout.json z_eval_windows（主口径 top50mean）",
+   "supersedes": "原 granularity_matrix_window_row（fixed@arl100 失效对照下的全 tie，R1A-C1/R1B-C1 波及格）",
+   "fair_window_row": {
+    "arl100": {
+     "tau_t": 3.0531,
+     "per_arm_seed": {
+      "full_s0": {
+       "det_rate": 0.182,
+       "delay": 2
+      },
+      "full_s1": {
+       "det_rate": 0.455,
+       "delay": 2
+      },
+      "full_s2": {
+       "det_rate": 0.364,
+       "delay": 0
+      },
+      "homoflows_s0": {
+       "det_rate": 0.455,
+       "delay": 2
+      },
+      "homoflows_s1": {
+       "det_rate": 0.455,
+       "delay": 0
+      },
+      "homoflows_s2": {
+       "det_rate": 0.182,
+       "delay": 2
+      },
+      "homo_s0": {
+       "det_rate": 0.182,
+       "delay": 2
+      },
+      "homo_s1": {
+       "det_rate": 0.182,
+       "delay": 8
+      },
+      "homo_s2": {
+       "det_rate": 0.182,
+       "delay": 2
+      }
+     },
+     "pair_directions": {
+      "full_vs_homoflows": [
+       "second_better",
+       "tie",
+       "first_better"
+      ],
+      "full_vs_homo": [
+       "tie",
+       "first_better",
+       "first_better"
+      ],
+      "homoflows_vs_homo": [
+       "first_better",
+       "first_better",
+       "tie"
+      ]
+     }
+    },
+    "arl500": {
+     "tau_t": 4.2068,
+     "per_arm_seed": {
+      "full_s0": {
+       "det_rate": 0.182,
+       "delay": 2
+      },
+      "full_s1": {
+       "det_rate": 0.182,
+       "delay": 2
+      },
+      "full_s2": {
+       "det_rate": 0.182,
+       "delay": 2
+      },
+      "homoflows_s0": {
+       "det_rate": 0.091,
+       "delay": 2
+      },
+      "homoflows_s1": {
+       "det_rate": 0.091,
+       "delay": 2
+      },
+      "homoflows_s2": {
+       "det_rate": 0.091,
+       "delay": 2
+      },
+      "homo_s0": {
+       "det_rate": 0.091,
+       "delay": 2
+      },
+      "homo_s1": {
+       "det_rate": 0.0,
+       "delay": null
+      },
+      "homo_s2": {
+       "det_rate": 0.091,
+       "delay": 2
+      }
+     },
+     "pair_directions": {
+      "full_vs_homoflows": [
+       "first_better",
+       "first_better",
+       "first_better"
+      ],
+      "full_vs_homo": [
+       "first_better",
+       "first_better",
+       "first_better"
+      ],
+      "homoflows_vs_homo": [
+       "tie",
+       "first_better",
+       "tie"
+      ]
+     }
+    }
+   },
+   "note": "公平阈值下 fixed 检出率臂间出现差异（不再全 tie）；窗级=11 攻击窗上的描述性格（R1B-m7），臂间方向与边级/事件级方向的一致性陈述归论文写作路"
+  },
+  "w14_diagnosis_correction_r2": {
+   "status": "SUPERSEDES 同段 w14_diagnosis.unified_explanation（若含原文案；原文保留）",
+   "corrected_text": "full 与 nemb 同为三类别可比口径，macro-F1 差 0.1136（nemb 更高，反常）。逐类 F1 分解（seed0）{class0: +0.228, class1: −0.0066, class2: +0.1193}：差距主导项为 class0（full 0.7037 vs nemb 0.9317，驱动=class0 精确率 0.557 vs 0.976——full 的类型头把 445,229 个未观测随机对中 22.4% 误判为 LOGON，压低的是 class0 精确率；class2 recall 0.776 为同源伴随信号，非主导项）。可比性审计（R1A2-M2 更正版）：仅 noflows 臂评估池无 FLOW 正例（classes_in_eval_true=[0,2]、class1 support=0），其 macro-F1 在 {0,2} 上平均、与其余臂不可比；homo/homoflows 臂三类齐全（class1 support=313,994 在场、classes_in_eval_true=[0,1,2]），其 macro 低（≈0.57）是 class0 F1=0（从不预测 LOGON）的真实表现，属可比差异而非口径不可比——「homo/homoflows 无 FLOW 正例」的原表述错误，予以更正。跨臂并列申报规则不变：noflows 的 macro 不得与三类别臂直接并列；full vs nemb 逐类分解为 W14 主证据。该机理与主线证据同向：E2 评估侧候选池扩到非观测对时 AUC 全塌（0.31→0.04）、E2 污染免疫发现（homo 跨类型分数崩坏）——类型条件化的关系记忆在分布外无法校准其置信度。本段为 R2 第三轮更正版（P0-7/R1A2-M2/R2B-m2）；被更正原文保留于 F3_w14_diagnosis.unified_explanation 不删改。",
+   "review_refs": "R1A2-M2 / R2B-m2 / 本轮 P0-7；三处传播文本（e7 json / RESEARCH_LOG:156 / e4 r2_repairs）同步"
+  }
+ }
+}

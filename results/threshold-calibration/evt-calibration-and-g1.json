@@ -1,0 +1,2972 @@
+{
+ "exp": "R1-E5 EVT 公平校准",
+ "date": "2026-10-24",
+ "criteria": "criteria.json（冻结）",
+ "root_cause_confirmed": {
+  "fixed_measured_arl_incase": "8.7-9.4（54 点，本席复算均值 9.0/9.1 两档）",
+  "structural": "9 离散良性值 → 最小非零告警率 1/9 → 经验 ARL 上限≈9；二分上界被池最大值封顶（e1_window_alert.py:91,129-131）"
+ },
+ "calibration": {
+  "top50mean": {
+   "arl100": {
+    "main_tpivot": {
+     "branch": "tpivot",
+     "tau": 3.0531,
+     "formula": "sqrt(1+1/9)*t_8(1-1/ARL0)",
+     "evt_hybrid_tau": 1.8743,
+     "tau_empirical": 1.9894,
+     "note": "t-枢轴修正逐池标准化参数估计效应；EVT 并报为形状诊断/非参推广"
+    },
+    "sensitivity": {
+     "evt_hybrid": {
+      "ok": true,
+      "tau": 1.8743,
+      "tau_plugin": 1.8934,
+      "xi": -3.9224,
+      "sigma": 6.9265,
+      "p_u": 0.2469,
+      "u": 0.1275,
+      "n_exc": 20,
+      "q_u_used": 0.7531,
+      "estimator": "lmom",
+      "n_boot_ok": 2000,
+      "branch": "evt",
+      "tau_empirical": 1.9894,
+      "n_fit": 81,
+      "tau_ci": [
+       1.7744,
+       1.9638
+      ]
+     },
+     "mle_q0.7": {
+      "ok": true,
+      "tau": 2.0219,
+      "tau_plugin": 2.0299,
+      "xi": -1.6847,
+      "sigma": 3.4632,
+      "p_u": 0.2963,
+      "u": -0.019,
+      "n_exc": 24,
+      "q_u_used": 0.7,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.9199,
+       2.0359
+      ]
+     },
+     "mle_q0.75": {
+      "ok": true,
+      "tau": 2.0299,
+      "tau_plugin": 2.0305,
+      "xi": -1.7845,
+      "sigma": 3.4125,
+      "p_u": 0.2469,
+      "u": 0.1244,
+      "n_exc": 20,
+      "q_u_used": 0.75,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.9245,
+       2.0358
+      ]
+     },
+     "mle_q0.8": {
+      "ok": true,
+      "tau": 2.0004,
+      "tau_plugin": 2.0243,
+      "xi": -1.3304,
+      "sigma": 0.8712,
+      "p_u": 0.1975,
+      "u": 1.3819,
+      "n_exc": 16,
+      "q_u_used": 0.8,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.9089,
+       2.0345
+      ]
+     },
+     "mle_q0.85": {
+      "ok": true,
+      "tau": 2.0185,
+      "tau_plugin": 2.0284,
+      "xi": -1.5096,
+      "sigma": 0.7317,
+      "p_u": 0.1481,
+      "u": 1.552,
+      "n_exc": 12,
+      "q_u_used": 0.85,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.9204,
+       2.035
+      ]
+     },
+     "mle_q0.9": {
+      "ok": true,
+      "tau": 2.0217,
+      "tau_plugin": 2.0325,
+      "xi": -1.9725,
+      "sigma": 0.7632,
+      "p_u": 0.0988,
+      "u": 1.6498,
+      "n_exc": 8,
+      "q_u_used": 0.9,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.92,
+       2.0352
+      ]
+     }
+    },
+    "normal_theory_tau": 2.3263
+   },
+   "arl500": {
+    "main_tpivot": {
+     "branch": "tpivot",
+     "tau": 4.2068,
+     "formula": "sqrt(1+1/9)*t_8(1-1/ARL0)",
+     "evt_hybrid_tau": 1.8754,
+     "tau_empirical": 2.0272,
+     "note": "t-枢轴修正逐池标准化参数估计效应；EVT 并报为形状诊断/非参推广"
+    },
+    "sensitivity": {
+     "evt_hybrid": {
+      "ok": true,
+      "tau": 1.8754,
+      "tau_plugin": 1.8934,
+      "xi": -3.9224,
+      "sigma": 6.9265,
+      "p_u": 0.2469,
+      "u": 0.1275,
+      "n_exc": 20,
+      "q_u_used": 0.7531,
+      "estimator": "lmom",
+      "n_boot_ok": 2000,
+      "branch": "evt",
+      "tau_empirical": 2.0272,
+      "n_fit": 81,
+      "tau_ci": [
+       1.7768,
+       1.9675
+      ]
+     },
+     "mle_q0.7": {
+      "ok": true,
+      "tau": 2.0353,
+      "tau_plugin": 2.0363,
+      "xi": -1.6847,
+      "sigma": 3.4632,
+      "p_u": 0.2963,
+      "u": -0.019,
+      "n_exc": 24,
+      "q_u_used": 0.7,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.9219,
+       2.0367
+      ]
+     },
+     "mle_q0.75": {
+      "ok": true,
+      "tau": 2.0361,
+      "tau_plugin": 2.0364,
+      "xi": -1.7845,
+      "sigma": 3.4125,
+      "p_u": 0.2469,
+      "u": 0.1244,
+      "n_exc": 20,
+      "q_u_used": 0.75,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.9333,
+       2.0367
+      ]
+     },
+     "mle_q0.8": {
+      "ok": true,
+      "tau": 2.0299,
+      "tau_plugin": 2.0353,
+      "xi": -1.3304,
+      "sigma": 0.8712,
+      "p_u": 0.1975,
+      "u": 1.3819,
+      "n_exc": 16,
+      "q_u_used": 0.8,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.9275,
+       2.0367
+      ]
+     },
+     "mle_q0.85": {
+      "ok": true,
+      "tau": 2.0344,
+      "tau_plugin": 2.036,
+      "xi": -1.5096,
+      "sigma": 0.7317,
+      "p_u": 0.1481,
+      "u": 1.552,
+      "n_exc": 12,
+      "q_u_used": 0.85,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.9217,
+       2.0367
+      ]
+     },
+     "mle_q0.9": {
+      "ok": true,
+      "tau": 2.0353,
+      "tau_plugin": 2.0365,
+      "xi": -1.9725,
+      "sigma": 0.7632,
+      "p_u": 0.0988,
+      "u": 1.6498,
+      "n_exc": 8,
+      "q_u_used": 0.9,
+      "estimator": "mle",
+      "n_boot_ok": 299,
+      "tau_ci": [
+       1.9222,
+       2.0367
+      ]
+     }
+    },
+    "normal_theory_tau": 2.8782
+   },
+   "qq_corr_main": -0.61,
+   "gpd_xi_main": -3.9224
+  },
+  "mean": {
+   "arl100": {
+    "main_tpivot": {
+     "branch": "tpivot",
+     "tau": 3.0531,
+     "formula": "sqrt(1+1/9)*t_8(1-1/ARL0)",
+     "evt_hybrid_tau": 1.411,
+     "tau_empirical": 1.3676,
+     "note": "t-枢轴修正逐池标准化参数估计效应；EVT 并报为形状诊断/非参推广"
+    },
+    "sensitivity": {
+     "evt_hybrid": {
+      "ok": true,
+      "tau": 1.411,
+      "tau_plugin": 1.4222,
+      "xi": -0.4917,
+      "sigma": 0.3764,
+      "p_u": 0.2469,
+      "u": 0.8149,
+      "n_exc": 20,
+      "q_u_used": 0.7531,
+      "estimator": "lmom",
+      "n_boot_ok": 2000,
+      "branch": "evt",
+      "tau_empirical": 1.3676,
+      "n_fit": 81,
+      "tau_ci": [
+       1.1966,
+       1.6023
+      ]
+     },
+     "mle_q0.7": {
+      "ok": true,
+      "tau": 1.3536,
+      "tau_plugin": 1.3559,
+      "xi": -0.8464,
+      "sigma": 0.5361,
+      "p_u": 0.2963,
+      "u": 0.7585,
+      "n_exc": 24,
+      "q_u_used": 0.7,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.2827,
+       1.3813
+      ]
+     },
+     "mle_q0.75": {
+      "ok": true,
+      "tau": 1.3635,
+      "tau_plugin": 1.3699,
+      "xi": -1.1497,
+      "sigma": 0.6644,
+      "p_u": 0.2469,
+      "u": 0.8065,
+      "n_exc": 20,
+      "q_u_used": 0.75,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.2984,
+       1.3828
+      ]
+     },
+     "mle_q0.8": {
+      "ok": true,
+      "tau": 1.3678,
+      "tau_plugin": 1.3694,
+      "xi": -1.1967,
+      "sigma": 0.6391,
+      "p_u": 0.1975,
+      "u": 0.8503,
+      "n_exc": 16,
+      "q_u_used": 0.8,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.2924,
+       1.3834
+      ]
+     },
+     "mle_q0.85": {
+      "ok": true,
+      "tau": 1.3726,
+      "tau_plugin": 1.3672,
+      "xi": -1.1487,
+      "sigma": 0.438,
+      "p_u": 0.1481,
+      "u": 1.0031,
+      "n_exc": 12,
+      "q_u_used": 0.85,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.2608,
+       1.3836
+      ]
+     },
+     "mle_q0.9": {
+      "ok": true,
+      "tau": 1.3733,
+      "tau_plugin": 1.3802,
+      "xi": -1.8609,
+      "sigma": 0.5635,
+      "p_u": 0.0988,
+      "u": 1.0816,
+      "n_exc": 8,
+      "q_u_used": 0.9,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.2638,
+       2.0366
+      ]
+     }
+    },
+    "normal_theory_tau": 2.3263
+   },
+   "arl500": {
+    "main_tpivot": {
+     "branch": "tpivot",
+     "tau": 4.2068,
+     "formula": "sqrt(1+1/9)*t_8(1-1/ARL0)",
+     "evt_hybrid_tau": 1.4903,
+     "tau_empirical": 1.3811,
+     "note": "t-枢轴修正逐池标准化参数估计效应；EVT 并报为形状诊断/非参推广"
+    },
+    "sensitivity": {
+     "evt_hybrid": {
+      "ok": true,
+      "tau": 1.4903,
+      "tau_plugin": 1.5088,
+      "xi": -0.4917,
+      "sigma": 0.3764,
+      "p_u": 0.2469,
+      "u": 0.8149,
+      "n_exc": 20,
+      "q_u_used": 0.7531,
+      "estimator": "lmom",
+      "n_boot_ok": 2000,
+      "branch": "evt",
+      "tau_empirical": 1.3811,
+      "n_fit": 81,
+      "tau_ci": [
+       1.2012,
+       1.9194
+      ]
+     },
+     "mle_q0.7": {
+      "ok": true,
+      "tau": 1.3821,
+      "tau_plugin": 1.3827,
+      "xi": -0.8464,
+      "sigma": 0.5361,
+      "p_u": 0.2963,
+      "u": 0.7585,
+      "n_exc": 24,
+      "q_u_used": 0.7,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.3074,
+       1.4072
+      ]
+     },
+     "mle_q0.75": {
+      "ok": true,
+      "tau": 1.3824,
+      "tau_plugin": 1.3821,
+      "xi": -1.1497,
+      "sigma": 0.6644,
+      "p_u": 0.2469,
+      "u": 0.8065,
+      "n_exc": 20,
+      "q_u_used": 0.75,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.3195,
+       1.4029
+      ]
+     },
+     "mle_q0.8": {
+      "ok": true,
+      "tau": 1.3828,
+      "tau_plugin": 1.3822,
+      "xi": -1.1967,
+      "sigma": 0.6391,
+      "p_u": 0.1975,
+      "u": 0.8503,
+      "n_exc": 16,
+      "q_u_used": 0.8,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.3192,
+       1.5476
+      ]
+     },
+     "mle_q0.85": {
+      "ok": true,
+      "tau": 1.383,
+      "tau_plugin": 1.3817,
+      "xi": -1.1487,
+      "sigma": 0.438,
+      "p_u": 0.1481,
+      "u": 1.0031,
+      "n_exc": 12,
+      "q_u_used": 0.85,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.321,
+       1.4914
+      ]
+     },
+     "mle_q0.9": {
+      "ok": true,
+      "tau": 1.3837,
+      "tau_plugin": 1.3842,
+      "xi": -1.8609,
+      "sigma": 0.5635,
+      "p_u": 0.0988,
+      "u": 1.0816,
+      "n_exc": 8,
+      "q_u_used": 0.9,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.3205,
+       77.7378
+      ]
+     }
+    },
+    "normal_theory_tau": 2.8782
+   },
+   "qq_corr_main": -0.932,
+   "gpd_xi_main": -0.4917
+  },
+  "max": {
+   "arl100": {
+    "main_tpivot": {
+     "branch": "tpivot",
+     "tau": 3.0531,
+     "formula": "sqrt(1+1/9)*t_8(1-1/ARL0)",
+     "evt_hybrid_tau": 1.9732,
+     "tau_empirical": 2.1028,
+     "note": "t-枢轴修正逐池标准化参数估计效应；EVT 并报为形状诊断/非参推广"
+    },
+    "sensitivity": {
+     "evt_hybrid": {
+      "ok": true,
+      "tau": 1.9732,
+      "tau_plugin": 2.0101,
+      "xi": -0.6588,
+      "sigma": 0.9555,
+      "p_u": 0.2469,
+      "u": 0.7353,
+      "n_exc": 20,
+      "q_u_used": 0.7531,
+      "estimator": "lmom",
+      "n_boot_ok": 2000,
+      "branch": "evt",
+      "tau_empirical": 2.1028,
+      "n_fit": 81,
+      "tau_ci": [
+       1.5775,
+       2.5351
+      ]
+     },
+     "mle_q0.7": {
+      "ok": true,
+      "tau": 2.097,
+      "tau_plugin": 2.1035,
+      "xi": -0.6528,
+      "sigma": 1.1983,
+      "p_u": 0.2963,
+      "u": 0.4689,
+      "n_exc": 24,
+      "q_u_used": 0.7,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.638,
+       2.2203
+      ]
+     },
+     "mle_q0.75": {
+      "ok": true,
+      "tau": 2.0696,
+      "tau_plugin": 2.0931,
+      "xi": -0.5874,
+      "sigma": 0.9581,
+      "p_u": 0.2469,
+      "u": 0.71,
+      "n_exc": 20,
+      "q_u_used": 0.75,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.6656,
+       2.2149
+      ]
+     },
+     "mle_q0.8": {
+      "ok": true,
+      "tau": 2.0583,
+      "tau_plugin": 2.0696,
+      "xi": -0.3636,
+      "sigma": 0.5924,
+      "p_u": 0.1975,
+      "u": 0.9911,
+      "n_exc": 16,
+      "q_u_used": 0.8,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.653,
+       2.2221
+      ]
+     },
+     "mle_q0.85": {
+      "ok": true,
+      "tau": 2.0633,
+      "tau_plugin": 2.075,
+      "xi": -0.4402,
+      "sigma": 0.5997,
+      "p_u": 0.1481,
+      "u": 1.1285,
+      "n_exc": 12,
+      "q_u_used": 0.85,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.6208,
+       2.2252
+      ]
+     },
+     "mle_q0.9": {
+      "ok": true,
+      "tau": 2.1287,
+      "tau_plugin": 2.1795,
+      "xi": -1.2714,
+      "sigma": 1.1486,
+      "p_u": 0.0988,
+      "u": 1.3253,
+      "n_exc": 8,
+      "q_u_used": 0.9,
+      "estimator": "mle",
+      "n_boot_ok": 299,
+      "tau_ci": [
+       1.6942,
+       2.2251
+      ]
+     }
+    },
+    "normal_theory_tau": 2.3263
+   },
+   "arl500": {
+    "main_tpivot": {
+     "branch": "tpivot",
+     "tau": 4.2068,
+     "formula": "sqrt(1+1/9)*t_8(1-1/ARL0)",
+     "evt_hybrid_tau": 2.0679,
+     "tau_empirical": 2.2034,
+     "note": "t-枢轴修正逐池标准化参数估计效应；EVT 并报为形状诊断/非参推广"
+    },
+    "sensitivity": {
+     "evt_hybrid": {
+      "ok": true,
+      "tau": 2.0679,
+      "tau_plugin": 2.1248,
+      "xi": -0.6588,
+      "sigma": 0.9555,
+      "p_u": 0.2469,
+      "u": 0.7353,
+      "n_exc": 20,
+      "q_u_used": 0.7531,
+      "estimator": "lmom",
+      "n_boot_ok": 2000,
+      "branch": "evt",
+      "tau_empirical": 2.2034,
+      "n_fit": 81,
+      "tau_ci": [
+       1.6158,
+       3.0877
+      ]
+     },
+     "mle_q0.7": {
+      "ok": true,
+      "tau": 2.2215,
+      "tau_plugin": 2.2342,
+      "xi": -0.6528,
+      "sigma": 1.1983,
+      "p_u": 0.2963,
+      "u": 0.4689,
+      "n_exc": 24,
+      "q_u_used": 0.7,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.673,
+       2.303
+      ]
+     },
+     "mle_q0.75": {
+      "ok": true,
+      "tau": 2.2253,
+      "tau_plugin": 2.2447,
+      "xi": -0.5874,
+      "sigma": 0.9581,
+      "p_u": 0.2469,
+      "u": 0.71,
+      "n_exc": 20,
+      "q_u_used": 0.75,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.7178,
+       2.3748
+      ]
+     },
+     "mle_q0.8": {
+      "ok": true,
+      "tau": 2.2284,
+      "tau_plugin": 2.3135,
+      "xi": -0.3636,
+      "sigma": 0.5924,
+      "p_u": 0.1975,
+      "u": 0.9911,
+      "n_exc": 16,
+      "q_u_used": 0.8,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.7181,
+       2.9194
+      ]
+     },
+     "mle_q0.85": {
+      "ok": true,
+      "tau": 2.2259,
+      "tau_plugin": 2.2861,
+      "xi": -0.4402,
+      "sigma": 0.5997,
+      "p_u": 0.1481,
+      "u": 1.1285,
+      "n_exc": 12,
+      "q_u_used": 0.85,
+      "estimator": "mle",
+      "n_boot_ok": 300,
+      "tau_ci": [
+       1.72,
+       3.4441
+      ]
+     },
+     "mle_q0.9": {
+      "ok": true,
+      "tau": 2.2253,
+      "tau_plugin": 2.2223,
+      "xi": -1.2714,
+      "sigma": 1.1486,
+      "p_u": 0.0988,
+      "u": 1.3253,
+      "n_exc": 8,
+      "q_u_used": 0.9,
+      "estimator": "mle",
+      "n_boot_ok": 299,
+      "tau_ci": [
+       1.716,
+       7.4698
+      ]
+     }
+    },
+    "normal_theory_tau": 2.8782
+   },
+   "qq_corr_main": -0.9201,
+   "gpd_xi_main": -0.6588
+  }
+ },
+ "g1_synthetic": {
+  "arl100": {
+   "n_worlds": 100,
+   "gate": "平均误报率校准：世界平均告警率 vs 1/ARL0 相对偏差 <15%（判据修订 5）",
+   "gate_pass": false,
+   "mean_alarm_rate_x_arl0": 0.8245,
+   "median_rel_dev_tpivot_reported": 8.517,
+   "world_iqr_rel_dev_irreducible": [
+    0.646,
+    44.944
+   ],
+   "pass_frac_lt33pct_reported": 0.08,
+   "evt_disclosed_no_gate": {
+    "pass_frac": 0.16,
+    "median_rel_dev": -0.549,
+    "note": "EVT/GPD 不修正池标准化参数估计效应——申报列（其偏差正是 SPOT 类方法套用到小 Phase-I 池时的隐患）"
+   },
+   "rows": [
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 92.8,
+     "rel_dev_tpivot": -0.072,
+     "tau_evt": 1.617,
+     "arl_evt": 7.6,
+     "rel_dev_evt": -0.924
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 75.3,
+     "rel_dev_tpivot": -0.247,
+     "tau_evt": 2.12,
+     "arl_evt": 18.3,
+     "rel_dev_evt": -0.817
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 8.5,
+     "rel_dev_tpivot": -0.915,
+     "tau_evt": 2.202,
+     "arl_evt": 5.0,
+     "rel_dev_evt": -0.95
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 779.9,
+     "rel_dev_tpivot": 6.799,
+     "tau_evt": 1.693,
+     "arl_evt": 32.2,
+     "rel_dev_evt": -0.678
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 1.69,
+     "arl_evt": 354.5,
+     "rel_dev_evt": 2.545
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 2392.2,
+     "rel_dev_tpivot": 22.922,
+     "tau_evt": 1.873,
+     "arl_evt": 75.6,
+     "rel_dev_evt": -0.244
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1585.2,
+     "rel_dev_tpivot": 14.852,
+     "tau_evt": 1.968,
+     "arl_evt": 57.2,
+     "rel_dev_evt": -0.428
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 127.8,
+     "rel_dev_tpivot": 0.278,
+     "tau_evt": 2.257,
+     "arl_evt": 37.5,
+     "rel_dev_evt": -0.625
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 791.8,
+     "rel_dev_tpivot": 6.918,
+     "tau_evt": 2.434,
+     "arl_evt": 117.2,
+     "rel_dev_evt": 0.172
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.184,
+     "arl_evt": 383.6,
+     "rel_dev_evt": 2.836
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.002,
+     "arl_evt": 183.0,
+     "rel_dev_evt": 0.83
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 31.6,
+     "rel_dev_tpivot": -0.684,
+     "tau_evt": 2.404,
+     "arl_evt": 13.2,
+     "rel_dev_evt": -0.868
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 998.3,
+     "rel_dev_tpivot": 8.983,
+     "tau_evt": 2.284,
+     "arl_evt": 68.5,
+     "rel_dev_evt": -0.315
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.263,
+     "arl_evt": 557.9,
+     "rel_dev_evt": 4.579
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 1.813,
+     "arl_evt": 350.1,
+     "rel_dev_evt": 2.501
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4713.3,
+     "rel_dev_tpivot": 46.133,
+     "tau_evt": 2.047,
+     "arl_evt": 323.3,
+     "rel_dev_evt": 2.233
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 14.4,
+     "rel_dev_tpivot": -0.856,
+     "tau_evt": 1.769,
+     "arl_evt": 4.2,
+     "rel_dev_evt": -0.958
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 361.6,
+     "rel_dev_tpivot": 2.616,
+     "tau_evt": 1.796,
+     "arl_evt": 14.0,
+     "rel_dev_evt": -0.86
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.022,
+     "arl_evt": 653.3,
+     "rel_dev_evt": 5.533
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 160.2,
+     "rel_dev_tpivot": 0.602,
+     "tau_evt": 1.927,
+     "arl_evt": 12.7,
+     "rel_dev_evt": -0.873
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1796.0,
+     "rel_dev_tpivot": 16.96,
+     "tau_evt": 2.143,
+     "arl_evt": 58.7,
+     "rel_dev_evt": -0.413
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 251.4,
+     "rel_dev_tpivot": 1.514,
+     "tau_evt": 1.743,
+     "arl_evt": 18.9,
+     "rel_dev_evt": -0.811
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1858.0,
+     "rel_dev_tpivot": 17.58,
+     "tau_evt": 2.171,
+     "arl_evt": 160.3,
+     "rel_dev_evt": 0.603
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.019,
+     "arl_evt": 204.2,
+     "rel_dev_evt": 1.042
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1461.3,
+     "rel_dev_tpivot": 13.613,
+     "tau_evt": 2.141,
+     "arl_evt": 72.7,
+     "rel_dev_evt": -0.273
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.103,
+     "arl_evt": 571.1,
+     "rel_dev_evt": 4.711
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 727.5,
+     "rel_dev_tpivot": 6.275,
+     "tau_evt": 2.073,
+     "arl_evt": 43.3,
+     "rel_dev_evt": -0.567
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 296.7,
+     "rel_dev_tpivot": 1.967,
+     "tau_evt": 2.212,
+     "arl_evt": 41.7,
+     "rel_dev_evt": -0.583
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 39.1,
+     "rel_dev_tpivot": -0.609,
+     "tau_evt": 1.858,
+     "arl_evt": 5.1,
+     "rel_dev_evt": -0.949
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.067,
+     "arl_evt": 354.1,
+     "rel_dev_evt": 2.541
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 166.1,
+     "rel_dev_tpivot": 0.661,
+     "tau_evt": 2.212,
+     "arl_evt": 27.2,
+     "rel_dev_evt": -0.728
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 21.4,
+     "rel_dev_tpivot": -0.786,
+     "tau_evt": 2.268,
+     "arl_evt": 8.2,
+     "rel_dev_evt": -0.918
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 1.743,
+     "arl_evt": 480.6,
+     "rel_dev_evt": 3.806
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4554.9,
+     "rel_dev_tpivot": 44.549,
+     "tau_evt": 1.947,
+     "arl_evt": 86.8,
+     "rel_dev_evt": -0.132
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1735.5,
+     "rel_dev_tpivot": 16.355,
+     "tau_evt": 1.598,
+     "arl_evt": 39.9,
+     "rel_dev_evt": -0.601
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 135.2,
+     "rel_dev_tpivot": 0.352,
+     "tau_evt": 1.973,
+     "arl_evt": 15.9,
+     "rel_dev_evt": -0.841
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 2302.7,
+     "rel_dev_tpivot": 22.027,
+     "tau_evt": 1.303,
+     "arl_evt": 6.0,
+     "rel_dev_evt": -0.94
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 1.869,
+     "arl_evt": 546.5,
+     "rel_dev_evt": 4.465
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 190.2,
+     "rel_dev_tpivot": 0.902,
+     "tau_evt": 1.994,
+     "arl_evt": 25.1,
+     "rel_dev_evt": -0.749
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 9023.7,
+     "rel_dev_tpivot": 89.237,
+     "tau_evt": 1.983,
+     "arl_evt": 65.2,
+     "rel_dev_evt": -0.348
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 8871.3,
+     "rel_dev_tpivot": 87.713,
+     "tau_evt": 1.779,
+     "arl_evt": 281.4,
+     "rel_dev_evt": 1.814
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 195.0,
+     "rel_dev_tpivot": 0.95,
+     "tau_evt": 1.732,
+     "arl_evt": 12.4,
+     "rel_dev_evt": -0.876
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 994.5,
+     "rel_dev_tpivot": 8.945,
+     "tau_evt": 2.122,
+     "arl_evt": 76.8,
+     "rel_dev_evt": -0.232
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1464.9,
+     "rel_dev_tpivot": 13.649,
+     "tau_evt": 1.66,
+     "arl_evt": 46.7,
+     "rel_dev_evt": -0.533
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 681.0,
+     "rel_dev_tpivot": 5.81,
+     "tau_evt": 2.215,
+     "arl_evt": 127.3,
+     "rel_dev_evt": 0.273
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4513.5,
+     "rel_dev_tpivot": 44.135,
+     "tau_evt": 2.379,
+     "arl_evt": 685.5,
+     "rel_dev_evt": 5.855
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 100.3,
+     "rel_dev_tpivot": 0.003,
+     "tau_evt": 1.933,
+     "arl_evt": 13.1,
+     "rel_dev_evt": -0.869
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 301.1,
+     "rel_dev_tpivot": 2.011,
+     "tau_evt": 1.831,
+     "arl_evt": 15.6,
+     "rel_dev_evt": -0.844
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 136.4,
+     "rel_dev_tpivot": 0.364,
+     "tau_evt": 1.812,
+     "arl_evt": 15.7,
+     "rel_dev_evt": -0.843
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 1.699,
+     "arl_evt": 102.2,
+     "rel_dev_evt": 0.022
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4531.4,
+     "rel_dev_tpivot": 44.314,
+     "tau_evt": 1.845,
+     "arl_evt": 41.1,
+     "rel_dev_evt": -0.589
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 9176.2,
+     "rel_dev_tpivot": 90.762,
+     "tau_evt": 1.857,
+     "arl_evt": 137.9,
+     "rel_dev_evt": 0.379
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 608.9,
+     "rel_dev_tpivot": 5.089,
+     "tau_evt": 2.462,
+     "arl_evt": 149.6,
+     "rel_dev_evt": 0.496
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 248.0,
+     "rel_dev_tpivot": 1.48,
+     "tau_evt": 2.163,
+     "arl_evt": 41.9,
+     "rel_dev_evt": -0.581
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 16.3,
+     "rel_dev_tpivot": -0.837,
+     "tau_evt": 1.678,
+     "arl_evt": 4.8,
+     "rel_dev_evt": -0.952
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4455.8,
+     "rel_dev_tpivot": 43.558,
+     "tau_evt": 2.172,
+     "arl_evt": 95.0,
+     "rel_dev_evt": -0.05
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 908.8,
+     "rel_dev_tpivot": 8.088,
+     "tau_evt": 1.906,
+     "arl_evt": 23.8,
+     "rel_dev_evt": -0.762
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 153.4,
+     "rel_dev_tpivot": 0.534,
+     "tau_evt": 1.989,
+     "arl_evt": 25.1,
+     "rel_dev_evt": -0.749
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.073,
+     "arl_evt": 863.0,
+     "rel_dev_evt": 7.63
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4568.9,
+     "rel_dev_tpivot": 44.689,
+     "tau_evt": 1.927,
+     "arl_evt": 164.9,
+     "rel_dev_evt": 0.649
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 1.626,
+     "arl_evt": 59.9,
+     "rel_dev_evt": -0.401
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 8566.5,
+     "rel_dev_tpivot": 84.665,
+     "tau_evt": 2.069,
+     "arl_evt": 207.6,
+     "rel_dev_evt": 1.076
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 879.6,
+     "rel_dev_tpivot": 7.796,
+     "tau_evt": 1.859,
+     "arl_evt": 43.5,
+     "rel_dev_evt": -0.565
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 3039.4,
+     "rel_dev_tpivot": 29.394,
+     "tau_evt": 2.081,
+     "arl_evt": 83.5,
+     "rel_dev_evt": -0.165
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4229.9,
+     "rel_dev_tpivot": 41.299,
+     "tau_evt": 2.357,
+     "arl_evt": 257.3,
+     "rel_dev_evt": 1.573
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1857.3,
+     "rel_dev_tpivot": 17.573,
+     "tau_evt": 1.775,
+     "arl_evt": 70.0,
+     "rel_dev_evt": -0.3
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 30.6,
+     "rel_dev_tpivot": -0.694,
+     "tau_evt": 2.606,
+     "arl_evt": 15.4,
+     "rel_dev_evt": -0.846
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 8524.3,
+     "rel_dev_tpivot": 84.243,
+     "tau_evt": 1.564,
+     "arl_evt": 63.7,
+     "rel_dev_evt": -0.363
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1278.4,
+     "rel_dev_tpivot": 11.784,
+     "tau_evt": 1.729,
+     "arl_evt": 27.2,
+     "rel_dev_evt": -0.728
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 1.87,
+     "arl_evt": 1277.1,
+     "rel_dev_evt": 11.771
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 3035.1,
+     "rel_dev_tpivot": 29.351,
+     "tau_evt": 2.081,
+     "arl_evt": 111.7,
+     "rel_dev_evt": 0.117
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1310.1,
+     "rel_dev_tpivot": 12.101,
+     "tau_evt": 2.215,
+     "arl_evt": 137.5,
+     "rel_dev_evt": 0.375
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 543.2,
+     "rel_dev_tpivot": 4.432,
+     "tau_evt": 2.225,
+     "arl_evt": 56.4,
+     "rel_dev_evt": -0.436
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 569.2,
+     "rel_dev_tpivot": 4.692,
+     "tau_evt": 2.29,
+     "arl_evt": 64.4,
+     "rel_dev_evt": -0.356
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1175.6,
+     "rel_dev_tpivot": 10.756,
+     "tau_evt": 2.092,
+     "arl_evt": 42.6,
+     "rel_dev_evt": -0.574
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 896.3,
+     "rel_dev_tpivot": 7.963,
+     "tau_evt": 1.654,
+     "arl_evt": 19.4,
+     "rel_dev_evt": -0.806
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 177.1,
+     "rel_dev_tpivot": 0.771,
+     "tau_evt": 1.827,
+     "arl_evt": 17.3,
+     "rel_dev_evt": -0.827
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 8694.6,
+     "rel_dev_tpivot": 85.946,
+     "tau_evt": 1.861,
+     "arl_evt": 265.3,
+     "rel_dev_evt": 1.653
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 354.2,
+     "rel_dev_tpivot": 2.542,
+     "tau_evt": 2.032,
+     "arl_evt": 29.7,
+     "rel_dev_evt": -0.703
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 34.0,
+     "rel_dev_tpivot": -0.66,
+     "tau_evt": 2.051,
+     "arl_evt": 7.4,
+     "rel_dev_evt": -0.926
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 9123.1,
+     "rel_dev_tpivot": 90.231,
+     "tau_evt": 1.845,
+     "arl_evt": 126.3,
+     "rel_dev_evt": 0.263
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 1729.7,
+     "rel_dev_tpivot": 16.297,
+     "tau_evt": 2.311,
+     "arl_evt": 133.7,
+     "rel_dev_evt": 0.337
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 21.5,
+     "rel_dev_tpivot": -0.785,
+     "tau_evt": 1.946,
+     "arl_evt": 6.5,
+     "rel_dev_evt": -0.935
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 19.7,
+     "rel_dev_tpivot": -0.803,
+     "tau_evt": 2.303,
+     "arl_evt": 8.0,
+     "rel_dev_evt": -0.92
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 87.9,
+     "rel_dev_tpivot": -0.121,
+     "tau_evt": 1.98,
+     "arl_evt": 15.0,
+     "rel_dev_evt": -0.85
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 587.5,
+     "rel_dev_tpivot": 4.875,
+     "tau_evt": 1.922,
+     "arl_evt": 23.1,
+     "rel_dev_evt": -0.769
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 249.9,
+     "rel_dev_tpivot": 1.499,
+     "tau_evt": 1.638,
+     "arl_evt": 11.2,
+     "rel_dev_evt": -0.888
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 17.5,
+     "rel_dev_tpivot": -0.825,
+     "tau_evt": 2.086,
+     "arl_evt": 6.7,
+     "rel_dev_evt": -0.933
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 66.3,
+     "rel_dev_tpivot": -0.337,
+     "tau_evt": 2.115,
+     "arl_evt": 20.0,
+     "rel_dev_evt": -0.8
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 284.9,
+     "rel_dev_tpivot": 1.849,
+     "tau_evt": 1.636,
+     "arl_evt": 16.9,
+     "rel_dev_evt": -0.831
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 91.0,
+     "rel_dev_tpivot": -0.09,
+     "tau_evt": 1.676,
+     "arl_evt": 8.5,
+     "rel_dev_evt": -0.915
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 117.8,
+     "rel_dev_tpivot": 0.178,
+     "tau_evt": 1.971,
+     "arl_evt": 19.0,
+     "rel_dev_evt": -0.81
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 170.7,
+     "rel_dev_tpivot": 0.707,
+     "tau_evt": 1.766,
+     "arl_evt": 12.0,
+     "rel_dev_evt": -0.88
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 400.6,
+     "rel_dev_tpivot": 3.006,
+     "tau_evt": 2.073,
+     "arl_evt": 40.8,
+     "rel_dev_evt": -0.592
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4536.3,
+     "rel_dev_tpivot": 44.363,
+     "tau_evt": 2.203,
+     "arl_evt": 106.9,
+     "rel_dev_evt": 0.069
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 115.0,
+     "rel_dev_tpivot": 0.15,
+     "tau_evt": 1.692,
+     "arl_evt": 8.2,
+     "rel_dev_evt": -0.918
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 4671.1,
+     "rel_dev_tpivot": 45.711,
+     "tau_evt": 1.956,
+     "arl_evt": 131.1,
+     "rel_dev_evt": 0.311
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 23.0,
+     "rel_dev_tpivot": -0.77,
+     "tau_evt": 1.903,
+     "arl_evt": 5.2,
+     "rel_dev_evt": -0.949
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 499.0,
+     "tau_evt": 2.175,
+     "arl_evt": 316.5,
+     "rel_dev_evt": 2.165
+    },
+    {
+     "tau_tpivot": 3.053,
+     "arl_tpivot": 2272.3,
+     "rel_dev_tpivot": 21.723,
+     "tau_evt": 1.97,
+     "arl_evt": 72.5,
+     "rel_dev_evt": -0.275
+    }
+   ],
+   "heavy_tail_sensitivity_no_gate": {
+    "median_rel_dev_tpivot": -0.38,
+    "note": "10% 质量在 GPD(0.3) 重尾上——GPD/正态两假设同时受限的申报性边界（WMO TD-781、Inderscience 138231）"
+   }
+  },
+  "arl500": {
+   "n_worlds": 100,
+   "gate": "平均误报率校准：世界平均告警率 vs 1/ARL0 相对偏差 <15%（判据修订 5）",
+   "gate_pass": false,
+   "mean_alarm_rate_x_arl0": 0.6722,
+   "median_rel_dev_tpivot_reported": 99.0,
+   "world_iqr_rel_dev_irreducible": [
+    7.563,
+    99.0
+   ],
+   "pass_frac_lt33pct_reported": 0.02,
+   "evt_disclosed_no_gate": {
+    "pass_frac": 0.1,
+    "median_rel_dev": -0.835,
+    "note": "EVT/GPD 不修正池标准化参数估计效应——申报列（其偏差正是 SPOT 类方法套用到小 Phase-I 池时的隐患）"
+   },
+   "rows": [
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 1600.9,
+     "rel_dev_tpivot": 2.202,
+     "tau_evt": 1.702,
+     "arl_evt": 9.1,
+     "rel_dev_evt": -0.982
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 3217.9,
+     "rel_dev_tpivot": 5.436,
+     "tau_evt": 2.541,
+     "arl_evt": 34.1,
+     "rel_dev_evt": -0.932
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 29.5,
+     "rel_dev_tpivot": -0.941,
+     "tau_evt": 2.922,
+     "arl_evt": 8.1,
+     "rel_dev_evt": -0.984
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.826,
+     "arl_evt": 40.8,
+     "rel_dev_evt": -0.918
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.754,
+     "arl_evt": 506.0,
+     "rel_dev_evt": 0.012
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.223,
+     "arl_evt": 218.3,
+     "rel_dev_evt": -0.563
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.434,
+     "arl_evt": 202.3,
+     "rel_dev_evt": -0.595
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 1767.7,
+     "rel_dev_tpivot": 2.535,
+     "tau_evt": 2.517,
+     "arl_evt": 50.6,
+     "rel_dev_evt": -0.899
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 3.07,
+     "arl_evt": 735.6,
+     "rel_dev_evt": 0.471
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 3.02,
+     "arl_evt": 50000.0,
+     "rel_dev_evt": 99.0
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.332,
+     "arl_evt": 638.6,
+     "rel_dev_evt": 0.277
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 242.8,
+     "rel_dev_tpivot": -0.514,
+     "tau_evt": 2.899,
+     "arl_evt": 24.7,
+     "rel_dev_evt": -0.951
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.932,
+     "arl_evt": 706.3,
+     "rel_dev_evt": 0.413
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.619,
+     "arl_evt": 3003.8,
+     "rel_dev_evt": 5.008
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.037,
+     "arl_evt": 1720.7,
+     "rel_dev_evt": 2.441
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.339,
+     "arl_evt": 760.8,
+     "rel_dev_evt": 0.522
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 66.6,
+     "rel_dev_tpivot": -0.867,
+     "tau_evt": 1.938,
+     "arl_evt": 4.7,
+     "rel_dev_evt": -0.991
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 4226.3,
+     "rel_dev_tpivot": 7.453,
+     "tau_evt": 1.942,
+     "arl_evt": 18.1,
+     "rel_dev_evt": -0.964
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.553,
+     "arl_evt": 9035.0,
+     "rel_dev_evt": 17.07
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 4682.7,
+     "rel_dev_tpivot": 8.365,
+     "tau_evt": 2.191,
+     "arl_evt": 23.0,
+     "rel_dev_evt": -0.954
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.579,
+     "arl_evt": 238.5,
+     "rel_dev_evt": -0.523
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.998,
+     "arl_evt": 31.8,
+     "rel_dev_evt": -0.936
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.605,
+     "arl_evt": 413.8,
+     "rel_dev_evt": -0.172
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.079,
+     "arl_evt": 228.7,
+     "rel_dev_evt": -0.543
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.361,
+     "arl_evt": 115.3,
+     "rel_dev_evt": -0.769
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.429,
+     "arl_evt": 2206.6,
+     "rel_dev_evt": 3.413
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.233,
+     "arl_evt": 65.0,
+     "rel_dev_evt": -0.87
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.58,
+     "arl_evt": 86.3,
+     "rel_dev_evt": -0.827
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 758.6,
+     "rel_dev_tpivot": 0.517,
+     "tau_evt": 2.421,
+     "arl_evt": 12.2,
+     "rel_dev_evt": -0.976
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.237,
+     "arl_evt": 710.4,
+     "rel_dev_evt": 0.421
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.486,
+     "arl_evt": 47.1,
+     "rel_dev_evt": -0.906
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 143.5,
+     "rel_dev_tpivot": -0.713,
+     "tau_evt": 2.679,
+     "arl_evt": 13.4,
+     "rel_dev_evt": -0.973
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.757,
+     "arl_evt": 490.9,
+     "rel_dev_evt": -0.018
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.091,
+     "arl_evt": 137.4,
+     "rel_dev_evt": -0.725
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.637,
+     "arl_evt": 42.6,
+     "rel_dev_evt": -0.915
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 1281.7,
+     "rel_dev_tpivot": 1.563,
+     "tau_evt": 2.257,
+     "arl_evt": 24.4,
+     "rel_dev_evt": -0.951
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.322,
+     "arl_evt": 6.8,
+     "rel_dev_evt": -0.986
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.27,
+     "arl_evt": 50000.0,
+     "rel_dev_evt": 99.0
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 4697.7,
+     "rel_dev_tpivot": 8.395,
+     "tau_evt": 2.649,
+     "arl_evt": 80.6,
+     "rel_dev_evt": -0.839
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.131,
+     "arl_evt": 117.8,
+     "rel_dev_evt": -0.764
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.893,
+     "arl_evt": 506.5,
+     "rel_dev_evt": 0.013
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 4343.1,
+     "rel_dev_tpivot": 7.686,
+     "tau_evt": 1.779,
+     "arl_evt": 13.3,
+     "rel_dev_evt": -0.973
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.238,
+     "arl_evt": 99.2,
+     "rel_dev_evt": -0.802
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.76,
+     "arl_evt": 52.2,
+     "rel_dev_evt": -0.896
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.543,
+     "arl_evt": 268.2,
+     "rel_dev_evt": -0.464
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.632,
+     "arl_evt": 1144.5,
+     "rel_dev_evt": 1.289
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 8902.9,
+     "rel_dev_tpivot": 16.806,
+     "tau_evt": 2.095,
+     "arl_evt": 18.4,
+     "rel_dev_evt": -0.963
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 9109.3,
+     "rel_dev_tpivot": 17.219,
+     "tau_evt": 1.998,
+     "arl_evt": 24.3,
+     "rel_dev_evt": -0.951
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 3048.1,
+     "rel_dev_tpivot": 5.096,
+     "tau_evt": 1.946,
+     "arl_evt": 17.2,
+     "rel_dev_evt": -0.966
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.791,
+     "arl_evt": 159.8,
+     "rel_dev_evt": -0.68
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.965,
+     "arl_evt": 58.0,
+     "rel_dev_evt": -0.884
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.944,
+     "arl_evt": 173.3,
+     "rel_dev_evt": -0.653
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 9198.2,
+     "rel_dev_tpivot": 17.396,
+     "tau_evt": 2.95,
+     "arl_evt": 414.3,
+     "rel_dev_evt": -0.171
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 4673.9,
+     "rel_dev_tpivot": 8.348,
+     "tau_evt": 2.86,
+     "arl_evt": 136.8,
+     "rel_dev_evt": -0.726
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 86.8,
+     "rel_dev_tpivot": -0.826,
+     "tau_evt": 1.694,
+     "arl_evt": 4.8,
+     "rel_dev_evt": -0.99
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.362,
+     "arl_evt": 157.1,
+     "rel_dev_evt": -0.686
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 8287.4,
+     "rel_dev_tpivot": 15.575,
+     "tau_evt": 2.216,
+     "arl_evt": 52.4,
+     "rel_dev_evt": -0.895
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 4300.0,
+     "rel_dev_tpivot": 7.6,
+     "tau_evt": 2.18,
+     "arl_evt": 34.1,
+     "rel_dev_evt": -0.932
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.303,
+     "arl_evt": 1860.5,
+     "rel_dev_evt": 2.721
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.0,
+     "arl_evt": 189.6,
+     "rel_dev_evt": -0.621
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.63,
+     "arl_evt": 60.8,
+     "rel_dev_evt": -0.878
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.295,
+     "arl_evt": 481.9,
+     "rel_dev_evt": -0.036
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.013,
+     "arl_evt": 69.1,
+     "rel_dev_evt": -0.862
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.396,
+     "arl_evt": 194.8,
+     "rel_dev_evt": -0.61
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.534,
+     "arl_evt": 394.0,
+     "rel_dev_evt": -0.212
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.881,
+     "arl_evt": 84.2,
+     "rel_dev_evt": -0.832
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 259.2,
+     "rel_dev_tpivot": -0.482,
+     "tau_evt": 2.89,
+     "arl_evt": 21.5,
+     "rel_dev_evt": -0.957
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.594,
+     "arl_evt": 70.3,
+     "rel_dev_evt": -0.859
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.88,
+     "arl_evt": 40.7,
+     "rel_dev_evt": -0.919
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.046,
+     "arl_evt": 3077.7,
+     "rel_dev_evt": 5.155
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.286,
+     "arl_evt": 205.2,
+     "rel_dev_evt": -0.59
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.607,
+     "arl_evt": 453.2,
+     "rel_dev_evt": -0.094
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.797,
+     "arl_evt": 234.5,
+     "rel_dev_evt": -0.531
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.712,
+     "arl_evt": 213.3,
+     "rel_dev_evt": -0.573
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.349,
+     "arl_evt": 84.2,
+     "rel_dev_evt": -0.832
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.665,
+     "arl_evt": 19.0,
+     "rel_dev_evt": -0.962
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 1694.7,
+     "rel_dev_tpivot": 2.389,
+     "tau_evt": 1.892,
+     "arl_evt": 19.8,
+     "rel_dev_evt": -0.96
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.923,
+     "arl_evt": 421.8,
+     "rel_dev_evt": -0.156
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 8961.8,
+     "rel_dev_tpivot": 16.924,
+     "tau_evt": 2.2,
+     "arl_evt": 36.8,
+     "rel_dev_evt": -0.926
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 397.0,
+     "rel_dev_tpivot": -0.206,
+     "tau_evt": 2.192,
+     "arl_evt": 8.3,
+     "rel_dev_evt": -0.983
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.934,
+     "arl_evt": 190.4,
+     "rel_dev_evt": -0.619
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.773,
+     "arl_evt": 683.0,
+     "rel_dev_evt": 0.366
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 93.9,
+     "rel_dev_tpivot": -0.812,
+     "tau_evt": 2.099,
+     "arl_evt": 7.9,
+     "rel_dev_evt": -0.984
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 92.1,
+     "rel_dev_tpivot": -0.816,
+     "tau_evt": 3.168,
+     "arl_evt": 19.8,
+     "rel_dev_evt": -0.96
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 988.6,
+     "rel_dev_tpivot": 0.977,
+     "tau_evt": 2.156,
+     "arl_evt": 20.7,
+     "rel_dev_evt": -0.959
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 1.944,
+     "arl_evt": 23.8,
+     "rel_dev_evt": -0.952
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 9255.8,
+     "rel_dev_tpivot": 17.512,
+     "tau_evt": 1.648,
+     "arl_evt": 12.3,
+     "rel_dev_evt": -0.975
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 65.9,
+     "rel_dev_tpivot": -0.868,
+     "tau_evt": 2.474,
+     "arl_evt": 9.2,
+     "rel_dev_evt": -0.982
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 440.1,
+     "rel_dev_tpivot": -0.12,
+     "tau_evt": 2.34,
+     "arl_evt": 25.5,
+     "rel_dev_evt": -0.949
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 3146.0,
+     "rel_dev_tpivot": 5.292,
+     "tau_evt": 1.654,
+     "arl_evt": 17.3,
+     "rel_dev_evt": -0.965
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 1531.4,
+     "rel_dev_tpivot": 2.063,
+     "tau_evt": 1.699,
+     "arl_evt": 9.1,
+     "rel_dev_evt": -0.982
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 2829.3,
+     "rel_dev_tpivot": 4.659,
+     "tau_evt": 2.025,
+     "arl_evt": 21.1,
+     "rel_dev_evt": -0.958
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 2899.9,
+     "rel_dev_tpivot": 4.8,
+     "tau_evt": 1.885,
+     "arl_evt": 14.9,
+     "rel_dev_evt": -0.97
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 8720.3,
+     "rel_dev_tpivot": 16.441,
+     "tau_evt": 2.173,
+     "arl_evt": 48.0,
+     "rel_dev_evt": -0.904
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.735,
+     "arl_evt": 972.9,
+     "rel_dev_evt": 0.946
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 4566.0,
+     "rel_dev_tpivot": 8.132,
+     "tau_evt": 1.751,
+     "arl_evt": 9.3,
+     "rel_dev_evt": -0.981
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.195,
+     "arl_evt": 282.7,
+     "rel_dev_evt": -0.435
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 146.3,
+     "rel_dev_tpivot": -0.707,
+     "tau_evt": 2.015,
+     "arl_evt": 5.9,
+     "rel_dev_evt": -0.988
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.477,
+     "arl_evt": 871.8,
+     "rel_dev_evt": 0.744
+    },
+    {
+     "tau_tpivot": 4.207,
+     "arl_tpivot": 50000.0,
+     "rel_dev_tpivot": 99.0,
+     "tau_evt": 2.122,
+     "arl_evt": 97.7,
+     "rel_dev_evt": -0.805
+    }
+   ],
+   "heavy_tail_sensitivity_no_gate": {
+    "median_rel_dev_tpivot": -0.794,
+    "note": "10% 质量在 GPD(0.3) 重尾上——GPD/正态两假设同时受限的申报性边界（WMO TD-781、Inderscience 138231）"
+   }
+  }
+ },
+ "g2_hourly": {
+  "n_fit_benign": 809,
+  "n_holdout_benign": 347,
+  "arl100": {
+   "evt": {
+    "tau": 3.453,
+    "xi": 0.55,
+    "arl_median_holdout": 112.0,
+    "arl_ci95": [
+     6.0,
+     367.0
+    ],
+    "nominal_in_ci": true
+   },
+   "empirical_ref": {
+    "tau": 3.308,
+    "arl_median_holdout": 111.0,
+    "arl_ci95": [
+     4.0,
+     417.1
+    ],
+    "nominal_in_ci": true
+   }
+  },
+  "arl500": {
+   "evt": {
+    "tau": 8.572,
+    "xi": 0.55,
+    "arl_median_holdout": 112.0,
+    "arl_ci95": [
+     9.0,
+     418.0
+    ],
+    "nominal_in_ci": false
+   },
+   "empirical_ref": {
+    "tau": 9.039,
+    "arl_median_holdout": 111.0,
+    "arl_ci95": [
+     7.0,
+     393.0
+    ],
+    "nominal_in_ci": false
+   }
+  }
+ },
+ "g3_h1_reverdict": {
+  "arl100": {
+   "rows": [
+    {
+     "arm": "full",
+     "seed": 0,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 2,
+      "det_rate": 0.182,
+      "det_rate_ci_band": [
+       0.182,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "measured_arl": 88.3
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 92.4
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 1,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 2,
+      "det_rate": 0.455,
+      "det_rate_ci_band": [
+       0.455,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       26,
+       27,
+       28,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "measured_arl": 89.5
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 111.4
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 2,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 0,
+      "det_rate": 0.364,
+      "det_rate_ci_band": [
+       0.364,
+       1.0
+      ],
+      "alarm_days": [
+       12,
+       14,
+       26,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "measured_arl": 107.5
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 94.1
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 0,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 2,
+      "det_rate": 0.455,
+      "det_rate_ci_band": [
+       0.455,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       15,
+       20,
+       28,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "measured_arl": 91.4
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 105.1
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 1,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 0,
+      "det_rate": 0.455,
+      "det_rate_ci_band": [
+       0.455,
+       1.0
+      ],
+      "alarm_days": [
+       12,
+       14,
+       15,
+       28,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "measured_arl": 94.8
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 97.0
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 2,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 2,
+      "det_rate": 0.182,
+      "det_rate_ci_band": [
+       0.182,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.455,
+      "measured_arl": 105.5
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 96.3
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 0,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 2,
+      "det_rate": 0.182,
+      "det_rate_ci_band": [
+       0.182,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.455,
+      "measured_arl": 92.2
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 95.1
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 1,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 8,
+      "det_rate": 0.182,
+      "det_rate_ci_band": [
+       0.182,
+       0.909
+      ],
+      "alarm_days": [
+       27,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.455,
+      "measured_arl": 96.9
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 82.4
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 2,
+     "fixed_evt": {
+      "tau": 3.053,
+      "delay": 2,
+      "det_rate": 0.182,
+      "det_rate_ci_band": [
+       0.182,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.545,
+      "measured_arl": 88.7
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 112.3
+     }
+    }
+   ],
+   "noninferior_counts": {
+    "cusum": "7/9",
+    "ewma02": "7/9"
+   },
+   "familywise_falsealarm_11win": 0.1047,
+   "verdict": "公平对照重判定：存在非劣序贯读出；三读出共同 11 窗族级误报预算 0.1047（ARL 对齐后联合推断口径）"
+  },
+  "arl500": {
+   "rows": [
+    {
+     "arm": "full",
+     "seed": 0,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": 2,
+      "det_rate": 0.182,
+      "det_rate_ci_band": [
+       0.182,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 2,
+      "det_rate": 0.364,
+      "measured_arl": 465.7
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 490.8
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 1,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": 2,
+      "det_rate": 0.182,
+      "det_rate_ci_band": [
+       0.182,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 2,
+      "det_rate": 0.364,
+      "measured_arl": 512.4
+     },
+     "ewma02_incase": {
+      "delay": 2,
+      "det_rate": 0.818,
+      "measured_arl": 521.1
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 2,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": 2,
+      "det_rate": 0.182,
+      "det_rate_ci_band": [
+       0.182,
+       1.0
+      ],
+      "alarm_days": [
+       14,
+       29
+      ]
+     },
+     "cusum_incase": {
+      "delay": 2,
+      "det_rate": 0.364,
+      "measured_arl": 526.6
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 545.0
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 0,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": 2,
+      "det_rate": 0.091,
+      "det_rate_ci_band": [
+       0.091,
+       1.0
+      ],
+      "alarm_days": [
+       14
+      ]
+     },
+     "cusum_incase": {
+      "delay": 2,
+      "det_rate": 0.364,
+      "measured_arl": 490.0
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 502.6
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 1,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": 2,
+      "det_rate": 0.091,
+      "det_rate_ci_band": [
+       0.091,
+       1.0
+      ],
+      "alarm_days": [
+       14
+      ]
+     },
+     "cusum_incase": {
+      "delay": 1,
+      "det_rate": 0.455,
+      "measured_arl": 457.2
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 541.2
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 2,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": 2,
+      "det_rate": 0.091,
+      "det_rate_ci_band": [
+       0.091,
+       1.0
+      ],
+      "alarm_days": [
+       14
+      ]
+     },
+     "cusum_incase": {
+      "delay": 2,
+      "det_rate": 0.273,
+      "measured_arl": 472.0
+     },
+     "ewma02_incase": {
+      "delay": 2,
+      "det_rate": 0.818,
+      "measured_arl": 541.9
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 0,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": 2,
+      "det_rate": 0.091,
+      "det_rate_ci_band": [
+       0.091,
+       1.0
+      ],
+      "alarm_days": [
+       14
+      ]
+     },
+     "cusum_incase": {
+      "delay": 2,
+      "det_rate": 0.364,
+      "measured_arl": 479.8
+     },
+     "ewma02_incase": {
+      "delay": 2,
+      "det_rate": 0.818,
+      "measured_arl": 525.6
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 1,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": null,
+      "det_rate": 0.0,
+      "det_rate_ci_band": [
+       0.0,
+       0.909
+      ],
+      "alarm_days": []
+     },
+     "cusum_incase": {
+      "delay": 2,
+      "det_rate": 0.364,
+      "measured_arl": 527.5
+     },
+     "ewma02_incase": {
+      "delay": 1,
+      "det_rate": 0.909,
+      "measured_arl": 480.4
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 2,
+     "fixed_evt": {
+      "tau": 4.207,
+      "delay": 2,
+      "det_rate": 0.091,
+      "det_rate_ci_band": [
+       0.091,
+       1.0
+      ],
+      "alarm_days": [
+       14
+      ]
+     },
+     "cusum_incase": {
+      "delay": 2,
+      "det_rate": 0.364,
+      "measured_arl": 437.2
+     },
+     "ewma02_incase": {
+      "delay": 2,
+      "det_rate": 0.818,
+      "measured_arl": 520.2
+     }
+    }
+   ],
+   "noninferior_counts": {
+    "cusum": "9/9",
+    "ewma02": "9/9"
+   },
+   "familywise_falsealarm_11win": 0.0218,
+   "verdict": "公平对照重判定：存在非劣序贯读出；三读出共同 11 窗族级误报预算 0.0218（ARL 对齐后联合推断口径）"
+  }
+ },
+ "z3_crosscheck": {
+  "det_rates_at_z3": [
+   0.182,
+   0.455,
+   0.364,
+   0.455,
+   0.455,
+   0.182,
+   0.182,
+   0.182,
+   0.273
+  ],
+  "range": [
+   0.182,
+   0.455
+  ],
+  "reviewerA_claim": "0.18-0.45",
+  "confirmed": true
+ },
+ "selfstarting": {},
+ "g1_direct_pivot_check": {
+  "instrument": "直接无条件模拟（每次试验：抽 9 点校准池→抽 1 新窗→pivot 标准化→比阈值）；20 万次试验，SE≈0.07%——替代 100 世界重放均值（该估计量因世界间 ARL 重尾偏斜而精度不足，二者并报）",
+  "gate": "|rate×ARL0 − 1| < 15%（判据修订 6：门仪表换成直接模拟；原 100 世界重放值保留披露）",
+  "arl100": {
+   "tau": 3.0531,
+   "rate": 0.00952,
+   "rate_x_arl0": 0.952,
+   "gate_pass": true
+  },
+  "arl500": {
+   "tau": 4.2068,
+   "rate": 0.00205,
+   "rate_x_arl0": 1.025,
+   "gate_pass": true
+  }
+ }
+}

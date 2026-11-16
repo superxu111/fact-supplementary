@@ -1,0 +1,225 @@
+{
+ "exp": "R1-E8 干净消融收口",
+ "date": "2026-10-24",
+ "criteria": "criteria.json（冻结）",
+ "E8a_uniform1_60ep": {
+  "metrics": {
+   "full": [
+    {
+     "auc_mixed": 0.89581,
+     "auc_logon": 0.64771,
+     "ap_logon": 0.00427
+    },
+    {
+     "auc_mixed": 0.8994,
+     "auc_logon": 0.68311,
+     "ap_logon": 0.00484
+    },
+    {
+     "auc_mixed": 0.92102,
+     "auc_logon": 0.7402,
+     "ap_logon": 0.00565
+    }
+   ],
+   "homo_tw0.5": [
+    {
+     "auc_mixed": 0.93143,
+     "auc_logon": 0.83417,
+     "ap_logon": 0.00836
+    },
+    {
+     "auc_mixed": 0.88736,
+     "auc_logon": 0.82907,
+     "ap_logon": 0.01675
+    },
+    {
+     "auc_mixed": 0.8867,
+     "auc_logon": 0.7393,
+     "ap_logon": 0.00558
+    }
+   ],
+   "homo_tw0": [
+    {
+     "auc_mixed": 0.9133,
+     "auc_logon": 0.82964,
+     "ap_logon": 0.00819
+    },
+    {
+     "auc_mixed": 0.89845,
+     "auc_logon": 0.84546,
+     "ap_logon": 0.01239
+    },
+    {
+     "auc_mixed": 0.87629,
+     "auc_logon": 0.72508,
+     "ap_logon": 0.00542
+    }
+   ]
+  },
+  "logon_tests": [
+   {
+    "seed": 0,
+    "logon_full_minus_tw0": {
+     "obs": -0.18193,
+     "p": 0.002,
+     "ci95": [
+      -0.24601,
+      -0.08247
+     ]
+    },
+    "logon_full_minus_tw0.5_incase_p": 0.004,
+    "logon_full_minus_tw0.5_ci95": [
+     -0.27178,
+     -0.09566
+    ]
+   },
+   {
+    "seed": 1,
+    "logon_full_minus_tw0": {
+     "obs": -0.16235,
+     "p": 0.002,
+     "ci95": [
+      -0.36803,
+      -0.1277
+     ]
+    },
+    "logon_full_minus_tw0.5_incase_p": 0.002,
+    "logon_full_minus_tw0.5_ci95": [
+     -0.2021,
+     -0.08193
+    ]
+   },
+   {
+    "seed": 2,
+    "logon_full_minus_tw0": {
+     "obs": 0.01512,
+     "p": 0.7605,
+     "ci95": [
+      -0.37229,
+      0.0079
+     ]
+    },
+    "logon_full_minus_tw0.5_incase_p": 0.986,
+    "logon_full_minus_tw0.5_ci95": [
+     -0.31343,
+     0.01496
+    ]
+   }
+  ],
+  "band_check": {
+   "auc_logon_diff_full_minus_tw0": [
+    -0.18193,
+    -0.16235,
+    0.01512
+   ],
+   "auc_logon_diff_full_minus_tw0.5": [
+    -0.18646,
+    -0.14595,
+    0.0009
+   ],
+   "tw0_in_tw0.5_band": [
+    true,
+    true,
+    false
+   ],
+   "auc_mixed_diff_full_minus_tw0": [
+    -0.01749,
+    0.00095,
+    0.04474
+   ],
+   "auc_mixed_diff_full_minus_tw0.5": [
+    -0.03562,
+    0.01204,
+    0.03432
+   ],
+   "mixed_tw0_in_tw0.5_band": [
+    true,
+    true,
+    false
+   ]
+  }
+ },
+ "E8b_temporal1_30ep": {
+  "metrics": {
+   "full": [
+    {
+     "auc_mixed": 0.95968,
+     "auc_logon": 0.8652,
+     "ap_logon": 0.01165
+    },
+    {
+     "auc_mixed": 0.95055,
+     "auc_logon": 0.84119,
+     "ap_logon": 0.00789
+    },
+    {
+     "auc_mixed": 0.94635,
+     "auc_logon": 0.81867,
+     "ap_logon": 0.00841
+    }
+   ],
+   "homo_tw0.5": [
+    {
+     "auc_mixed": 0.63233,
+     "auc_logon": 0.8721,
+     "ap_logon": 0.01603
+    },
+    {
+     "auc_mixed": 0.6083,
+     "auc_logon": 0.85332,
+     "ap_logon": 0.00818
+    },
+    {
+     "auc_mixed": 0.62617,
+     "auc_logon": 0.86208,
+     "ap_logon": 0.00837
+    }
+   ],
+   "homo_tw0": [
+    {
+     "auc_mixed": 0.58703,
+     "auc_logon": 0.87944,
+     "ap_logon": 0.01954
+    },
+    {
+     "auc_mixed": 0.61239,
+     "auc_logon": 0.86634,
+     "ap_logon": 0.00823
+    },
+    {
+     "auc_mixed": 0.62334,
+     "auc_logon": 0.86263,
+     "ap_logon": 0.00806
+    }
+   ]
+  },
+  "mixed_separability": [
+   {
+    "seed": 0,
+    "mixed_full_minus_tw0": 0.37265,
+    "p": 0.004
+   },
+   {
+    "seed": 1,
+    "mixed_full_minus_tw0": 0.33816,
+    "p": 0.002
+   },
+   {
+    "seed": 2,
+    "mixed_full_minus_tw0": 0.32301,
+    "p": 0.004
+   }
+  ],
+  "tw0.5_reference_p": [
+   0.004,
+   0.004,
+   0.006
+  ]
+ },
+ "verdict": {
+  "E8a": "LOGON 同池：full−homo_tw0 差 2/3 seed 落 tw0.5 波动带；置换显著 seed 数 2/3；mixed 差 2/3 在带内",
+  "E8b": "temporal 点混合池 full 可分 3/3 seeds（tw0.5 参照 3/3）",
+  "conclusion": "干净消融（去辅助类型损失）下主结论方向保持——消融机制不对齐披露为局限而非推翻；",
+  "red_line_note": "未检出显著差异≠等效；本实验仅证明结论对辅助类型头梯度不敏感，不构成等效证明"
+ }
+}

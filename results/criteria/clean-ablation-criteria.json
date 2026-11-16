@@ -1,0 +1,16 @@
+{
+  "exp": "R1-E8 干净消融臂：homo 去辅助类型损失（type_w=0）",
+  "frozen_at": "2026-10-24T14:30:00+08:00",
+  "motivation": "R1B-M5：homo/homoflows 消融臂仍训 0.5·CE_type 辅助头，但任务语义与 full 不同（full=含 FLOW 正例的真三类型预测 LOGON=0/FLOW=1/neg=2；homo=pos=0/neg=2 正负区分）——『关掉类型机制』的消融不干净。本实验把辅助头梯度彻底置零，检验主结论是否依赖该辅助信号。",
+  "hypothesis": "H5: 去辅助类型损失后 homo 臂 LOGON 同池与混合池结论与 type_w=0.5 版本一致（full−homo 差方向不变）；若不一致，如实申报消融不干净并改写机理讨论",
+  "design": {
+    "自变量": "辅助类型损失权重 type_w ∈ {0.5（在案/E2 现行）, 0（干净消融）}",
+    "臂": "homo（无类型嵌入+无 FLOW+同构机制，r1_train_arm.py --arm homo）",
+    "对照": "full（E2 uniform1_full_60ep / temporal1_full_30ep 在案 npz）",
+    "点位": "E8a uniform 1:1 60ep ×3 seeds（主结论主口径）；E8b temporal 1:1 30ep ×3 seeds（E2 头条翻转点抽检）",
+    "指标": "LOGON 同池 AUC/AP + 混合池 AUC + 日块配对置换 p（独立种子）+ 日块 bootstrap CI",
+    "实现注记": "type_w=0 时类型头参数仍存在但零梯度（0×l_t），表征不再接收任何类型 CE 梯度；其 type_macro_f1 无意义不申报"
+  },
+  "success": "E8a: full−homo_tw0 的 LOGON/mixed 差与 full−homo_tw0.5（E2 60ep）方向一致且 3 seeds 多数在对方 seed 波动带内 → 主结论不依赖辅助类型损失；E8b: temporal 点 homo_tw0 混合池可分性与 homo_tw0.5 一致（3/3 seeds 同向）→ FLOW 崩坏机理不依赖辅助头。任一不成立则如实申报并降级对应结论措辞",
+  "red_lines": ["未检出显著差异≠等效", "消融下降≠超基线", "type_w=0 不是『更强的 homo』，两臂表征信息量对齐机制不变"]
+}

@@ -1,0 +1,13 @@
+{
+ "exp": "R2-E15：校准结论证书化（定向创新方案二 + R3B-M4 realized 误报预算列 + R3B-m7 S2 注）",
+ "frozen_at_filesystem": "2026-10-24T20:41:23+08:00",
+ "hypothesis": "四校准规格在 9 个标准化良性 z 池上的真实越限行为可证书化：S1(τ_t)/S2(z3.0) 预期 0/9 池越限（实测误报率 0）；S3(经验可达) 预期 1/9 池越限（越限池 FAR=1/9→实测 ARL≈9=第一轮失效体制）；S4(已否决 EVT) 预期 4/9 池越限。复审人（R3B-M4）数值作对照，脚本独立重算——不一致时如实报告差异并以脚本值为准。",
+ "methods": [
+  "realized_exceed_pools/per-pool FAR/realized_ARL_at_exceed 增列（越限=池内 ≥1 良性窗告警；FAR=告警窗数/9）",
+  "精确二项检验 P(X≥k|Binomial(9,1/ARL0))（n=9 低功效下替代渐近 Kupiec）+ 保形 p=(1+k)/(n+1) 并报",
+  "单元适配申报：名义预算按日、可交换单元=池、池内自相关、有效样本=9 池、证书粒度 1/10",
+  "S2 arl500 档沿用 τ=3.0 属设计使然（该档名义正态阈 z=2.878/枢轴 4.207）——产物内加注一句（R3B-m7）",
+  "S3/S4 行标注「失效体制反证档」；e-process（Ramdas et al. arXiv:2210.01948）仅作附录方向句引用，本轮不算数"
+ ],
+ "success_criteria": "9 池构建与 e5_evt_calib.py:217-229 同式；specification-curve.json 以追加键（只增不改）获得 realized 列；二项/保形 p 全部落盘；复审人对照表落盘"
+}

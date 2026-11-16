@@ -1,0 +1,821 @@
+{
+ "exp": "R2-E15：校准结论证书化（定向创新方案二；R3B-M4 realized 误报预算列+R3B-m7 S2 注）",
+ "date": "2026-10-24",
+ "unit_adaptation_declaration": "单元适配申报（保形异常检测文献三条警示全命中，引用时须随附）：①名义误报预算按「日」申报，但本证书的可交换单元=「池」（3 臂×3 seed 的良性日 z 池）——池内 9 日存在自相关、池间共享攻击配置，9 池≠81 个独立日观测，有效样本按池计=9；②证书粒度受保形分位数 1/(n+1) 限制：n=9 池 → 最细可分辨概率 1/10，本证书不支撑对名义预算更细档位的分辨；③名义预算在「日单元」与「池单元」间不直接换算（池层越限概率 ≥ 日层预算），故本证书口径为「按池聚合的越限池计数」，与 C2′「9 良性日不可辨识」披露互为表里——该申报本身即 C2′「披露不可辨识性」卖点的延伸证据。",
+ "reading": "判别读法（翻转 R3B-M4 担忧的「multiverse 对称不稳定」削弱读法）：名义预算必须通过真实良性流越限检验才算数——S1/S2 通过（0/9 池越限，实测误报率 0）；S3/S4 不通过（越限档实测 ARL≈9=第一轮 R1B-C1 失效体制），恰为「经验可达/已否决 EVT 规格不可部署」的定量反证。规格曲线的非对称性=校准分辨率不可辨识性的证据，而非结论不稳定。",
+ "appendix_direction_sentence_only": "序贯读出 ARL 认证不可辨识的统计学出路（仅方向句引用，本轮不算数）：e-process/Ville 界（Ramdas, Grünwald, Vovk & Shafer 2022, \"Game-theoretic statistics and safe anytime-valid inference\", arXiv:2210.01948）允许任意停止时刻有效的误报控制，可在延长良性流到位后对 ARL0 做序贯认证——列_future work。",
+ "certificate": {
+  "arl100": {
+   "S1_tpivot_t9_8": {
+    "tau": 3.0531,
+    "exceed_pools": [],
+    "k_exceed_pools": "0/9",
+    "per_pool_far": {
+     "full_s0": 0.0,
+     "full_s1": 0.0,
+     "full_s2": 0.0,
+     "homo_s0": 0.0,
+     "homo_s1": 0.0,
+     "homo_s2": 0.0,
+     "homoflows_s0": 0.0,
+     "homoflows_s1": 0.0,
+     "homoflows_s2": 0.0
+    },
+    "realized_ARL_at_exceed": "∞（0 越限池，实测误报率 0）",
+    "exact_binomial": {
+     "null_A": "池越限概率≤名义日预算 1/100（保守口径）",
+     "k": 0,
+     "p_one_sided": 1.0,
+     "p_display_tier": "1",
+     "verdict_5pct": "不拒绝名义误报预算",
+     "null_B": "每窗误报率≤1/100 → 池越限概率=0.0865（每窗独立派生口径）",
+     "p_one_sided_nullB": 1.0,
+     "p_display_tier_nullB": "1",
+     "verdict_5pct_nullB": "不拒绝",
+     "note": "双口径并报（R3 逐档生成，废除跨档共享静态句）：本行 null_A=不拒绝名义误报预算、null_B=不拒绝——「0/9 越限」在两 null 下均不拒绝（正面证书稳健；零功率申报见 zero_power_declaration_r3：阈值恒高于 9 点池结构上界 8/3，本格为结构必然、不承担判别证据语义）"
+    },
+    "conformal_p": 0.1,
+    "kupiec_pof_asymptotic_reference": {
+     "LR": 0.0,
+     "p_chi2_1": 1.0,
+     "p_display_tier": "1",
+     "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+    },
+    "status": "主阈值（正态父体 t-枢轴外推）",
+    "zero_power_declaration_r3": {
+     "status": "ZERO-POWER DECLARATION（R3/P0-1 补录，R2A2-M2②）",
+     "structural_bound_9pt_pool": "8/3≈2.6667（n 点标准化池任意值上界=(n-1)/√n，n=9）",
+     "empirical_max_abs_z_9pools_recomputed_here": 2.0367,
+     "empirical_note": "本席从 9 良性池 npz 现算（复审人数 2.0367 仅作对照，非本句数值来源）",
+     "thresholds_vs_bound": "S1 τ_t：arl100=3.0531/arl500=4.2068；S2 τ=3.0——全部恒高于结构上界 8/3 与实测 max|z|",
+     "declaration": "S1/S2 的 0/9 越限系结构必然（阈值高于 9 点池可达上界→零功效），非「校准良好」的证据性通过；欠效力规格不承担判别语义（规格曲线须 statistically valid 申报）——引用 0/9 证书列时须随附本申报"
+    },
+    "reviewer_crossref_r3bm4": "0/9（复审人合计口径，未分档；本行=本档独立重算）"
+   },
+   "S2_z3_probe": {
+    "tau": 3.0,
+    "exceed_pools": [],
+    "k_exceed_pools": "0/9",
+    "per_pool_far": {
+     "full_s0": 0.0,
+     "full_s1": 0.0,
+     "full_s2": 0.0,
+     "homo_s0": 0.0,
+     "homo_s1": 0.0,
+     "homo_s2": 0.0,
+     "homoflows_s0": 0.0,
+     "homoflows_s1": 0.0,
+     "homoflows_s2": 0.0
+    },
+    "realized_ARL_at_exceed": "∞（0 越限池，实测误报率 0）",
+    "exact_binomial": {
+     "null_A": "池越限概率≤名义日预算 1/100（保守口径）",
+     "k": 0,
+     "p_one_sided": 1.0,
+     "p_display_tier": "1",
+     "verdict_5pct": "不拒绝名义误报预算",
+     "null_B": "每窗误报率≤1/100 → 池越限概率=0.0865（每窗独立派生口径）",
+     "p_one_sided_nullB": 1.0,
+     "p_display_tier_nullB": "1",
+     "verdict_5pct_nullB": "不拒绝",
+     "note": "双口径并报（R3 逐档生成，废除跨档共享静态句）：本行 null_A=不拒绝名义误报预算、null_B=不拒绝——「0/9 越限」在两 null 下均不拒绝（正面证书稳健；零功率申报见 zero_power_declaration_r3：阈值恒高于 9 点池结构上界 8/3，本格为结构必然、不承担判别证据语义）"
+    },
+    "conformal_p": 0.1,
+    "kupiec_pof_asymptotic_reference": {
+     "LR": 0.0,
+     "p_chi2_1": 1.0,
+     "p_display_tier": "1",
+     "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+    },
+    "status": "R1A 稳健性探针",
+    "zero_power_declaration_r3": {
+     "status": "ZERO-POWER DECLARATION（R3/P0-1 补录，R2A2-M2②）",
+     "structural_bound_9pt_pool": "8/3≈2.6667（n 点标准化池任意值上界=(n-1)/√n，n=9）",
+     "empirical_max_abs_z_9pools_recomputed_here": 2.0367,
+     "empirical_note": "本席从 9 良性池 npz 现算（复审人数 2.0367 仅作对照，非本句数值来源）",
+     "thresholds_vs_bound": "S1 τ_t：arl100=3.0531/arl500=4.2068；S2 τ=3.0——全部恒高于结构上界 8/3 与实测 max|z|",
+     "declaration": "S1/S2 的 0/9 越限系结构必然（阈值高于 9 点池可达上界→零功效），非「校准良好」的证据性通过；欠效力规格不承担判别语义（规格曲线须 statistically valid 申报）——引用 0/9 证书列时须随附本申报"
+    },
+    "note_r3bm7": "该档沿用 τ=3.0 属设计使然（R1A 稳健性探针两档同值）；本档（arl100）名义正态阈 z=2.3263/枢轴 τ_t=3.0531——勿将 z3 读作本档名义预算对应阈值",
+    "reviewer_crossref_r3bm4": "0/9（复审人合计口径，未分档；本行=本档独立重算）"
+   },
+   "S3_empirical_reachable": {
+    "tau": 1.9894,
+    "exceed_pools": [
+     "full_s2"
+    ],
+    "k_exceed_pools": "1/9",
+    "per_pool_far": {
+     "full_s0": 0.0,
+     "full_s1": 0.0,
+     "full_s2": 0.1111,
+     "homo_s0": 0.0,
+     "homo_s1": 0.0,
+     "homo_s2": 0.0,
+     "homoflows_s0": 0.0,
+     "homoflows_s1": 0.0,
+     "homoflows_s2": 0.0
+    },
+    "realized_ARL_at_exceed": {
+     "full_s2": 9.0
+    },
+    "exact_binomial": {
+     "null_A": "池越限概率≤名义日预算 1/100（保守口径）",
+     "k": 1,
+     "p_one_sided": 0.0864827525163591,
+     "p_display_tier": "0.0864828",
+     "verdict_5pct": "不拒绝名义误报预算",
+     "null_B": "每窗误报率≤1/100 → 池越限概率=0.0865（每窗独立派生口径）",
+     "p_one_sided_nullB": 0.5569520183738275,
+     "p_display_tier_nullB": "0.556952",
+     "verdict_5pct_nullB": "不拒绝",
+     "note": "双口径并报（R3 逐档生成，废除跨档共享静态句）：本行 null_A=不拒绝名义误报预算、null_B=不拒绝——口径依赖如实并报、不作单口径判语（二项检验结论依赖单元口径；越限池实测 ARL≈9=第一轮 C1 失效体制）"
+    },
+    "conformal_p": 0.2,
+    "kupiec_pof_asymptotic_reference": {
+     "LR": 3.0922,
+     "p_chi2_1": 0.07866992692578476,
+     "p_display_tier": "0.0786699",
+     "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+    },
+    "status": "池内经验可达阈值——失效体制反证档（判据反向；越限池实测 ARL≈9=第一轮 C1 失效体制；二项检验结论依赖单元口径，见 exact_binomial 双 null 并报）",
+    "reviewer_crossref_r3bm4": "1/9（复审人合计口径，未分档；本行=本档独立重算）"
+   },
+   "S4_evt_hybrid_REJECTED_daywindow": {
+    "tau": 1.8743,
+    "exceed_pools": [
+     "full_s0",
+     "full_s1",
+     "full_s2",
+     "homoflows_s0"
+    ],
+    "k_exceed_pools": "4/9",
+    "per_pool_far": {
+     "full_s0": 0.1111,
+     "full_s1": 0.1111,
+     "full_s2": 0.1111,
+     "homo_s0": 0.0,
+     "homo_s1": 0.0,
+     "homo_s2": 0.0,
+     "homoflows_s0": 0.1111,
+     "homoflows_s1": 0.0,
+     "homoflows_s2": 0.0
+    },
+    "realized_ARL_at_exceed": {
+     "full_s0": 9.0,
+     "full_s1": 9.0,
+     "full_s2": 9.0,
+     "homoflows_s0": 9.0
+    },
+    "exact_binomial": {
+     "null_A": "池越限概率≤名义日预算 1/100（保守口径）",
+     "k": 4,
+     "p_one_sided": 1.210432831444e-06,
+     "p_display_tier": "1.21043e-06",
+     "verdict_5pct": "拒绝名义误报预算",
+     "null_B": "每窗误报率≤1/100 → 池越限概率=0.0865（每窗独立派生口径）",
+     "p_one_sided_nullB": 0.004936481632128414,
+     "p_display_tier_nullB": "0.00493648",
+     "verdict_5pct_nullB": "拒绝",
+     "note": "双口径并报（R3 逐档生成，废除跨档共享静态句）：本行 null_A=拒绝名义误报预算、null_B=拒绝——失效体制定量反证（两口径均强拒绝；第一轮 C1 失效体制复现）"
+    },
+    "conformal_p": 0.5,
+    "kupiec_pof_asymptotic_reference": {
+     "LR": 24.5766,
+     "p_chi2_1": 7.141529893612686e-07,
+     "p_display_tier": "<1e-6",
+     "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+    },
+    "status": "已否决分支（ξ̂=−3.92 自家诊断拒绝）——失效体制反证档（两口径二项强拒绝；第一轮 C1 失效体制复现）",
+    "reviewer_crossref_r3bm4": "4/9（复审人合计口径，未分档；本行=本档独立重算）"
+   }
+  },
+  "arl500": {
+   "S1_tpivot_t9_8": {
+    "tau": 4.2068,
+    "exceed_pools": [],
+    "k_exceed_pools": "0/9",
+    "per_pool_far": {
+     "full_s0": 0.0,
+     "full_s1": 0.0,
+     "full_s2": 0.0,
+     "homo_s0": 0.0,
+     "homo_s1": 0.0,
+     "homo_s2": 0.0,
+     "homoflows_s0": 0.0,
+     "homoflows_s1": 0.0,
+     "homoflows_s2": 0.0
+    },
+    "realized_ARL_at_exceed": "∞（0 越限池，实测误报率 0）",
+    "exact_binomial": {
+     "null_A": "池越限概率≤名义日预算 1/500（保守口径）",
+     "k": 0,
+     "p_one_sided": 1.0,
+     "p_display_tier": "1",
+     "verdict_5pct": "不拒绝名义误报预算",
+     "null_B": "每窗误报率≤1/500 → 池越限概率=0.0179（每窗独立派生口径）",
+     "p_one_sided_nullB": 1.0,
+     "p_display_tier_nullB": "1",
+     "verdict_5pct_nullB": "不拒绝",
+     "note": "双口径并报（R3 逐档生成，废除跨档共享静态句）：本行 null_A=不拒绝名义误报预算、null_B=不拒绝——「0/9 越限」在两 null 下均不拒绝（正面证书稳健；零功率申报见 zero_power_declaration_r3：阈值恒高于 9 点池结构上界 8/3，本格为结构必然、不承担判别证据语义）"
+    },
+    "conformal_p": 0.1,
+    "kupiec_pof_asymptotic_reference": {
+     "LR": 0.0,
+     "p_chi2_1": 1.0,
+     "p_display_tier": "1",
+     "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+    },
+    "status": "主阈值（正态父体 t-枢轴外推）",
+    "zero_power_declaration_r3": {
+     "status": "ZERO-POWER DECLARATION（R3/P0-1 补录，R2A2-M2②）",
+     "structural_bound_9pt_pool": "8/3≈2.6667（n 点标准化池任意值上界=(n-1)/√n，n=9）",
+     "empirical_max_abs_z_9pools_recomputed_here": 2.0367,
+     "empirical_note": "本席从 9 良性池 npz 现算（复审人数 2.0367 仅作对照，非本句数值来源）",
+     "thresholds_vs_bound": "S1 τ_t：arl100=3.0531/arl500=4.2068；S2 τ=3.0——全部恒高于结构上界 8/3 与实测 max|z|",
+     "declaration": "S1/S2 的 0/9 越限系结构必然（阈值高于 9 点池可达上界→零功效），非「校准良好」的证据性通过；欠效力规格不承担判别语义（规格曲线须 statistically valid 申报）——引用 0/9 证书列时须随附本申报"
+    },
+    "reviewer_crossref_r3bm4": "0/9（复审人合计口径，未分档；本行=本档独立重算）"
+   },
+   "S2_z3_probe": {
+    "tau": 3.0,
+    "exceed_pools": [],
+    "k_exceed_pools": "0/9",
+    "per_pool_far": {
+     "full_s0": 0.0,
+     "full_s1": 0.0,
+     "full_s2": 0.0,
+     "homo_s0": 0.0,
+     "homo_s1": 0.0,
+     "homo_s2": 0.0,
+     "homoflows_s0": 0.0,
+     "homoflows_s1": 0.0,
+     "homoflows_s2": 0.0
+    },
+    "realized_ARL_at_exceed": "∞（0 越限池，实测误报率 0）",
+    "exact_binomial": {
+     "null_A": "池越限概率≤名义日预算 1/500（保守口径）",
+     "k": 0,
+     "p_one_sided": 1.0,
+     "p_display_tier": "1",
+     "verdict_5pct": "不拒绝名义误报预算",
+     "null_B": "每窗误报率≤1/500 → 池越限概率=0.0179（每窗独立派生口径）",
+     "p_one_sided_nullB": 1.0,
+     "p_display_tier_nullB": "1",
+     "verdict_5pct_nullB": "不拒绝",
+     "note": "双口径并报（R3 逐档生成，废除跨档共享静态句）：本行 null_A=不拒绝名义误报预算、null_B=不拒绝——「0/9 越限」在两 null 下均不拒绝（正面证书稳健；零功率申报见 zero_power_declaration_r3：阈值恒高于 9 点池结构上界 8/3，本格为结构必然、不承担判别证据语义）"
+    },
+    "conformal_p": 0.1,
+    "kupiec_pof_asymptotic_reference": {
+     "LR": 0.0,
+     "p_chi2_1": 1.0,
+     "p_display_tier": "1",
+     "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+    },
+    "status": "R1A 稳健性探针",
+    "zero_power_declaration_r3": {
+     "status": "ZERO-POWER DECLARATION（R3/P0-1 补录，R2A2-M2②）",
+     "structural_bound_9pt_pool": "8/3≈2.6667（n 点标准化池任意值上界=(n-1)/√n，n=9）",
+     "empirical_max_abs_z_9pools_recomputed_here": 2.0367,
+     "empirical_note": "本席从 9 良性池 npz 现算（复审人数 2.0367 仅作对照，非本句数值来源）",
+     "thresholds_vs_bound": "S1 τ_t：arl100=3.0531/arl500=4.2068；S2 τ=3.0——全部恒高于结构上界 8/3 与实测 max|z|",
+     "declaration": "S1/S2 的 0/9 越限系结构必然（阈值高于 9 点池可达上界→零功效），非「校准良好」的证据性通过；欠效力规格不承担判别语义（规格曲线须 statistically valid 申报）——引用 0/9 证书列时须随附本申报"
+    },
+    "note_r3bm7": "该档沿用 τ=3.0 属设计使然（R1A 稳健性探针两档同值）；本档（arl500）名义正态阈 z=2.8782/枢轴 τ_t=4.2068——勿将 z3 读作本档名义预算对应阈值",
+    "reviewer_crossref_r3bm4": "0/9（复审人合计口径，未分档；本行=本档独立重算）"
+   },
+   "S3_empirical_reachable": {
+    "tau": 2.0272,
+    "exceed_pools": [
+     "full_s2"
+    ],
+    "k_exceed_pools": "1/9",
+    "per_pool_far": {
+     "full_s0": 0.0,
+     "full_s1": 0.0,
+     "full_s2": 0.1111,
+     "homo_s0": 0.0,
+     "homo_s1": 0.0,
+     "homo_s2": 0.0,
+     "homoflows_s0": 0.0,
+     "homoflows_s1": 0.0,
+     "homoflows_s2": 0.0
+    },
+    "realized_ARL_at_exceed": {
+     "full_s2": 9.0
+    },
+    "exact_binomial": {
+     "null_A": "池越限概率≤名义日预算 1/500（保守口径）",
+     "k": 1,
+     "p_one_sided": 0.017856669988026624,
+     "p_display_tier": "0.0178567",
+     "verdict_5pct": "拒绝名义误报预算",
+     "null_B": "每窗误报率≤1/500 → 池越限概率=0.0179（每窗独立派生口径）",
+     "p_one_sided_nullB": 0.14969673971747924,
+     "p_display_tier_nullB": "0.149697",
+     "verdict_5pct_nullB": "不拒绝",
+     "note": "双口径并报（R3 逐档生成，废除跨档共享静态句）：本行 null_A=拒绝名义误报预算、null_B=不拒绝——口径依赖如实并报、不作单口径判语（二项检验结论依赖单元口径；越限池实测 ARL≈9=第一轮 C1 失效体制）"
+    },
+    "conformal_p": 0.2,
+    "kupiec_pof_asymptotic_reference": {
+     "LR": 6.1823,
+     "p_chi2_1": 0.012903659162026498,
+     "p_display_tier": "0.0129037",
+     "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+    },
+    "status": "池内经验可达阈值——失效体制反证档（判据反向；越限池实测 ARL≈9=第一轮 C1 失效体制；二项检验结论依赖单元口径，见 exact_binomial 双 null 并报）",
+    "reviewer_crossref_r3bm4": "1/9（复审人合计口径，未分档；本行=本档独立重算）"
+   },
+   "S4_evt_hybrid_REJECTED_daywindow": {
+    "tau": 1.8754,
+    "exceed_pools": [
+     "full_s0",
+     "full_s1",
+     "full_s2",
+     "homoflows_s0"
+    ],
+    "k_exceed_pools": "4/9",
+    "per_pool_far": {
+     "full_s0": 0.1111,
+     "full_s1": 0.1111,
+     "full_s2": 0.1111,
+     "homo_s0": 0.0,
+     "homo_s1": 0.0,
+     "homo_s2": 0.0,
+     "homoflows_s0": 0.1111,
+     "homoflows_s1": 0.0,
+     "homoflows_s2": 0.0
+    },
+    "realized_ARL_at_exceed": {
+     "full_s0": 9.0,
+     "full_s1": 9.0,
+     "full_s2": 9.0,
+     "homoflows_s0": 9.0
+    },
+    "exact_binomial": {
+     "null_A": "池越限概率≤名义日预算 1/500（保守口径）",
+     "k": 4,
+     "p_one_sided": 1.999925667920611e-09,
+     "p_display_tier": "<1e-6",
+     "verdict_5pct": "拒绝名义误报预算",
+     "null_B": "每窗误报率≤1/500 → 池越限概率=0.0179（每窗独立派生口径）",
+     "p_one_sided_nullB": 1.192248115755465e-05,
+     "p_display_tier_nullB": "1.19225e-05",
+     "verdict_5pct_nullB": "拒绝",
+     "note": "双口径并报（R3 逐档生成，废除跨档共享静态句）：本行 null_A=拒绝名义误报预算、null_B=拒绝——失效体制定量反证（两口径均强拒绝；第一轮 C1 失效体制复现）"
+    },
+    "conformal_p": 0.5,
+    "kupiec_pof_asymptotic_reference": {
+     "LR": 37.3716,
+     "p_chi2_1": 9.763472503687846e-10,
+     "p_display_tier": "<1e-6",
+     "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+    },
+    "status": "已否决分支（ξ̂=−3.92 自家诊断拒绝）——失效体制反证档（两口径二项强拒绝；第一轮 C1 失效体制复现）",
+    "reviewer_crossref_r3bm4": "4/9（复审人合计口径，未分档；本行=本档独立重算）"
+   }
+  }
+ },
+ "superseded_r3_static_note": {
+  "status": "SUPERSEDED（R3/P0-1：旧 certificate 8 格原文保留——共享静态 note 句「S3 在 null_A 下边缘拒绝」与 arl100/S3 实算 p=0.086483 不拒绝矛盾（R2A2-M2①/R4B-m1②）；arl100/S2 的 note_r3bm7 贴 arl500 档标签却注 arl100 值 2.3263/3.0531（R4B-m1①/R2A2-m2）；p_one_sided 两处 round(·,6) 舍零/降精度（R2A2-m3）。更正见 certificate 逐档生成 note）",
+  "old_certificate": {
+   "arl100": {
+    "S1_tpivot_t9_8": {
+     "tau": 3.0531,
+     "exceed_pools": [],
+     "k_exceed_pools": "0/9",
+     "per_pool_far": {
+      "full_s0": 0.0,
+      "full_s1": 0.0,
+      "full_s2": 0.0,
+      "homo_s0": 0.0,
+      "homo_s1": 0.0,
+      "homo_s2": 0.0,
+      "homoflows_s0": 0.0,
+      "homoflows_s1": 0.0,
+      "homoflows_s2": 0.0
+     },
+     "realized_ARL_at_exceed": "∞（0 越限池，实测误报率 0）",
+     "exact_binomial": {
+      "null_A": "池越限概率≤名义日预算 1/100（保守口径）",
+      "k": 0,
+      "p_one_sided": 1.0,
+      "verdict_5pct": "不拒绝名义误报预算",
+      "null_B": "每窗误报率≤1/100 → 池越限概率=0.0865（每窗独立派生口径）",
+      "p_one_sided_nullB": 1.0,
+      "verdict_5pct_nullB": "不拒绝",
+      "note": "双口径并报：S1/S2 的「0/9 越限」在两 null 下均不拒绝（正面证书稳健）；S3 在 null_A 下边缘拒绝、null_B 下不拒绝（如实并报，不作单口径判语）；S4 在两 null 下均强拒绝"
+     },
+     "conformal_p": 0.1,
+     "kupiec_pof_asymptotic_reference": {
+      "LR": 0.0,
+      "p_chi2_1": 1.0,
+      "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+     },
+     "status": "主阈值（正态父体 t-枢轴外推）",
+     "reviewer_crossref_r3bm4": "0/9（复审人合计口径，未分档；本行=本档独立重算）"
+    },
+    "S2_z3_probe": {
+     "tau": 3.0,
+     "exceed_pools": [],
+     "k_exceed_pools": "0/9",
+     "per_pool_far": {
+      "full_s0": 0.0,
+      "full_s1": 0.0,
+      "full_s2": 0.0,
+      "homo_s0": 0.0,
+      "homo_s1": 0.0,
+      "homo_s2": 0.0,
+      "homoflows_s0": 0.0,
+      "homoflows_s1": 0.0,
+      "homoflows_s2": 0.0
+     },
+     "realized_ARL_at_exceed": "∞（0 越限池，实测误报率 0）",
+     "exact_binomial": {
+      "null_A": "池越限概率≤名义日预算 1/100（保守口径）",
+      "k": 0,
+      "p_one_sided": 1.0,
+      "verdict_5pct": "不拒绝名义误报预算",
+      "null_B": "每窗误报率≤1/100 → 池越限概率=0.0865（每窗独立派生口径）",
+      "p_one_sided_nullB": 1.0,
+      "verdict_5pct_nullB": "不拒绝",
+      "note": "双口径并报：S1/S2 的「0/9 越限」在两 null 下均不拒绝（正面证书稳健）；S3 在 null_A 下边缘拒绝、null_B 下不拒绝（如实并报，不作单口径判语）；S4 在两 null 下均强拒绝"
+     },
+     "conformal_p": 0.1,
+     "kupiec_pof_asymptotic_reference": {
+      "LR": 0.0,
+      "p_chi2_1": 1.0,
+      "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+     },
+     "status": "R1A 稳健性探针",
+     "note_r3bm7": "该档沿用 τ=3.0 属设计使然（R1A 稳健性探针两档同值）；arl500 档名义正态阈 z=2.3263/枢轴 τ_t=3.0531——勿将 z3 读作该档名义预算对应阈值",
+     "reviewer_crossref_r3bm4": "0/9（复审人合计口径，未分档；本行=本档独立重算）"
+    },
+    "S3_empirical_reachable": {
+     "tau": 1.9894,
+     "exceed_pools": [
+      "full_s2"
+     ],
+     "k_exceed_pools": "1/9",
+     "per_pool_far": {
+      "full_s0": 0.0,
+      "full_s1": 0.0,
+      "full_s2": 0.1111,
+      "homo_s0": 0.0,
+      "homo_s1": 0.0,
+      "homo_s2": 0.0,
+      "homoflows_s0": 0.0,
+      "homoflows_s1": 0.0,
+      "homoflows_s2": 0.0
+     },
+     "realized_ARL_at_exceed": {
+      "full_s2": 9.0
+     },
+     "exact_binomial": {
+      "null_A": "池越限概率≤名义日预算 1/100（保守口径）",
+      "k": 1,
+      "p_one_sided": 0.086483,
+      "verdict_5pct": "不拒绝名义误报预算",
+      "null_B": "每窗误报率≤1/100 → 池越限概率=0.0865（每窗独立派生口径）",
+      "p_one_sided_nullB": 0.556952,
+      "verdict_5pct_nullB": "不拒绝",
+      "note": "双口径并报：S1/S2 的「0/9 越限」在两 null 下均不拒绝（正面证书稳健）；S3 在 null_A 下边缘拒绝、null_B 下不拒绝（如实并报，不作单口径判语）；S4 在两 null 下均强拒绝"
+     },
+     "conformal_p": 0.2,
+     "kupiec_pof_asymptotic_reference": {
+      "LR": 3.0922,
+      "p_chi2_1": 0.07867,
+      "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+     },
+     "status": "池内经验可达阈值——失效体制反证档（判据反向；越限池实测 ARL≈9=第一轮 C1 失效体制；二项检验结论依赖单元口径，见 exact_binomial 双 null 并报）",
+     "reviewer_crossref_r3bm4": "1/9（复审人合计口径，未分档；本行=本档独立重算）"
+    },
+    "S4_evt_hybrid_REJECTED_daywindow": {
+     "tau": 1.8743,
+     "exceed_pools": [
+      "full_s0",
+      "full_s1",
+      "full_s2",
+      "homoflows_s0"
+     ],
+     "k_exceed_pools": "4/9",
+     "per_pool_far": {
+      "full_s0": 0.1111,
+      "full_s1": 0.1111,
+      "full_s2": 0.1111,
+      "homo_s0": 0.0,
+      "homo_s1": 0.0,
+      "homo_s2": 0.0,
+      "homoflows_s0": 0.1111,
+      "homoflows_s1": 0.0,
+      "homoflows_s2": 0.0
+     },
+     "realized_ARL_at_exceed": {
+      "full_s0": 9.0,
+      "full_s1": 9.0,
+      "full_s2": 9.0,
+      "homoflows_s0": 9.0
+     },
+     "exact_binomial": {
+      "null_A": "池越限概率≤名义日预算 1/100（保守口径）",
+      "k": 4,
+      "p_one_sided": 1e-06,
+      "verdict_5pct": "拒绝名义误报预算",
+      "null_B": "每窗误报率≤1/100 → 池越限概率=0.0865（每窗独立派生口径）",
+      "p_one_sided_nullB": 0.004936,
+      "verdict_5pct_nullB": "拒绝",
+      "note": "双口径并报：S1/S2 的「0/9 越限」在两 null 下均不拒绝（正面证书稳健）；S3 在 null_A 下边缘拒绝、null_B 下不拒绝（如实并报，不作单口径判语）；S4 在两 null 下均强拒绝"
+     },
+     "conformal_p": 0.5,
+     "kupiec_pof_asymptotic_reference": {
+      "LR": 24.5766,
+      "p_chi2_1": 1e-06,
+      "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+     },
+     "status": "已否决分支（ξ̂=−3.92 自家诊断拒绝）——失效体制反证档（两口径二项强拒绝；第一轮 C1 失效体制复现）",
+     "reviewer_crossref_r3bm4": "4/9（复审人合计口径，未分档；本行=本档独立重算）"
+    }
+   },
+   "arl500": {
+    "S1_tpivot_t9_8": {
+     "tau": 4.2068,
+     "exceed_pools": [],
+     "k_exceed_pools": "0/9",
+     "per_pool_far": {
+      "full_s0": 0.0,
+      "full_s1": 0.0,
+      "full_s2": 0.0,
+      "homo_s0": 0.0,
+      "homo_s1": 0.0,
+      "homo_s2": 0.0,
+      "homoflows_s0": 0.0,
+      "homoflows_s1": 0.0,
+      "homoflows_s2": 0.0
+     },
+     "realized_ARL_at_exceed": "∞（0 越限池，实测误报率 0）",
+     "exact_binomial": {
+      "null_A": "池越限概率≤名义日预算 1/500（保守口径）",
+      "k": 0,
+      "p_one_sided": 1.0,
+      "verdict_5pct": "不拒绝名义误报预算",
+      "null_B": "每窗误报率≤1/500 → 池越限概率=0.0179（每窗独立派生口径）",
+      "p_one_sided_nullB": 1.0,
+      "verdict_5pct_nullB": "不拒绝",
+      "note": "双口径并报：S1/S2 的「0/9 越限」在两 null 下均不拒绝（正面证书稳健）；S3 在 null_A 下边缘拒绝、null_B 下不拒绝（如实并报，不作单口径判语）；S4 在两 null 下均强拒绝"
+     },
+     "conformal_p": 0.1,
+     "kupiec_pof_asymptotic_reference": {
+      "LR": 0.0,
+      "p_chi2_1": 1.0,
+      "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+     },
+     "status": "主阈值（正态父体 t-枢轴外推）",
+     "reviewer_crossref_r3bm4": "0/9（复审人合计口径，未分档；本行=本档独立重算）"
+    },
+    "S2_z3_probe": {
+     "tau": 3.0,
+     "exceed_pools": [],
+     "k_exceed_pools": "0/9",
+     "per_pool_far": {
+      "full_s0": 0.0,
+      "full_s1": 0.0,
+      "full_s2": 0.0,
+      "homo_s0": 0.0,
+      "homo_s1": 0.0,
+      "homo_s2": 0.0,
+      "homoflows_s0": 0.0,
+      "homoflows_s1": 0.0,
+      "homoflows_s2": 0.0
+     },
+     "realized_ARL_at_exceed": "∞（0 越限池，实测误报率 0）",
+     "exact_binomial": {
+      "null_A": "池越限概率≤名义日预算 1/500（保守口径）",
+      "k": 0,
+      "p_one_sided": 1.0,
+      "verdict_5pct": "不拒绝名义误报预算",
+      "null_B": "每窗误报率≤1/500 → 池越限概率=0.0179（每窗独立派生口径）",
+      "p_one_sided_nullB": 1.0,
+      "verdict_5pct_nullB": "不拒绝",
+      "note": "双口径并报：S1/S2 的「0/9 越限」在两 null 下均不拒绝（正面证书稳健）；S3 在 null_A 下边缘拒绝、null_B 下不拒绝（如实并报，不作单口径判语）；S4 在两 null 下均强拒绝"
+     },
+     "conformal_p": 0.1,
+     "kupiec_pof_asymptotic_reference": {
+      "LR": 0.0,
+      "p_chi2_1": 1.0,
+      "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+     },
+     "status": "R1A 稳健性探针",
+     "note_r3bm7": "该档沿用 τ=3.0 属设计使然（R1A 稳健性探针两档同值）；arl500 档名义正态阈 z=2.8782/枢轴 τ_t=4.2068——勿将 z3 读作该档名义预算对应阈值",
+     "reviewer_crossref_r3bm4": "0/9（复审人合计口径，未分档；本行=本档独立重算）"
+    },
+    "S3_empirical_reachable": {
+     "tau": 2.0272,
+     "exceed_pools": [
+      "full_s2"
+     ],
+     "k_exceed_pools": "1/9",
+     "per_pool_far": {
+      "full_s0": 0.0,
+      "full_s1": 0.0,
+      "full_s2": 0.1111,
+      "homo_s0": 0.0,
+      "homo_s1": 0.0,
+      "homo_s2": 0.0,
+      "homoflows_s0": 0.0,
+      "homoflows_s1": 0.0,
+      "homoflows_s2": 0.0
+     },
+     "realized_ARL_at_exceed": {
+      "full_s2": 9.0
+     },
+     "exact_binomial": {
+      "null_A": "池越限概率≤名义日预算 1/500（保守口径）",
+      "k": 1,
+      "p_one_sided": 0.017857,
+      "verdict_5pct": "拒绝名义误报预算",
+      "null_B": "每窗误报率≤1/500 → 池越限概率=0.0179（每窗独立派生口径）",
+      "p_one_sided_nullB": 0.149697,
+      "verdict_5pct_nullB": "不拒绝",
+      "note": "双口径并报：S1/S2 的「0/9 越限」在两 null 下均不拒绝（正面证书稳健）；S3 在 null_A 下边缘拒绝、null_B 下不拒绝（如实并报，不作单口径判语）；S4 在两 null 下均强拒绝"
+     },
+     "conformal_p": 0.2,
+     "kupiec_pof_asymptotic_reference": {
+      "LR": 6.1823,
+      "p_chi2_1": 0.012904,
+      "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+     },
+     "status": "池内经验可达阈值——失效体制反证档（判据反向；越限池实测 ARL≈9=第一轮 C1 失效体制；二项检验结论依赖单元口径，见 exact_binomial 双 null 并报）",
+     "reviewer_crossref_r3bm4": "1/9（复审人合计口径，未分档；本行=本档独立重算）"
+    },
+    "S4_evt_hybrid_REJECTED_daywindow": {
+     "tau": 1.8754,
+     "exceed_pools": [
+      "full_s0",
+      "full_s1",
+      "full_s2",
+      "homoflows_s0"
+     ],
+     "k_exceed_pools": "4/9",
+     "per_pool_far": {
+      "full_s0": 0.1111,
+      "full_s1": 0.1111,
+      "full_s2": 0.1111,
+      "homo_s0": 0.0,
+      "homo_s1": 0.0,
+      "homo_s2": 0.0,
+      "homoflows_s0": 0.1111,
+      "homoflows_s1": 0.0,
+      "homoflows_s2": 0.0
+     },
+     "realized_ARL_at_exceed": {
+      "full_s0": 9.0,
+      "full_s1": 9.0,
+      "full_s2": 9.0,
+      "homoflows_s0": 9.0
+     },
+     "exact_binomial": {
+      "null_A": "池越限概率≤名义日预算 1/500（保守口径）",
+      "k": 4,
+      "p_one_sided": 0.0,
+      "verdict_5pct": "拒绝名义误报预算",
+      "null_B": "每窗误报率≤1/500 → 池越限概率=0.0179（每窗独立派生口径）",
+      "p_one_sided_nullB": 1.2e-05,
+      "verdict_5pct_nullB": "拒绝",
+      "note": "双口径并报：S1/S2 的「0/9 越限」在两 null 下均不拒绝（正面证书稳健）；S3 在 null_A 下边缘拒绝、null_B 下不拒绝（如实并报，不作单口径判语）；S4 在两 null 下均强拒绝"
+     },
+     "conformal_p": 0.5,
+     "kupiec_pof_asymptotic_reference": {
+      "LR": 37.3716,
+      "p_chi2_1": 0.0,
+      "note": "渐近 χ²(1) 在 n=9 低功效窗下仅对照并报（主口径=精确二项）"
+     },
+     "status": "已否决分支（ξ̂=−3.92 自家诊断拒绝）——失效体制反证档（两口径二项强拒绝；第一轮 C1 失效体制复现）",
+     "reviewer_crossref_r3bm4": "4/9（复审人合计口径，未分档；本行=本档独立重算）"
+    }
+   }
+  }
+ },
+ "family_multiplicity_stance_r3": {
+  "status": "APPENDED（R3 第二轮 R3A-m2：16 格族级多重比较立场；各格 verdict 原文保留）",
+  "family_definition": "8 规格（2 arl 档 × S1-S4）× 双 null（A 保守/B 每窗派生）=16 格精确二项，单口径 5% 逐格判定（证书主证据=realized ARL，本层为描述性并报口径）",
+  "bonferroni_x16": {
+   "arl500_S3_nullA": {
+    "p_raw": 0.017856669988026624,
+    "p_adjusted": 0.285706719808426,
+    "verdict_5pct_adjusted": "不拒绝（×16=0.2857>0.05）——16 格中唯一翻转格"
+   },
+   "arl500_S4_nullA": {
+    "p_raw": 1.999925667920611e-09,
+    "p_adjusted": 3.199881068672978e-08,
+    "verdict_5pct_adjusted": "拒绝（任何校正下强拒绝）"
+   },
+   "arl100_S4_nullA": {
+    "p_raw": 1.210432831444e-06,
+    "p_adjusted": 1.9366925303104e-05,
+    "verdict_5pct_adjusted": "拒绝（任何校正下强拒绝）"
+   }
+  },
+  "stance": "族级校正（Bonferroni×16）下拒绝数 3→2：arl500/S3 由「拒绝」翻为「不拒绝」，S4 两档不变。结论方向（S4 档超名义误报预算、S1-S3 不超）对校正稳健；写作引用 arl500/S3 单格「拒绝」时必须随附本立场句或声明描述性单口径（E14 自标先例同款）",
+  "producer": "src/r3_review2_minor_fixes.py（R3 第二轮 R3A-m2）；p 现算 binom(k>=1;n=9,p=1/500) 与在案逐位断言一致后方落盘",
+  "review_refs": "R3A-m2 / 方案二 claims 登记层实例 #1",
+  "corrected_r4": {
+   "status": "APPENDED（R4/P0-1，R6B-M1：全 16 格枚举补全——原 bonferroni_x16 仅 3 格且 stance 漏 arl100/S4 nullB 翻转格）",
+   "supersedes": "本键 stance 与 bonferroni_x16 的「唯一翻转格/拒绝数 3→2」表述（原文保留不改）",
+   "enumeration_16": {
+    "arl100_S1_nullA": {
+     "p_raw": 1.0,
+     "p_adjusted": 16.0,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl100_S1_nullB": {
+     "p_raw": 1.0,
+     "p_adjusted": 16.0,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl100_S2_nullA": {
+     "p_raw": 1.0,
+     "p_adjusted": 16.0,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl100_S2_nullB": {
+     "p_raw": 1.0,
+     "p_adjusted": 16.0,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl100_S3_nullA": {
+     "p_raw": 0.0864827525163591,
+     "p_adjusted": 1.3837240402617457,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl100_S3_nullB": {
+     "p_raw": 0.5569520183738275,
+     "p_adjusted": 8.91123229398124,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl100_S4_nullA": {
+     "p_raw": 1.210432831444e-06,
+     "p_adjusted": 1.9366925303104e-05,
+     "verdict_5pct_adjusted": "拒绝"
+    },
+    "arl100_S4_nullB": {
+     "p_raw": 0.004936481632128414,
+     "p_adjusted": 0.07898370611405463,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl500_S1_nullA": {
+     "p_raw": 1.0,
+     "p_adjusted": 16.0,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl500_S1_nullB": {
+     "p_raw": 1.0,
+     "p_adjusted": 16.0,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl500_S2_nullA": {
+     "p_raw": 1.0,
+     "p_adjusted": 16.0,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl500_S2_nullB": {
+     "p_raw": 1.0,
+     "p_adjusted": 16.0,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl500_S3_nullA": {
+     "p_raw": 0.017856669988026624,
+     "p_adjusted": 0.285706719808426,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl500_S3_nullB": {
+     "p_raw": 0.14969673971747924,
+     "p_adjusted": 2.395147835479668,
+     "verdict_5pct_adjusted": "不拒绝"
+    },
+    "arl500_S4_nullA": {
+     "p_raw": 1.999925667920611e-09,
+     "p_adjusted": 3.199881068672978e-08,
+     "verdict_5pct_adjusted": "拒绝"
+    },
+    "arl500_S4_nullB": {
+     "p_raw": 1.192248115755465e-05,
+     "p_adjusted": 0.0001907596985208744,
+     "verdict_5pct_adjusted": "拒绝"
+    }
+   },
+   "counts": {
+    "n_reject_raw": 5,
+    "n_reject_bonferroni_x16": 3,
+    "flips": [
+     "arl100_S4_nullB",
+     "arl500_S3_nullA"
+    ]
+   },
+   "corrected_stance": "raw 拒绝 5 格→族级校正（Bonferroni×16）后 3 格、翻转 2 格（arl500/S3 nullA→0.2857、arl100/S4 nullB→0.0790）；S4 在 null_A 侧任何校正下强拒绝（1e-6/1e-9 量级）；null_B arl100 档族级校正后不拒绝（边际 0.079）",
+   "citation_rule_writing": "写作期引用规则：单口径 16 格 verdict 可引（随附描述性单口径声明）；族级立场句以本 corrected_r4 为准；勿摘句拆散（R6B-M1 Concern 防复发）",
+   "recompute": "scipy binom.sf 现算 16/16 与在案 p_one_sided / p_one_sided_nullB 逐位一致（rel≤1e-12）断言后方落盘",
+   "producer": "src/r4_p0_registry_fixes.py（R4/P0-1+P1-2+P1-3）",
+   "review_refs": "R6B-M1 / criteria_r4 P0-1"
+  }
+ }
+}

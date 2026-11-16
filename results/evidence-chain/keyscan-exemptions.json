@@ -1,0 +1,83 @@
+{
+ "exp": "R3/P0-2：闸1 键级豁免登记表（类级处置：模式+模板证据+适用文件；未匹配键仍报孤儿）",
+ "producer": "src/r3_keyscan_exemptions.py（R3/P0-2；gate1 运行时加载逐类计数上报）",
+ "entries": [
+  {
+   "class": "grid_composite",
+   "pattern": "^(uniform|temporal)_(1|4|16)_(full|homo|homoflows|noflows)_s[0-2]$",
+   "evidence_file": "src/e2_closure.py",
+   "evidence_line": 114,
+   "evidence_fragment": "grid[f'{strat}_{ratio}_{arm}_s{seed}']",
+   "reason": "协议×比率×臂×seed 四变量 f-string 动态组装键（字符串匹配不可见插值；写入点在案）",
+   "applies_to": [
+    "EXP-R1-E2/protocol-grid-closure.json"
+   ],
+   "example_keys": [
+    "uniform_1_full_s0",
+    "temporal_16_homo_s2"
+   ]
+  },
+  {
+   "class": "pair_composite",
+   "pattern": "^(full|homo|homoflows|noflows)(_rerun)?_vs_(full|homo|homoflows|noflows)(_rerun)?(_edgeAP_logon|_eventAP_weighted)?$",
+   "evidence_file": "src/e4_granularity.py",
+   "evidence_line": 141,
+   "evidence_fragment": "col = f'{arm_a}_vs_{arm_b}'",
+   "evidence_extra": [
+    "src/e6_inference.py:269 f'{a}_vs_{b}_edgeAP_logon'",
+    "src/e7_e4_repair.py:184 f'{a}_vs_{b}_eventAP_weighted'"
+   ],
+   "reason": "臂对比较 f-string 组装键（三处写入点在案）",
+   "applies_to": [
+    "EXP-R1-E4/edge-event-granularity.json",
+    "EXP-R1-E6/ranking-inference.json",
+    "EXP-R1-E7/type-head-diagnosis.json"
+   ],
+   "example_keys": [
+    "full_vs_homo_rerun",
+    "full_vs_homo_rerun_edgeAP_logon"
+   ]
+  },
+  {
+   "class": "data_entity",
+   "pattern": "^U\\d+@DOM\\d+$",
+   "evidence_file": "src/e4_granularity.py",
+   "evidence_line": 49,
+   "evidence_fragment": "'dropped_users': dict(rt_user_drop)",
+   "reason": "LANL 数据实体标识（用户@域）直接作键——键源自数据非代码字面量（dropped_users 计数字典）",
+   "applies_to": [
+    "EXP-R1-E4/edge-event-granularity.json"
+   ],
+   "example_keys": [
+    "U9763@DOM1",
+    "U737@DOM1"
+   ]
+  },
+  {
+   "class": "narrative_section",
+   "pattern": "^(baselines|instrument|estimand)$",
+   "evidence_file": "—",
+   "evidence_line": 0,
+   "evidence_fragment": "—",
+   "reason": "纯叙述节键（无数字、无生产者属设计使然；与 R2 首轮审计「叙述性键豁免登记」同类处置，逐键列名登记而非模式泛化）",
+   "applies_to": [
+    "EXP-R1-E4/edge-event-granularity.json",
+    "EXP-R1-E5/evt-calibration-and-g1.json",
+    "EXP-R1-E6/ranking-inference.json"
+   ],
+   "example_keys": [
+    "baselines",
+    "instrument",
+    "estimand"
+   ]
+  }
+ ],
+ "covered_keys": 50,
+ "covered_by_class": {
+  "grid_composite": 36,
+  "data_entity": 4,
+  "pair_composite": 7,
+  "narrative_section": 3
+ },
+ "uncovered_after_registry": []
+}

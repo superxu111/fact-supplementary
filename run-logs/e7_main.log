@@ -1,0 +1,20 @@
+F1 v2 sample: {
+"0": {
+"ap_attack_rows": 0.004272,
+"ap_event_weighted_v2": 0.006062,
+"n_attack_rows": 277
+},
+"1": {
+"ap_attack_rows": 0.004844,
+"ap_event_weighted_v2": 0.00649,
+"n_attack_rows": 277
+},
+"2": {
+"ap_attack_rows": 0.005645,
+"ap_event_weighted_v2": 0.008057,
+"n_attack_rows": 277
+}
+}
+F3 gap decomposition: full 与 nemb 同为三类别可比口径，macro-F1 差 0.1136（nemb 更高，反常）。逐类 F1 分解（seed0）{'class0': 0.228, 'class1': -0.0066, 'class2': 0.1193}：差距主导项为 class2（随机未观测负对）——full 的类型头把 445229 个未观测随机对中大量误判为 LOGON（class0），nemb 几乎不
+E7_DONE
+rc=0

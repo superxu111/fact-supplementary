@@ -1,0 +1,27 @@
+{
+ "exp": "R1-E6 统计推断补强（R1A-M3/M4、R1B-M1/M3）",
+ "post_hoc_note": "⚠️ 本判据文件为运行后补登记（2026-10-24 R2 第三轮 P0-2 补录，R1A2-M1①/R2B-C1① 指认缺口；产物 ranking-inference.json 已于 2026-10-24 15:51 运行完毕，本文件 mtime 即补录时刻，不回充任何历史时间戳）。判据文本取自 src/e6_inference.py docstring 与第一轮双审意见要求原文（REVIEW_ROUNDS.md R1A-M3/M4、R1B-M1/M3），非事后改写。补录原因：E6 落盘时漏建 criteria.json，而 RESEARCH_LOG §6 头部当时声称『全部新实验判据先落盘』——该不实声明本身已由 P0-2 修复（RESEARCH_LOG §6 头部改写）。E6 恰是决定论文头条显著性的实验，此缺口如实申报。",
+ "registered_at_filesystem": "2026-10-24（以本文件 mtime 为准；自报时刻字段一律视为非文件系统留痕，审计以 mtime 为准——P0-2 规范）",
+ "hypothesis": "头条发现（E2 temporal 协议混合池可分）在 seed 层聚合检验与 Holm 族校正下存活；E2/E3/E4 全线具备协议承诺口径（B=2000 日块 bootstrap）的区间估计。",
+ "design": [
+  "① 日块 bootstrap CI：E2 6 协议点×3 seed×{mixed AUC, LOGON AP} + E3 三指标 w32/w33 + E4 边级 LOGON AP，逐 seed 差 CI，B=2000（R1A-M3）；估计量=逐日差等权日均（与池化差非同一泛函，二者并报——E3 池化口径另见 results/capacity-parity 生产者重放）",
+  "② seed 层聚合置换检验：stat=跨 seed 平均池化差；日块翻转逐 seed 独立（R1B-M1）；B=2000",
+  "③ 逐 seed 置换独立种子：rng_master=zlib.crc32(point|metric)，日块翻转独立（修 R1A-M4 附带缺陷：原 e2_closure 全部 mixed 检验共享 seed=2026）",
+  "④ 检验族显式申报+Holm 逐步校正（R1A-M4）：family_half2_mixed（auc_mixed）、family_half1_logonAP（ap_logon）；族规模口径缺陷（原交付按 m=18/m=6 分层两套，R1A2-m2）由 R2-E9 统一为 m=24 一次性 Holm 重算并 supersedes 登记",
+  "⑤ E3 verdict 由代码计算（废除硬编码文本）+LOGON 差距缩小全量申报（R1B-M3）；±0.02 带容差见 e6_inference.py:241-242（原 criteria 补注册声明失实系 R1A2-M1②，本文件一并如实登记）；池化口径生产者缺位由 R2-E10 补录（R2B-M4①）"
+ ],
+ "success": [
+  "头条：temporal 训练混合池可分——3 点聚合 p=0.0005（分辨率地板 1/2001）、Holm 后 0.003 全部 <0.05（在 m=24 统一口径下 0.012 仍过门）",
+  "uniform 三点聚合不显著（与『uniform 不可分』一致）；half1（LOGON AP）聚合全不显著（agg_p 0.074-0.595）——该弱化事实写回 SSOT 由 P0-4/E9 双口径登记",
+  "逐 seed 独立种子重跑与在案邻域一致（uniform_1 mixed obs 逐位、p 0.547/0.040/0.018 vs 在案 0.547/0.064/0.016，置换种子不同）"
+ ],
+ "red_lines": [
+  "未检出显著差异≠等效（half1 聚合不显著不构成 LOGON AP 等效主张）",
+  "聚合检验与效应量并报（obs_mean_diff 随 p 落盘）",
+  "日块置换分辨率地板 (0+1)/2001≈0.0005——p 到地板即报『不更显著』而非精确 p"
+ ],
+ "postmortem": "运行与判据的时序在本次补录时已不可文件系统验证（R2B-C1② 的普遍结论）；判据内容与 docstring/审稿要求原文逐条一致、未发现事后改写痕迹；v2→v3 自纠（池分支字符串错配、Holm 切片错位）已在 RESEARCH_LOG §R1-E6 申报。族规模口径缺陷与 auc_logon 缺席由 R2-E9 修复（EXP-R2-E9）。",
+ "note_amendments": [
+  "2026-10-24 P0-2：本文件为补登记（唯一一次写入；后续修订一律追加 note_amendments 条目并保留原文，不改写已写内容）"
+ ]
+}

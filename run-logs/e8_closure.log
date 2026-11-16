@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "./src/e8_closure.py", line 112, in <module>
+    main()
+  File "./src/e8_closure.py", line 47, in main
+    obs, p0 = perm_test_dayblock_indep(day[lm], scF[lm], sc0[lm], y[lm], B=500, rng=rng)
+NameError: name 'day' is not defined
+rc=1

@@ -1,0 +1,106 @@
+  arl100 cusum_k0.5 full s0 kappa1: thr=3.347 arl=101.7 delay=1
+  arl100 cusum_k0.5 full s0 kappa_t: thr=3.521 arl=131.1 delay=1
+  arl100 cusum_k0.5 full s1 kappa1: thr=3.318 arl=94.4 delay=1
+  arl100 cusum_k0.5 full s1 kappa_t: thr=3.521 arl=132.4 delay=1
+  arl100 cusum_k0.5 full s2 kappa1: thr=3.289 arl=105.8 delay=1
+  arl100 cusum_k0.5 full s2 kappa_t: thr=3.521 arl=134.8 delay=1
+  arl100 cusum_k0.5 homo s0 kappa1: thr=3.405 arl=96.4 delay=1
+  arl100 cusum_k0.5 homo s0 kappa_t: thr=3.521 arl=125.2 delay=1
+  arl100 cusum_k0.5 homo s1 kappa1: thr=3.291 arl=95.9 delay=1
+  arl100 cusum_k0.5 homo s1 kappa_t: thr=3.347 arl=128.4 delay=1
+  arl100 cusum_k0.5 homo s2 kappa1: thr=3.463 arl=104.8 delay=1
+  arl100 cusum_k0.5 homo s2 kappa_t: thr=3.638 arl=133.1 delay=1
+  arl100 cusum_k0.5 homoflows s0 kappa1: thr=3.198 arl=97.2 delay=1
+  arl100 cusum_k0.5 homoflows s0 kappa_t: thr=3.521 arl=139.0 delay=1
+  arl100 cusum_k0.5 homoflows s1 kappa1: thr=3.318 arl=96.4 delay=1
+  arl100 cusum_k0.5 homoflows s1 kappa_t: thr=3.521 arl=131.3 delay=1
+  arl100 cusum_k0.5 homoflows s2 kappa1: thr=3.405 arl=100.5 delay=1
+  arl100 cusum_k0.5 homoflows s2 kappa_t: thr=3.521 arl=129.4 delay=1
+  == arl100 cusum_k0.5: κ=1 还原 7/9（在案 7/9，match=True）→ κ_t 收紧 7/9
+  arl100 ewma_l0.2 full s0 kappa1: thr=2.243 arl=99.8 delay=1
+  arl100 ewma_l0.2 full s0 kappa_t: thr=2.33 arl=132.2 delay=1
+  arl100 ewma_l0.2 full s1 kappa1: thr=2.243 arl=102.9 delay=1
+  arl100 ewma_l0.2 full s1 kappa_t: thr=2.301 arl=127.8 delay=1
+  arl100 ewma_l0.2 full s2 kappa1: thr=2.243 arl=105.7 delay=1
+  arl100 ewma_l0.2 full s2 kappa_t: thr=2.301 arl=125.6 delay=1
+  arl100 ewma_l0.2 homo s0 kappa1: thr=2.127 arl=97.6 delay=1
+  arl100 ewma_l0.2 homo s0 kappa_t: thr=2.243 arl=125.3 delay=1
+  arl100 ewma_l0.2 homo s1 kappa1: thr=2.098 arl=100.0 delay=1
+  arl100 ewma_l0.2 homo s1 kappa_t: thr=2.243 arl=126.2 delay=1
+  arl100 ewma_l0.2 homo s2 kappa1: thr=2.127 arl=96.7 delay=1
+  arl100 ewma_l0.2 homo s2 kappa_t: thr=2.301 arl=133.4 delay=1
+  arl100 ewma_l0.2 homoflows s0 kappa1: thr=2.185 arl=102.7 delay=1
+  arl100 ewma_l0.2 homoflows s0 kappa_t: thr=2.301 arl=131.1 delay=1
+  arl100 ewma_l0.2 homoflows s1 kappa1: thr=2.127 arl=98.5 delay=1
+  arl100 ewma_l0.2 homoflows s1 kappa_t: thr=2.301 arl=131.1 delay=1
+  arl100 ewma_l0.2 homoflows s2 kappa1: thr=2.127 arl=97.7 delay=1
+  arl100 ewma_l0.2 homoflows s2 kappa_t: thr=2.301 arl=132.3 delay=1
+  == arl100 ewma_l0.2: κ=1 还原 7/9（在案 7/9，match=True）→ κ_t 收紧 7/9
+  arl500 cusum_k0.5 full s0 kappa1: thr=5.148 arl=528.1 delay=2
+  arl500 cusum_k0.5 full s0 kappa_t: thr=5.41 arl=746.1 delay=2
+  arl500 cusum_k0.5 full s1 kappa1: thr=5.148 arl=506.6 delay=2
+  arl500 cusum_k0.5 full s1 kappa_t: thr=5.613 arl=764.7 delay=2
+  arl500 cusum_k0.5 full s2 kappa1: thr=5.148 arl=513.9 delay=2
+  arl500 cusum_k0.5 full s2 kappa_t: thr=5.381 arl=703.0 delay=2
+  arl500 cusum_k0.5 homo s0 kappa1: thr=4.916 arl=517.9 delay=2
+  arl500 cusum_k0.5 homo s0 kappa_t: thr=5.381 arl=743.2 delay=2
+  arl500 cusum_k0.5 homo s1 kappa1: thr=4.538 arl=505.2 delay=2
+  arl500 cusum_k0.5 homo s1 kappa_t: thr=5.032 arl=770.2 delay=2
+  arl500 cusum_k0.5 homo s2 kappa1: thr=4.8 arl=479.7 delay=2
+  arl500 cusum_k0.5 homo s2 kappa_t: thr=5.381 arl=741.9 delay=2
+  arl500 cusum_k0.5 homoflows s0 kappa1: thr=4.916 arl=483.2 delay=2
+  arl500 cusum_k0.5 homoflows s0 kappa_t: thr=5.381 arl=714.1 delay=2
+  arl500 cusum_k0.5 homoflows s1 kappa1: thr=4.916 arl=494.0 delay=1
+  arl500 cusum_k0.5 homoflows s1 kappa_t: thr=5.381 arl=704.2 delay=2
+  arl500 cusum_k0.5 homoflows s2 kappa1: thr=4.8 arl=500.9 delay=2
+  arl500 cusum_k0.5 homoflows s2 kappa_t: thr=5.148 arl=694.4 delay=2
+  == arl500 cusum_k0.5: κ=1 还原 9/9（在案 9/9，match=True）→ κ_t 收紧 9/9
+  arl500 ewma_l0.2 full s0 kappa1: thr=2.926 arl=502.8 delay=1
+  arl500 ewma_l0.2 full s0 kappa_t: thr=3.057 arl=716.2 delay=2
+  arl500 ewma_l0.2 full s1 kappa1: thr=2.94 arl=529.3 delay=2
+  arl500 ewma_l0.2 full s1 kappa_t: thr=3.093 arl=740.5 delay=2
+  arl500 ewma_l0.2 full s2 kappa1: thr=2.94 arl=522.3 delay=1
+  arl500 ewma_l0.2 full s2 kappa_t: thr=3.086 arl=751.2 delay=1
+  arl500 ewma_l0.2 homo s0 kappa1: thr=2.882 arl=521.0 delay=2
+  arl500 ewma_l0.2 homo s0 kappa_t: thr=2.999 arl=762.5 delay=2
+  arl500 ewma_l0.2 homo s1 kappa1: thr=2.795 arl=527.4 delay=1
+  arl500 ewma_l0.2 homo s1 kappa_t: thr=2.911 arl=753.9 delay=2
+  arl500 ewma_l0.2 homo s2 kappa1: thr=2.882 arl=506.1 delay=2
+  arl500 ewma_l0.2 homo s2 kappa_t: thr=2.999 arl=729.2 delay=2
+  arl500 ewma_l0.2 homoflows s0 kappa1: thr=2.882 arl=473.2 delay=1
+  arl500 ewma_l0.2 homoflows s0 kappa_t: thr=2.999 arl=687.3 delay=1
+  arl500 ewma_l0.2 homoflows s1 kappa1: thr=2.882 arl=500.4 delay=1
+  arl500 ewma_l0.2 homoflows s1 kappa_t: thr=3.057 arl=773.3 delay=1
+  arl500 ewma_l0.2 homoflows s2 kappa1: thr=2.882 arl=523.9 delay=2
+  arl500 ewma_l0.2 homoflows s2 kappa_t: thr=2.999 arl=749.1 delay=2
+  == arl500 ewma_l0.2: κ=1 还原 9/9（在案 9/9，match=True）→ κ_t 收紧 9/9
+E11_DONE {
+ "arl100/cusum_k0.5": {
+  "noninferior_kappa1_restore": "7/9",
+  "incase_reference": "7/9",
+  "restore_match": true,
+  "noninferior_kappa_tightened": "7/9",
+  "count_maintained_under_tightening": true
+ },
+ "arl100/ewma_l0.2": {
+  "noninferior_kappa1_restore": "7/9",
+  "incase_reference": "7/9",
+  "restore_match": true,
+  "noninferior_kappa_tightened": "7/9",
+  "count_maintained_under_tightening": true
+ },
+ "arl500/cusum_k0.5": {
+  "noninferior_kappa1_restore": "9/9",
+  "incase_reference": "9/9",
+  "restore_match": true,
+  "noninferior_kappa_tightened": "9/9",
+  "count_maintained_under_tightening": true
+ },
+ "arl500/ewma_l0.2": {
+  "noninferior_kappa1_restore": "9/9",
+  "incase_reference": "9/9",
+  "restore_match": true,
+  "noninferior_kappa_tightened": "9/9",
+  "count_maintained_under_tightening": true
+ }
+}

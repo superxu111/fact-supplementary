@@ -1,0 +1,932 @@
+{
+ "exp": "R2-E11 G3 单向敏感性 + det_rate_ci_band 重定义（P0-1/R2B-M2+R1A2-m7）",
+ "date": "2026-10-24",
+ "design": "见模块 docstring（开工前冻结，判据双去向预先登记）",
+ "kappa_t_pivot_inflation": {
+  "arl100": 1.3124,
+  "arl500": 1.4616
+ },
+ "kappa_def": "κ = τ_t(9,ARL0)/z_{1−1/ARL0}（t-枢轴相对正态理论阈值的保守膨胀因子；序贯侧收紧目标 = κ·ARL0，与 fixed@τ_t 同源单向保守化）",
+ "sensitivity": {
+  "arl100/cusum_k0.5": {
+   "rows": [
+    {
+     "arm": "full",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 3.347,
+      "arl_target": 100,
+      "arl_measured": 101.7,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.521,
+      "arl_target": 131.2,
+      "arl_measured": 131.1,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 1,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.455,
+     "kappa1": {
+      "thr": 3.318,
+      "arl_target": 100,
+      "arl_measured": 94.4,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.521,
+      "arl_target": 131.2,
+      "arl_measured": 132.4,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 2,
+     "fixed_tpivot_delay": 0,
+     "fixed_tpivot_det": 0.364,
+     "kappa1": {
+      "thr": 3.289,
+      "arl_target": 100,
+      "arl_measured": 105.8,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": false
+     },
+     "kappa_t": {
+      "thr": 3.521,
+      "arl_target": 131.2,
+      "arl_measured": 134.8,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": false
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 3.405,
+      "arl_target": 100,
+      "arl_measured": 96.4,
+      "delay": 1,
+      "det": 0.455,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.521,
+      "arl_target": 131.2,
+      "arl_measured": 125.2,
+      "delay": 1,
+      "det": 0.455,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 1,
+     "fixed_tpivot_delay": 8,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 3.291,
+      "arl_target": 100,
+      "arl_measured": 95.9,
+      "delay": 1,
+      "det": 0.455,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.347,
+      "arl_target": 131.2,
+      "arl_measured": 128.4,
+      "delay": 1,
+      "det": 0.455,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 3.463,
+      "arl_target": 100,
+      "arl_measured": 104.8,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.638,
+      "arl_target": 131.2,
+      "arl_measured": 133.1,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.455,
+     "kappa1": {
+      "thr": 3.198,
+      "arl_target": 100,
+      "arl_measured": 97.2,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.521,
+      "arl_target": 131.2,
+      "arl_measured": 139.0,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 1,
+     "fixed_tpivot_delay": 0,
+     "fixed_tpivot_det": 0.455,
+     "kappa1": {
+      "thr": 3.318,
+      "arl_target": 100,
+      "arl_measured": 96.4,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": false
+     },
+     "kappa_t": {
+      "thr": 3.521,
+      "arl_target": 131.2,
+      "arl_measured": 131.3,
+      "delay": 1,
+      "det": 0.545,
+      "noninferior": false
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 3.405,
+      "arl_target": 100,
+      "arl_measured": 100.5,
+      "delay": 1,
+      "det": 0.455,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.521,
+      "arl_target": 131.2,
+      "arl_measured": 129.4,
+      "delay": 1,
+      "det": 0.455,
+      "noninferior": true
+     }
+    }
+   ],
+   "noninferior_kappa1_restore": "7/9",
+   "incase_reference": "7/9",
+   "restore_match": true,
+   "noninferior_kappa_tightened": "7/9",
+   "count_maintained_under_tightening": true
+  },
+  "arl100/ewma_l0.2": {
+   "rows": [
+    {
+     "arm": "full",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 2.243,
+      "arl_target": 100,
+      "arl_measured": 99.8,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.33,
+      "arl_target": 131.2,
+      "arl_measured": 132.2,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 1,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.455,
+     "kappa1": {
+      "thr": 2.243,
+      "arl_target": 100,
+      "arl_measured": 102.9,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.301,
+      "arl_target": 131.2,
+      "arl_measured": 127.8,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 2,
+     "fixed_tpivot_delay": 0,
+     "fixed_tpivot_det": 0.364,
+     "kappa1": {
+      "thr": 2.243,
+      "arl_target": 100,
+      "arl_measured": 105.7,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": false
+     },
+     "kappa_t": {
+      "thr": 2.301,
+      "arl_target": 131.2,
+      "arl_measured": 125.6,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": false
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 2.127,
+      "arl_target": 100,
+      "arl_measured": 97.6,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.243,
+      "arl_target": 131.2,
+      "arl_measured": 125.3,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 1,
+     "fixed_tpivot_delay": 8,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 2.098,
+      "arl_target": 100,
+      "arl_measured": 100.0,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.243,
+      "arl_target": 131.2,
+      "arl_measured": 126.2,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 2.127,
+      "arl_target": 100,
+      "arl_measured": 96.7,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.301,
+      "arl_target": 131.2,
+      "arl_measured": 133.4,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.455,
+     "kappa1": {
+      "thr": 2.185,
+      "arl_target": 100,
+      "arl_measured": 102.7,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.301,
+      "arl_target": 131.2,
+      "arl_measured": 131.1,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 1,
+     "fixed_tpivot_delay": 0,
+     "fixed_tpivot_det": 0.455,
+     "kappa1": {
+      "thr": 2.127,
+      "arl_target": 100,
+      "arl_measured": 98.5,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": false
+     },
+     "kappa_t": {
+      "thr": 2.301,
+      "arl_target": 131.2,
+      "arl_measured": 131.1,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": false
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 2.127,
+      "arl_target": 100,
+      "arl_measured": 97.7,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.301,
+      "arl_target": 131.2,
+      "arl_measured": 132.3,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    }
+   ],
+   "noninferior_kappa1_restore": "7/9",
+   "incase_reference": "7/9",
+   "restore_match": true,
+   "noninferior_kappa_tightened": "7/9",
+   "count_maintained_under_tightening": true
+  },
+  "arl500/cusum_k0.5": {
+   "rows": [
+    {
+     "arm": "full",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 5.148,
+      "arl_target": 500,
+      "arl_measured": 528.1,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.41,
+      "arl_target": 730.8,
+      "arl_measured": 746.1,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 1,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 5.148,
+      "arl_target": 500,
+      "arl_measured": 506.6,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.613,
+      "arl_target": 730.8,
+      "arl_measured": 764.7,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 5.148,
+      "arl_target": 500,
+      "arl_measured": 513.9,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.381,
+      "arl_target": 730.8,
+      "arl_measured": 703.0,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 4.916,
+      "arl_target": 500,
+      "arl_measured": 517.9,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.381,
+      "arl_target": 730.8,
+      "arl_measured": 743.2,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 1,
+     "fixed_tpivot_delay": null,
+     "fixed_tpivot_det": 0.0,
+     "kappa1": {
+      "thr": 4.538,
+      "arl_target": 500,
+      "arl_measured": 505.2,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.032,
+      "arl_target": 730.8,
+      "arl_measured": 770.2,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 4.8,
+      "arl_target": 500,
+      "arl_measured": 479.7,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.381,
+      "arl_target": 730.8,
+      "arl_measured": 741.9,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 4.916,
+      "arl_target": 500,
+      "arl_measured": 483.2,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.381,
+      "arl_target": 730.8,
+      "arl_measured": 714.1,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 1,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 4.916,
+      "arl_target": 500,
+      "arl_measured": 494.0,
+      "delay": 1,
+      "det": 0.455,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.381,
+      "arl_target": 730.8,
+      "arl_measured": 704.2,
+      "delay": 2,
+      "det": 0.364,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 4.8,
+      "arl_target": 500,
+      "arl_measured": 500.9,
+      "delay": 2,
+      "det": 0.273,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 5.148,
+      "arl_target": 730.8,
+      "arl_measured": 694.4,
+      "delay": 2,
+      "det": 0.273,
+      "noninferior": true
+     }
+    }
+   ],
+   "noninferior_kappa1_restore": "9/9",
+   "incase_reference": "9/9",
+   "restore_match": true,
+   "noninferior_kappa_tightened": "9/9",
+   "count_maintained_under_tightening": true
+  },
+  "arl500/ewma_l0.2": {
+   "rows": [
+    {
+     "arm": "full",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 2.926,
+      "arl_target": 500,
+      "arl_measured": 502.8,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.057,
+      "arl_target": 730.8,
+      "arl_measured": 716.2,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 1,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 2.94,
+      "arl_target": 500,
+      "arl_measured": 529.3,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.093,
+      "arl_target": 730.8,
+      "arl_measured": 740.5,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "full",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.182,
+     "kappa1": {
+      "thr": 2.94,
+      "arl_target": 500,
+      "arl_measured": 522.3,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.086,
+      "arl_target": 730.8,
+      "arl_measured": 751.2,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 2.882,
+      "arl_target": 500,
+      "arl_measured": 521.0,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.999,
+      "arl_target": 730.8,
+      "arl_measured": 762.5,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 1,
+     "fixed_tpivot_delay": null,
+     "fixed_tpivot_det": 0.0,
+     "kappa1": {
+      "thr": 2.795,
+      "arl_target": 500,
+      "arl_measured": 527.4,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.911,
+      "arl_target": 730.8,
+      "arl_measured": 753.9,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homo",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 2.882,
+      "arl_target": 500,
+      "arl_measured": 506.1,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.999,
+      "arl_target": 730.8,
+      "arl_measured": 729.2,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 0,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 2.882,
+      "arl_target": 500,
+      "arl_measured": 473.2,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.999,
+      "arl_target": 730.8,
+      "arl_measured": 687.3,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 1,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 2.882,
+      "arl_target": 500,
+      "arl_measured": 500.4,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 3.057,
+      "arl_target": 730.8,
+      "arl_measured": 773.3,
+      "delay": 1,
+      "det": 0.909,
+      "noninferior": true
+     }
+    },
+    {
+     "arm": "homoflows",
+     "seed": 2,
+     "fixed_tpivot_delay": 2,
+     "fixed_tpivot_det": 0.091,
+     "kappa1": {
+      "thr": 2.882,
+      "arl_target": 500,
+      "arl_measured": 523.9,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     },
+     "kappa_t": {
+      "thr": 2.999,
+      "arl_target": 730.8,
+      "arl_measured": 749.1,
+      "delay": 2,
+      "det": 0.818,
+      "noninferior": true
+     }
+    }
+   ],
+   "noninferior_kappa1_restore": "9/9",
+   "incase_reference": "9/9",
+   "restore_match": true,
+   "noninferior_kappa_tightened": "9/9",
+   "count_maintained_under_tightening": true
+  }
+ },
+ "det_rate_ci_band_disposition": {
+  "arl100": {
+   "old_field_status": "INVALIDATED（supersedes 登记，历史 evt-calibration-and-g1.json 原文不改写）",
+   "invalidation_reason": "det_rate_ci_band 由主阈值 τ_t 与已否决 EVT 分支 tau_ci 混合生成（e5_evt_calib.py:371-373；EVT tau_ci=[1.7744, 1.9638]，日窗 EVT 分支已被ξ̂=−3.92 自家诊断否决）→ 带宽上界虚高至 1.0 无信息量（R1A2-m7/R2B-M2③）",
+   "old_band_sample": [
+    [
+     0.182,
+     1.0
+    ],
+    [
+     0.455,
+     1.0
+    ],
+    [
+     0.364,
+     1.0
+    ]
+   ],
+   "redefined_guard_band": {
+    "sd_pm10pct": {
+     "tau_band": [
+      2.7756,
+      3.3584
+     ],
+     "det_rate_band_grid9": [
+      0.091,
+      0.818
+     ],
+     "note": "检出率带=9 格（3 臂×3 seed）在 τ 带两端的检出率范围（全网格口径，不再取单格并报；R1A2-m1 教训）"
+    },
+    "df_7_to_9": {
+     "tau_band": [
+      2.9741,
+      3.1601
+     ],
+     "det_rate_band_grid9": [
+      0.091,
+      0.545
+     ],
+     "note": "检出率带=9 格（3 臂×3 seed）在 τ 带两端的检出率范围（全网格口径，不再取单格并报；R1A2-m1 教训）"
+    }
+   },
+   "point_estimate": {
+    "tau_t": 3.0531
+   }
+  },
+  "arl500": {
+   "old_field_status": "INVALIDATED（supersedes 登记，历史 evt-calibration-and-g1.json 原文不改写）",
+   "invalidation_reason": "det_rate_ci_band 由主阈值 τ_t 与已否决 EVT 分支 tau_ci 混合生成（e5_evt_calib.py:371-373；EVT tau_ci=[1.7768, 1.9675]，日窗 EVT 分支已被ξ̂=−3.92 自家诊断否决）→ 带宽上界虚高至 1.0 无信息量（R1A2-m7/R2B-M2③）",
+   "old_band_sample": [
+    [
+     0.182,
+     1.0
+    ],
+    [
+     0.182,
+     1.0
+    ],
+    [
+     0.182,
+     1.0
+    ]
+   ],
+   "redefined_guard_band": {
+    "sd_pm10pct": {
+     "tau_band": [
+      3.8244,
+      4.6275
+     ],
+     "det_rate_band_grid9": [
+      0.0,
+      0.182
+     ],
+     "note": "检出率带=9 格（3 臂×3 seed）在 τ 带两端的检出率范围（全网格口径，不再取单格并报；R1A2-m1 教训）"
+    },
+    "df_7_to_9": {
+     "tau_band": [
+      4.0419,
+      4.4347
+     ],
+     "det_rate_band_grid9": [
+      0.0,
+      0.182
+     ],
+     "note": "检出率带=9 格（3 臂×3 seed）在 τ 带两端的检出率范围（全网格口径，不再取单格并报；R1A2-m1 教训）"
+    }
+   },
+   "point_estimate": {
+    "tau_t": 4.2068
+   }
+  }
+ }
+}

@@ -1,0 +1,12 @@
+{
+  "exp": "R1-E7 E4 交付物修复（R1A-M1/M2、R1B-M2）",
+  "frozen_at": "2026-10-24T15:35:00+08:00",
+  "fixes": [
+    "F1 ap_event_weighted 退化修复：原实现 np.repeat(w.astype(int)) 把权重 0 的负例行整体剔除（e4_granularity.py:124-127），y_rep 全正例 → AP≡1.0（27/27 值在案）。修复定义（预冻结）：ap_event_weighted_v2 = 行按 max(事件数,1) 重复展开后的 AP——正例行按承载事件数重复、负例行保底 1 份；原字段保留并标 deprecated（不删，留审计）",
+    "F2 事件级 recall@K 全网格（K=10/25/50/100/250/500）+ 随机基线参照（K×n_attack_rows/n_LOGON）：修正 R1B-M2b 指出的错误归因（『top-25 预算过粗』）——若 K=100 仍近 0，归因改写为『两臂事件级排名信号弱（AP≈基率 2-8 倍），recall@K 接近随机，事件级方向一致性由 AP 行口径承载、非独立检出证据』",
+    "F3 W14 truetype 反常（full 0.837 vs nemb 0.951）统一解释申报：①跨臂可比性审计——在案 f1_score 无 labels 参数，评估池无 FLOW 正例的臂（homo/homoflows/noflows）macro-F1 实际只在 {0,2} 两类上平均，与 full/nemb 的三类别平均不可比；②full vs nemb（同为三类别、可比）逐类 P/R/F1 分解自在案 confusion_matrix：定位 0.951−0.837 差距的混淆列贡献；③机理对接：与 E2 评估侧扩池 AUC 塌陷/E2 污染免疫机理的一致性陈述；最终论文措辞归写作路",
+    "F4 事件级/边级 AP 日块 bootstrap CI（B=2000，借 E6 机器）——补 R1A-M3 的 E4 部分"
+  ],
+  "success": "F1 修复后 ap_event_weighted_v2 不再恒 1.0 且与行级 AP 方向一致可解释；F2 全网格+基线落盘并改写归因；F3 诊断证据链完整落盘（逐类 P/R/F1+可比性审计+机理陈述）；F4 CI 与逐 seed 差值并报",
+  "red_lines": ["粒度不一致≠某粒度错误，如实并报", "未检出显著差异≠等效", "v1 恒 1.0 字段必须标 deprecated 防误引"]
+}
